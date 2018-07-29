@@ -45,21 +45,10 @@
       text-decoration: none;
       padding-bottom: 6px;
       cursor: pointer;
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: $red;
-        height: 3px;
-        width: 0%;
-        -webkit-transition: width .3s ease-in-out;
-        -moz--transition: width .3s ease-in-out;
-        transition: width .3s ease-in-out;
-      }
-      &:hover::after,
-      :hover:focus {
-        width: 100%;
+      opacity: 1;
+      transition: opacity .3s;
+      &:hover{
+        opacity: .8;
       }
     }
     &--button {

@@ -513,22 +513,13 @@ img {
       color: #fff;
       text-decoration: none;
       padding-bottom: 6px;
-      cursor: pointer; }
-      .header__menu--link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: #e45028;
-        height: 3px;
-        width: 0%;
-        -webkit-transition: width .3s ease-in-out;
-        -moz--transition: width .3s ease-in-out;
-        -o-transition: width .3s ease-in-out;
-        transition: width .3s ease-in-out; }
-      .header__menu--link:hover::after,
-      .header__menu--link :hover:focus {
-        width: 100%; }
+      cursor: pointer;
+      opacity: 1;
+      -webkit-transition: opacity .3s;
+      -o-transition: opacity .3s;
+      transition: opacity .3s; }
+      .header__menu--link:hover {
+        opacity: .8; }
     .header__menu--button {
       color: #fff;
       background-color: #e45028;
@@ -1149,7 +1140,6 @@ img {
     -ms-flex-align: start;
     align-items: flex-start;
     color: #ffffff;
-    font-family: "Ubuntu";
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -1163,7 +1153,6 @@ img {
       background: url("../img/icons/phone.svg") center center no-repeat; }
     .footer__address--link {
       color: #e45028;
-      font-family: "Ubuntu", "Arial Narrow", sans-serif;
       font-weight: 700;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1215,4 +1204,5 @@ img {
       height: 16px; }
   .footer__social--link {
     padding: 10px 12px;
-    display: block; }
+    display: block;
+    font-size: 0; }
