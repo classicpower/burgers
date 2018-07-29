@@ -5,6 +5,6 @@ Burgers | Обучающий проект Loftschool
 Карасев Алексей
 <hr>
 Содержание:<br>
-[Интро](https://classicpower.github.io/burgers/)<br>
+[Интро](https://classicpower.github.io/burgers/src/)<br>
 
 
