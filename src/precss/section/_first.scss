@@ -1,5 +1,5 @@
 .first {
-  @include section('/img/first/first.jpg');
+  @include section('../img/first/first.jpg');
   .container {
     @include container();
   }
