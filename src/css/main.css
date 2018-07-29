@@ -1042,7 +1042,8 @@ img {
       box-sizing: border-box;
       -webkit-border-radius: 5px;
       border-radius: 5px;
-      min-height: 110px; }
+      min-height: 110px;
+      resize: none; }
       .form__input--comment:focus {
         outline: none;
         border: 2px solid #f9b43b; }
