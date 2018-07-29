@@ -1,0 +1,9 @@
+@import "vars";
+
+@include fontface($Ubuntu, $Ubuntu, normal, normal);
+@include fontface($Ubuntu, $Ubuntu-Bold, bold, normal);
+@include fontface($Ubuntu, $Ubuntu-Light, 300, normal);
+@include fontface($Ubuntu, $Ubuntu-Medium, 500, normal);
+@include fontface($Lifehack, $Lifehack, normal, normal);
+@include fontface($Gagalin, $Gagalin, normal, normal);
+

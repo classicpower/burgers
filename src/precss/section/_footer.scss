@@ -1,0 +1,31 @@
+.footer {
+  min-height: 60px;
+  background: url(/img/footer/footer.jpg) bottom center no-repeat;
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  &__address {
+    color: #ffffff;
+    font-family: $Ubuntu;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    font-weight: 300;
+    &--tel {
+      &::before {
+        content: "";
+        width: 12px;
+        height: 11px;
+        background: url(/img/footer/phone.png) center center no-repeat;
+      }
+    }
+    &--link {
+      color: $red;
+      font-family: $Ubuntu, "Arial Narrow", sans-serif;
+      font-weight: 700;
+    }
+  }
+}

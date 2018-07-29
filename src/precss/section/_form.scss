@@ -1,0 +1,119 @@
+.delivery {
+  @include section('/img/form/form.jpg');
+  .container {
+    @include container();
+  }
+  &__title {
+    @include title($yellow, center);
+    margin: 12% 0 4%;
+  }
+}
+
+.form {
+  &__content {
+    display: flex;
+    margin: 0 -10px;
+  }
+  &__left,
+  &__right {
+    width: 50%;
+    margin: 0 10px;
+  }
+  color: #ffffff;
+  font-family: $Ubuntu,
+  "Arial Narrow",
+  sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  &__row {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  &__block {
+    flex: 1;
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--title{
+      margin-bottom: 1%;
+    }
+    &--checked{
+      display: flex;
+      align-items: center;
+      flex: 0 1 32%;
+    }
+    &--submit{
+      @include btn(#fff, $red, #c1401e);
+      font-size: 13px;
+      padding: 10.5px 16.5px;
+      margin-right: 12px;
+      text-transform: uppercase;
+    }
+    &--reset{
+      @include btn(#fff, transparent, transparent);
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  &__input {
+    @include input();
+    &--comment {
+      @include input();
+      min-height: 110px;
+    }
+  }
+  &__radio {
+    display: none;
+    &--custom {
+      width: 15px;
+      height: 16px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 10px;
+      &-checked {
+      }
+    }
+    &:checked+&--custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 8px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #e35028;
+      border-radius: 50%;
+      margin: auto;
+    }
+  }
+  &__checkbox {
+    display: none;
+    &--custom {
+      width: 15px;
+      height: 16px;
+      background-color: #ffffff;
+      position: relative;
+      margin-right: 10px;
+      &-checked {
+      }
+    }
+    &:checked+&--custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 11px;
+      height: 9px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url(/img/form/checkbox.svg) center center no-repeat;
+      margin: auto;
+    }
+  }
+}
