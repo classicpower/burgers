@@ -81,6 +81,7 @@ img {
     border-radius: 50%;
     border: 1px solid transparent;
     transition: .5s;
+    z-index: 1;
     &--current, &:hover {
       border: 1px solid #fff;
     }
@@ -94,6 +95,7 @@ img {
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 0;
       background-color: #fff;
       border-radius: 50%;
       margin: auto;
@@ -101,6 +103,8 @@ img {
     }
   }
   &__link{
+    position: absolute;
+    z-index: 2;
     display: block;
     padding: 8px;
   }

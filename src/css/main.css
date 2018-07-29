@@ -437,7 +437,8 @@ img {
     border: 1px solid transparent;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s; }
+    transition: .5s;
+    z-index: 1; }
     .points__item--current, .points__item:hover {
       border: 1px solid #fff; }
     .points__item::before {
@@ -450,12 +451,15 @@ img {
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 0;
       background-color: #fff;
       -webkit-border-radius: 50%;
       border-radius: 50%;
       margin: auto;
       cursor: pointer; }
   .points__link {
+    position: absolute;
+    z-index: 2;
     display: block;
     padding: 8px; }
 
@@ -618,15 +622,17 @@ img {
       color: #fff;
       letter-spacing: -1.63px;
       line-height: 60px; }
-  .first__arrow-scroll {
+  .first__arrow--scroll {
     background: url("../img/first/arrow-scroll.png") no-repeat center center;
     width: 29px;
     height: 14px;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    cursor: pointer;
     margin: auto 0 43px 0; }
+  .first__arrow--link {
+    display: block;
+    padding: 7px 15px; }
 
 .we {
   width: 100%;
