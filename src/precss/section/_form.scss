@@ -73,8 +73,6 @@
       border-radius: 50%;
       position: relative;
       margin-right: 10px;
-      &-checked {
-      }
     }
     &:checked+&--custom::before {
       content: "";
@@ -99,8 +97,6 @@
       background-color: #ffffff;
       position: relative;
       margin-right: 10px;
-      &-checked {
-      }
     }
     &:checked+&--custom::before {
       content: "";
