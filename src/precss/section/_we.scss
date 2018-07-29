@@ -1,6 +1,6 @@
 //we section
 .we {
-  @include section('/img/we/we.jpg');
+  @include section('../img/we/we.jpg');
   .container {
     @include container();
     align-items: center;
@@ -26,13 +26,13 @@
       width: 100%;
       margin-bottom: 28px;
       &-meat {
-        background: url(/img/icons/meat.svg) center center no-repeat;
+        background: url('../img/icons/meat.svg') center center no-repeat;
       }
       &-hand {
-        background: url(/img/icons/hand.svg) center center no-repeat;
+        background: url('../img/icons/hand.svg') center center no-repeat;
       }
       &-natural {
-        background: url(/img/icons/natural.svg) center center no-repeat;
+        background: url('../img/icons/natural.svg') center center no-repeat;
       }
     }
     &--title {

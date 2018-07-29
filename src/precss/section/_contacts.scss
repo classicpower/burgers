@@ -1,5 +1,5 @@
 .contacts {
-  @include section('/img/contacts/contacts.jpg');
+  @include section('../img/contacts/contacts.jpg');
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

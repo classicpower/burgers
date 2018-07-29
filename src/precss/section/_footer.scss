@@ -1,6 +1,6 @@
 .footer {
   min-height: 60px;
-  background: url(/img/footer/footer.jpg) bottom center no-repeat;
+  background: url('../img/footer/footer.jpg') bottom center no-repeat;
   &__container {
     max-width: 940px;
     margin: 0 auto;
@@ -19,7 +19,7 @@
         content: "";
         width: 12px;
         height: 11px;
-        background: url(/img/footer/phone.png) center center no-repeat;
+        background: url('../img/footer/phone.png') center center no-repeat;
       }
     }
     &--link {

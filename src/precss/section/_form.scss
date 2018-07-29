@@ -1,5 +1,5 @@
 .delivery {
-  @include section('/img/form/form.jpg');
+  @include section('../img/form/form.jpg');
   .container {
     @include container();
   }
@@ -112,7 +112,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: url(/img/form/checkbox.svg) center center no-repeat;
+      background: url('../img/form/checkbox.svg') center center no-repeat;
       margin: auto;
     }
   }
