@@ -1,4 +1,5 @@
 $(function () {
+    /**Popup c параметрами**/
     var
         $btnReviews = $('.reviews__item--btn'),
         $btnHeader = $('.header__menu--button'),
@@ -44,4 +45,13 @@ $(function () {
             modal.removeClass('open');
         }
     }
+
+        /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
+        $('.header__menu--link, .points__link').on('click', function(e){
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 1200);
+            e.preventDefault();
+        });
 });
