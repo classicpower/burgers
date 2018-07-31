@@ -5,9 +5,9 @@ $red: #e45028;
 
 //var fonts
 $Ubuntu: 'Ubuntu';
-$Ubuntu-Bold: '${Ubuntu}-Bold';
-$Ubuntu-Light: '${Ubuntu}-Light';
-$Ubuntu-Medium: '${Ubuntu}-Medium';
+$Ubuntu-Bold: 'Ubuntu-Bold';
+$Ubuntu-Light: 'Ubuntu-Light';
+$Ubuntu-Medium: 'Ubuntu-Medium';
 $Lifehack: 'Lifehack';
 $Gagalin: 'Gagalin';
 
@@ -15,12 +15,12 @@ $Gagalin: 'Gagalin';
 //mixin fontface
 @mixin fontface($fontName, $urlName: $fontName, $weight: normal, $style: normal) {
   @font-face {
-    font-family: '${fontName}';
-    src: url('/fonts/${urlName}/${urlName}.eot');
-    src: url('/fonts/${urlName}/${urlName}.eot#iefix') format('embedded-opentype'),
-    url('/fonts/${urlName}/${urlName}.woff') format('woff'),
-    url('/fonts/${urlName}/${urlName}.ttf') format('truetype'),
-    url('/fonts/${urlName}/${urlName}.svg') format('svg');
+    font-family: '$fontName';
+    src: url('/fonts/$urlName/$urlName.eot');
+    src: url('/fonts/$urlName/$urlName.eot#iefix') format('embedded-opentype'),
+    url('/fonts/$urlName/$urlName.woff') format('woff'),
+    url('/fonts/$urlName/$urlName.ttf') format('truetype'),
+    url('/fonts/$urlName/$urlName.svg') format('svg');
     font-weight: $weight;
     font-style: $style;
   }
