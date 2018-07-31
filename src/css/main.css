@@ -302,44 +302,44 @@ template {
   display: none; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: '$fontName';
-  src: url("/fonts/$urlName/$urlName.eot");
-  src: url("/fonts/$urlName/$urlName.eot#iefix") format("embedded-opentype"), url("/fonts/$urlName/$urlName.woff") format("woff"), url("/fonts/$urlName/$urlName.ttf") format("truetype"), url("/fonts/$urlName/$urlName.svg") format("svg");
+  font-family: '${fontName}';
+  src: url("/fonts/${urlName}/${urlName}.eot");
+  src: url("/fonts/${urlName}/${urlName}.eot#iefix") format("embedded-opentype"), url("/fonts/${urlName}/${urlName}.woff") format("woff"), url("/fonts/${urlName}/${urlName}.ttf") format("truetype"), url("/fonts/${urlName}/${urlName}.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 

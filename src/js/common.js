@@ -63,11 +63,8 @@ $(function () {
 
     $teamItem.on('click', function () {
         var item = $(this);
-        item.toggleClass('team__content--item-active')
-            .animate({
-                height: "toggle"
-            })
+        item.toggleClass("team__content--item-active")
             .siblings()
-            .removeClass('team__content--item-active');
+            .removeClass("team__content--item-active");
     })
 });
