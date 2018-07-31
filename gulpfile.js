@@ -3,10 +3,10 @@ const
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     sass = require('gulp-sass');
-    // cleanCSS = require('gulp-clean-css'),
-    // gcmq = require('gulp-group-css-media-queries'),
-    // sourcemaps = require('gulp-sourcemaps'),
-    // rename = require('gulp-rename');
+// cleanCSS = require('gulp-clean-css'),
+// gcmq = require('gulp-group-css-media-queries'),
+// sourcemaps = require('gulp-sourcemaps'),
+// rename = require('gulp-rename');
 
 const config = {
     src: './src',

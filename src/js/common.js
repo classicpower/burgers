@@ -55,4 +55,19 @@ $(function () {
                 .offset().top
         }, 700, 'linear');
     });
+
+    /**АККОРДЕОН**/
+    var $teamItem = $(".team__content--item"),
+        $teamName = $(".team__content--item .team__content--item-name"),
+        $teamContent = $(".team__content--item .team__content--item-figure");
+
+    $teamItem.on('click', function () {
+        var item = $(this);
+        item.toggleClass('team__content--item-active')
+            .animate({
+                height: "toggle"
+            })
+            .siblings()
+            .removeClass('team__content--item-active');
+    })
 });

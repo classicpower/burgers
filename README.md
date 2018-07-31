@@ -6,3 +6,4 @@ Burgers | Обучающий проект Loftschool
 <hr>
 Содержание:<br>
 [Интро](https://classicpower.github.io/burgers/src/)<br>
+

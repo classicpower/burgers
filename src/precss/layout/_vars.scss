@@ -2,7 +2,17 @@
 $yellow: #f9b43b;
 $dark: #2f3234;
 $red: #e45028;
+
 //var fonts
+$Ubuntu: 'Ubuntu';
+$Ubuntu-Bold: '${Ubuntu}-Bold';
+$Ubuntu-Light: '${Ubuntu}-Light';
+$Ubuntu-Medium: '${Ubuntu}-Medium';
+$Lifehack: 'Lifehack';
+$Gagalin: 'Gagalin';
+
+
+//mixin fontface
 @mixin fontface($fontName, $urlName: $fontName, $weight: normal, $style: normal) {
   @font-face {
     font-family: '${fontName}';
@@ -16,13 +26,6 @@ $red: #e45028;
   }
 }
 
-//fonts
-$Ubuntu: 'Ubuntu';
-$Ubuntu-Bold: '${Ubuntu}-Bold';
-$Ubuntu-Light: '${Ubuntu}-Light';
-$Ubuntu-Medium: '${Ubuntu}-Medium';
-$Lifehack: 'Lifehack';
-$Gagalin: 'Gagalin';
 @mixin container() {
   max-width: 940px;
   margin: 0 auto;
@@ -50,8 +53,10 @@ $hover) {
 
 @mixin section($url) {
   width: 100%;
-  height: 100vh;
-  background: url($url) no-repeat center center;
+  height: 650px;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   overflow: hidden;
 }
