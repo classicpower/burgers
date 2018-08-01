@@ -493,18 +493,21 @@ img {
       text-transform: uppercase;
       font-weight: 500;
       margin: 0 5px; }
-    .header__menu--item::after {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      width: 4px;
-      height: 4px;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      margin: 0 11px;
-      background-color: #fff; }
-    .header__menu--item:last-child::after {
-      display: none; }
+    .header__menu--item {
+      white-space: nowrap; }
+      .header__menu--item::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: 4px;
+        height: 4px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        margin: 0 11px;
+        background-color: #fff; }
+      .header__menu--item:last-child::after {
+        display: none; }
     .header__menu--link {
       position: relative;
       color: #fff;
@@ -839,7 +842,111 @@ img {
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .burgermenu__title {
+    text-align: left;
+    font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+    font-size: 72px;
+    color: #fff;
+    position: absolute;
+    top: 89px;
+    left: 97px; }
+  .burgermenu__left {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 29%;
+    -ms-flex: 0 1 29%;
+    flex: 0 1 29%;
+    height: 100%;
+    position: relative; }
+  .burgermenu__right {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 71%;
+    -ms-flex: 0 1 71%;
+    flex: 0 1 71%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100%; }
+  .burgermenu__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .burgermenu__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer; }
+    .burgermenu__item--active .burgermenu__item--block-title {
+      color: #f9b43b; }
+    .burgermenu__item--active .burgermenu__item--text {
+      width: 100%;
+      visibility: visible;
+      padding: 13% 8% 0 7%; }
+    .burgermenu__item--block {
+      position: relative;
+      width: 80px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%; }
+      .burgermenu__item--block::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.7); }
+      .burgermenu__item--block-meat {
+        background: url("../img/burgermenu/formeat.jpg") center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      .burgermenu__item--block-vegan {
+        background: url("../img/burgermenu/forvegan.jpg") center right no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      .burgermenu__item--block-diet {
+        background: url("../img/burgermenu/fordiet.jpg") center right no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover; }
+      .burgermenu__item--block-title {
+        text-align: left;
+        font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+        font-size: 72px;
+        color: #fff;
+        font-size: 40px;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -webkit-transform-origin: 3% -15% 0;
+        -ms-transform-origin: 3% -15% 0;
+        transform-origin: 3% -15% 0;
+        -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        white-space: nowrap; }
+    .burgermenu__item--text {
+      visibility: hidden;
+      width: 0;
+      color: #ffffff;
+      font-weight: 300;
+      line-height: 24px;
+      padding: 0;
+      background-color: rgba(47, 50, 52, 0.93); }
 
 .reviews {
   height: 100vh; }

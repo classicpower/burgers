@@ -1,4 +1,86 @@
 //burgermenu section
-.burgermenu{
+.burgermenu {
   @include section('../img/burgermenu/menu.jpg');
+  display: flex;
+  &__title {
+    @include title(#fff, left);
+    position: absolute;
+    top: 89px;
+    left: 97px;
+  }
+  &__left {
+    flex: 0 1 29%;
+    height: 100%;
+    position: relative;
+  }
+  &__right {
+    flex: 0 1 71%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    cursor: pointer;
+    &--active{
+      .burgermenu__item--block-title{
+        color: $yellow;
+      }
+      .burgermenu__item--text{
+        width: 100%;
+        visibility: visible;
+        padding: 13% 8% 0 7%;
+      }
+    }
+    &--block {
+      position: relative;
+      width: 80px;
+      display: flex;
+      height: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.7);
+      }
+      &-meat {
+        background: url('../img/burgermenu/formeat.jpg') center center no-repeat;
+        background-size: cover;
+      }
+      &-vegan {
+        background: url('../img/burgermenu/forvegan.jpg') center right no-repeat;
+        background-size: cover;
+      }
+      &-diet {
+        background: url('../img/burgermenu/fordiet.jpg') center right no-repeat;
+        background-size: cover;
+      }
+      &-title {
+        @include title (#fff,
+        left);
+        font-size: 40px;
+        transform: rotate(-90deg);
+        transform-origin: 3% -15% 0;
+        align-self: flex-end;
+        white-space: nowrap;
+      }
+    }
+    &--text {
+      visibility: hidden;
+      width: 0;
+      color: #ffffff;
+      font-weight: 300;
+      line-height: 24px;
+      padding: 0;
+      background-color: rgba(47, 50, 52, 0.93);
+    }
+  }
 }

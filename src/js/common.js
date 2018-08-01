@@ -55,13 +55,20 @@ $(function () {
 
     /**АККОРДЕОН**/
     var $teamItem = $(".team__content--item"),
-        $teamName = $(".team__content--item .team__content--item-name"),
-        $teamContent = $(".team__content--item .team__content--item-figure");
+        $burgerItem = $('.burgermenu__item');
+        // $teamName = $(".team__content--item .team__content--item-name"),
+        // $teamContent = $(".team__content--item .team__content--item-figure");
 
     $teamItem.on('click', function () {
         var item = $(this);
         item.toggleClass("team__content--item-active")
             .siblings()
             .removeClass("team__content--item-active");
+    })
+    $burgerItem.on('click', function () {
+        var item = $(this);
+        item.toggleClass("burgermenu__item--active")
+            .siblings()
+            .removeClass("burgermenu__item--active");
     })
 });

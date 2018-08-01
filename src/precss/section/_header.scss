@@ -14,10 +14,12 @@
       margin: 0 5px;
     }
     &--item {
+      white-space: nowrap;
       &::after {
         content: "";
         display: inline-block;
         vertical-align: middle;
+        white-space: nowrap;
         width: 4px;
         height: 4px;
         border-radius: 50%;
