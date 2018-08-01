@@ -22,9 +22,6 @@ $(function () {
     $reviewsOverlay.on('click', function () {
         popRev.close();
     });
-    $btnHeader.on('click', function () {
-        popBur.open('Бургер');
-    });
     $burgersOverlay.on('click', function () {
         popBur.close();
     });
@@ -47,7 +44,7 @@ $(function () {
     }
 
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-    $('.header__menu--link, .points__link, .first__arrow--link').on('click', function (e) {
+    $('.header__menu--link, .header__menu--button, .points__link, .hero__arrow--link').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this)

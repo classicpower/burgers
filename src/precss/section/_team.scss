@@ -71,12 +71,8 @@
         visibility: hidden;
         display: flex;
       }
-      &-block {
-        flex: 0 1 100px;
-        padding: 0 5%;
-      }
-      &-img {
-        border-radius: 50%;
+      &-clip {
+        clip-path: circle(42% at 53% 48%);
       }
       &-figcaption {
         flex: 1;

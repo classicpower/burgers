@@ -21,52 +21,50 @@
 <body>
   <div class="wrapper">
     <main class="content">
-      <section id="first" class="first">
+      <section id="hero" class="hero">
         <div class="container">
           <header class="header">
             <div class="header__logo">
-              <a href="index.html" class="header__logo--link">
                 <img src="img/header/logo.png" alt="Логотип Burgers" class="header__logo--img">
-              </a>
             </div>
             <nav class="header__menu">
               <ul class="header__menu--list">
-                <li class="header__menu--item header__menu--item-current">
-                  <a class="header__menu--link" href="#we">О НАС</a>
+                <li class="header__menu--item">
+                  <a class="header__menu--link" href="#we">О нас</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#burgers">БУРГЕРЫ</a>
+                  <a class="header__menu--link" href="#burgers">Бургеры</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#team">КОМАНДА</a>
+                  <a class="header__menu--link" href="#team">Команда</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#burgermenu">МЕНЮ</a>
+                  <a class="header__menu--link" href="#burgermenu">Меню</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#reviews">ОТЗЫВЫ</a>
+                  <a class="header__menu--link" href="#reviews">Отзывы</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#work">КАК МЫ РАБОТАЕМ</a>
+                  <a class="header__menu--link" href="#work">Как мы работаем</a>
                 </li>
                 <li class="header__menu--item">
-                  <a class="header__menu--link" href="#contacts">КОНТАКТЫ</a>
+                  <a class="header__menu--link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </nav>
-            <button class="header__menu--button" type="button">ЗАКАЗАТЬ</button>
+            <a class="header__menu--button"  href="#delivery">Заказать</a>
           </header>
-          <div class="first__wrap">
-            <div class="first__logo">
-              <img src="img/first/burgerDrops.png" alt="Главный бургер" class="first__logo--img">
+          <div class="hero__wrap">
+            <div class="hero__logo">
+              <img src="img/hero/burgerDrops.png" alt="Главный бургер" class="hero__logo--img">
             </div>
-            <div class="first__content">
-              <h1 class="first__content--title">МЫ ДЕЛАЕМ</h1>
-              <div class="first__content--text">натуральные бургеры</div>
+            <div class="hero__content">
+              <h1 class="hero__content--title">Мы делаем</h1>
+              <div class="hero__content--text">натуральные бургеры</div>
             </div>
           </div>
-          <div class="first__arrow--scroll">
-            <a href="#we" class="first__arrow--link"></a>
+          <div class="hero__arrow--scroll">
+            <a href="#we" class="hero__arrow--link"></a>
           </div>
         </div>
       </section>
@@ -121,7 +119,7 @@
                 <li class="team__content--item">
                   <h3 class="team__content--item-name">Дэниэл Редклиф</h3>
                   <figure class="team__content--item-figure">
-                    <div class="team__content--item-block">
+                    <div class="team__content--item-clip">
                       <img src="img/team/aphex.jpg" alt="Дэниэл Редклиф" class="team__content--item-img">
                     </div>
                     <figcaption class="team__content--item-figcaption">
@@ -135,8 +133,8 @@
                 <li class="team__content--item">
                   <h3 class="team__content--item-name">Ричард Джеймс</h3>
                   <figure class="team__content--item-figure">
-                    <div class="team__content--item-block">
-                      <img src="img/team/aphex1.jpg" alt="Ричард Джеймс" class="team__content--item-img">
+                    <div class="team__content--item-clip">
+                      <img src="img/team/aphex.jpg" alt="Ричард Джеймс" class="team__content--item-img">
                     </div>
                     <figcaption class="team__content--item-figcaption">
                       <h4 class="team__content--item-prof">Оператор</h4>
@@ -149,7 +147,7 @@
                 <li class="team__content--item">
                   <h3 class="team__content--item-name">Джейк Финн</h3>
                   <figure class="team__content--item-figure">
-                    <div class="team__content--item-block">
+                    <div class="team__content--item-clip">
                       <img src="img/team/aphex.jpg" alt="Джейк Финн" class="team__content--item-img">
                     </div>
                     <figcaption class="team__content--item-figcaption">
@@ -163,7 +161,7 @@
                 <li class="team__content--item">
                   <h3 class="team__content--item-name">Николай Иванов</h3>
                   <figure class="team__content--item-figure">
-                    <div class="team__content--item-block">
+                    <div class="team__content--item-clip">
                       <img src="img/team/aphex.jpg" alt="Николай Иванов" class="team__content--item-img">
                     </div>
                     <figcaption class="team__content--item-figcaption">
@@ -180,7 +178,8 @@
         </div>
       </section>
       <section id="burgermenu" class="burgermenu">
-
+        <h1 class="burgermenu__title">Меню</h1>
+        
       </section>
       <section id="reviews" class="reviews">
         <ul class="reviews__list">
@@ -426,7 +425,7 @@
     <nav class="points">
       <ul class="points__list">
         <li class="points__item points__item--current">
-          <a class="points__link" href="#first"></a>
+          <a class="points__link" href="#hero"></a>
         </li>
         <li class="points__item">
           <a class="points__link" href="#we"></a>
@@ -456,8 +455,8 @@
     </nav>
     </div>
   </div>
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/common.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>
