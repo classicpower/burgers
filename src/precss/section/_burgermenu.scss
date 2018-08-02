@@ -25,12 +25,13 @@
   &__item {
     display: flex;
     cursor: pointer;
-    &--active{
-      .burgermenu__item--block-title{
+    &--active {
+      .burgermenu__item--block-title {
         color: $yellow;
       }
-      .burgermenu__item--text{
+      .burgermenu__item--text {
         width: 100%;
+        transition: width 1s ease;
         visibility: visible;
         padding: 13% 8% 0 7%;
       }
