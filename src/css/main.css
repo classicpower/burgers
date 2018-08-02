@@ -808,6 +808,9 @@ img {
         .team__content--item-active .team__content--item-figure {
           height: 100%;
           visibility: visible;
+          -webkit-transition: height 1s linear;
+          -o-transition: height 1s linear;
+          transition: height 1s linear;
           margin-bottom: 11.4%; }
         .team__content--item-active .team__content--item-name::before {
           background: url("../img/icons/arrow-up.svg") center center no-repeat; }

@@ -60,6 +60,7 @@
         .team__content--item-figure {
           height: 100%;
           visibility: visible;
+          transition: height 1s linear;
           margin-bottom: 11.4%;
         }
         .team__content--item-name::before {
