@@ -14,6 +14,64 @@
     display: flex;
     align-items: center;
   }
+  &__list {
+    margin-bottom: 5%;
+  }
+  &__name {
+    color: #ffffff;
+    font-family: $Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    &::before {
+      content: "";
+      background: url('../img/icons/arrow-down.svg') center center no-repeat;
+      width: 9px;
+      height: 7px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  &__figure {
+    height: 0;
+    visibility: hidden;
+    display: flex;
+  }
+  &__clip {
+    clip-path: circle(42% at 53% 48%);
+  }
+  &__figcaption {
+    flex: 1;
+    color: #ffffff;
+
+  }
+  &__prof {
+    font-weight: 700;
+    margin-bottom: 7%;
+  }
+  &__text {
+    font-weight: 300;
+    line-height: 24.01px;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 9.7%;
+    &--active {
+      margin-bottom: 0;
+      .team__name {
+        color: $yellow;
+        margin-bottom: 4.73%;
+      }
+      .team__figure {
+        height: 100%;
+        visibility: visible;
+        margin-bottom: 11.4%;
+      }
+      .team__name::before {
+        background: url('../img/icons/arrow-up.svg') center center no-repeat;
+      }
+    }
+  }
   &__content {
     display: flex;
     margin: 0 auto;
@@ -21,73 +79,14 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    &--wrap {
+    &-wrap {
       display: flex;
       flex-direction: column;
       margin-left: 5%;
     }
-    &--title {
+    &-title {
       @include title($yellow, left);
       margin-bottom: 11%;
-    }
-    &--list {
-      margin-bottom: 5%;
-    }
-    &--item {
-      position: relative;
-      margin-bottom: 9.7%;
-      &-name {
-        color: #ffffff;
-        font-family: $Gagalin;
-        font-size: 14px;
-        font-weight: 400;
-        cursor: pointer;
-        &::before {
-          content: "";
-          background: url('../img/icons/arrow-down.svg') center center no-repeat;
-          width: 9px;
-          height: 7px;
-          display: inline-block;
-          margin-right: 10px;
-        }
-      }
-      &-active {
-        margin-bottom: 0;
-        .team__content--item-name {
-          color: $yellow;
-          margin-bottom: 4.73%;
-        }
-        .team__content--item-figure {
-          height: 100%;
-          visibility: visible;
-          transition: height 1s linear;
-          margin-bottom: 11.4%;
-        }
-        .team__content--item-name::before {
-          background: url('../img/icons/arrow-up.svg') center center no-repeat;
-        }
-      }
-      &-figure {
-        height: 0;
-        visibility: hidden;
-        display: flex;
-      }
-      &-clip {
-        clip-path: circle(42% at 53% 48%);
-      }
-      &-figcaption {
-        flex: 1;
-        color: #ffffff;
-
-      }
-      &-prof {
-        font-weight: 700;
-        margin-bottom: 7%;
-      }
-      &-text {
-        font-weight: 300;
-        line-height: 24.01px;
-      }
     }
   }
 }

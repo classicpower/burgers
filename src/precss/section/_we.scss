@@ -1,8 +1,7 @@
 //we section
 .we {
   @include section('../img/we/we.jpg');
-  .container {
-    @include container();
+  &__container {
     align-items: center;
   }
   &__title {
@@ -21,21 +20,21 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    &--img {
+    &-img {
       height: 89px;
       width: 100%;
       margin-bottom: 28px;
-      &-meat {
+      &--meat {
         background: url('../img/icons/meat.svg') center center no-repeat;
       }
-      &-hand {
+      &--hand {
         background: url('../img/icons/hand.svg') center center no-repeat;
       }
-      &-natural {
+      &--natural {
         background: url('../img/icons/natural.svg') center center no-repeat;
       }
     }
-    &--title {
+    &-title {
       color: $dark;
       font-family: $Lifehack, "Arial Narrow", sans-serif;
       font-size: 24px;
@@ -43,7 +42,7 @@
       letter-spacing: -0.6px;
       margin-bottom: 15px;
     }
-    &--text {
+    &-text {
       opacity: 0.8;
       color: $dark;
       font-family: $Ubuntu, "Arial Narrow", sans-serif;

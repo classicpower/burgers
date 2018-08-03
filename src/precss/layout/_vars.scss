@@ -35,9 +35,7 @@ $Gagalin: 'Gagalin-Regular';
   height: 100%;
 }
 
-@mixin btn($color,
-$bkg,
-$hover) {
+@mixin btn($color, $bkg, $hover) {
   color: $color;
   background-color: $bkg;
   border: none;

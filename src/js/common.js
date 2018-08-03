@@ -1,8 +1,7 @@
 $(function () {
     /**Popup c параметрами**/
     var
-        $btnReviews = $('.reviews__item--btn'),
-        $btnHeader = $('.header__menu--button'),
+        $btnReviews = $('.reviews__button'),
         $reviewsModal = $('.reviews__modal'),
         $reviewsOverlay = $('.reviews__overlay'),
         $burgersModal = $('.burgers__modal'),
@@ -44,7 +43,7 @@ $(function () {
     }
 
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-    $('.header__menu--link, .header__menu--button, .points__link, .hero__arrow--link').on('click', function (e) {
+    $('.menu--link, .button, .points__link, .arrow__link').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this)
@@ -54,16 +53,16 @@ $(function () {
     });
 
     /**АККОРДЕОН**/
-    var $teamItem = $(".team__content--item"),
+    var $teamItem = $(".team__item"),
         $burgerItem = $('.burgermenu__item');
     // $teamName = $(".team__content--item .team__content--item-name"),
     // $teamContent = $(".team__content--item .team__content--item-figure");
 
     $teamItem.on('click', function () {
         var item = $(this);
-        item.toggleClass("team__content--item-active")
+        item.toggleClass("team__item--active")
             .siblings()
-            .removeClass("team__content--item-active")
+            .removeClass("team__item--active")
     })
     $burgerItem.on('click', function () {
         var item = $(this);
