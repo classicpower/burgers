@@ -82,3 +82,24 @@ $Gagalin: 'Gagalin-Regular';
     border: 2px solid $yellow;
   }
 }
+// Breakpoints  
+@mixin desktop {
+  @media screen and (max-width: 1200px){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: 992px){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: 480px){
+    @content;
+  }
+}
