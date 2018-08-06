@@ -51,21 +51,21 @@
   }
   &__text {
     font-weight: 300;
-    line-height: 24.01px;
+    line-height: 1.7;
   }
   &__item {
     position: relative;
-    margin-bottom: 9.7%;
+    margin-bottom: 10%;
     &--active {
       margin-bottom: 0;
       .team__name {
         color: $yellow;
-        margin-bottom: 4.73%;
+        margin-bottom: 5%;
       }
       .team__figure {
         height: 100%;
         visibility: visible;
-        margin-bottom: 11.4%;
+        margin-bottom: 10%;
       }
       .team__name::before {
         background: url('../img/icons/arrow-up.svg') center center no-repeat;
