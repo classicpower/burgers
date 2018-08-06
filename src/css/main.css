@@ -350,7 +350,7 @@ html {
 
 body {
   font-family: "Ubuntu", "Arial Narrow", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -429,12 +429,12 @@ img {
 
 .arrow--scroll {
   background: url("../img/hero/arrow-scroll.png") no-repeat center center;
-  width: 29px;
-  height: 14px;
+  width: 1.8125rem;
+  height: 0.875rem;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  margin: auto 0 43px 0; }
+  margin: auto 0 5%; }
 
 .arrow__link {
   display: block;
@@ -442,11 +442,11 @@ img {
 
 .points {
   position: fixed;
-  top: 86px;
+  top: 5.375rem;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin-left: -46px;
+  margin-left: -2.5%;
   z-index: 100; }
   .points__list {
     display: -webkit-box;
@@ -522,7 +522,7 @@ img {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-transform: uppercase;
     font-weight: 500;
     padding: 10.5px 16.5px; }
@@ -539,7 +539,7 @@ img {
   .logo svg {
     max-width: 95%; }
   .logo__img {
-    height: 75px; }
+    height: 4.6875rem; }
 
 .menu {
   -webkit-box-flex: 1;
@@ -559,7 +559,7 @@ img {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-transform: uppercase;
     font-weight: 500; }
   .menu__item {
@@ -579,8 +579,11 @@ img {
 
 .hamburger-menu__link {
   position: relative;
-  display: none;
-  height: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1.375rem;
   margin-left: 30px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -592,8 +595,8 @@ img {
 
 .hamburger-menu__bars, .hamburger-menu__bars::before, .hamburger-menu__bars::after {
   background-color: #fff;
-  width: 24px;
-  height: 5px;
+  width: 1.5rem;
+  height: 0.3125rem;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
@@ -633,9 +636,9 @@ img {
     margin-top: -11%; }
   .hero__logo {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 1 450px;
-    -ms-flex: 0 1 450px;
-    flex: 0 1 450px;
+    -webkit-flex: 0 1 28.125rem;
+    -ms-flex: 0 1 28.125rem;
+    flex: 0 1 28.125rem;
     margin: 0 11px 0 20px; }
   .hero__content {
     -webkit-box-flex: 0;
@@ -658,7 +661,7 @@ img {
     .hero__content-title {
       text-align: left;
       font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-      font-size: 72px;
+      font-size: 4.5rem;
       color: #f9b43b;
       margin: 17% 0 3%; }
     .hero__content-text {
@@ -667,9 +670,9 @@ img {
       -ms-flex-align: center;
       align-items: center;
       font-family: "Lifehack-Medium", "Arial Narrow", sans-serif;
-      font-size: 65px;
+      font-size: 4.0625rem;
       color: #fff;
-      letter-spacing: -1.63px;
+      letter-spacing: -0.10187rem;
       line-height: 1; }
 
 .we {
@@ -689,7 +692,7 @@ img {
   .we__title {
     text-align: center;
     font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-    font-size: 72px;
+    font-size: 4.5rem;
     color: #2f3234;
     margin: 11% 0 4%; }
   .we__list {
@@ -731,15 +734,13 @@ img {
     .we__item-title {
       color: #2f3234;
       font-family: "Lifehack-Medium", "Arial Narrow", sans-serif;
-      font-size: 24px;
-      letter-spacing: -0.6px;
+      font-size: 1.5rem;
+      letter-spacing: -0.0375rem;
       margin-bottom: 4%;
       line-height: 1.2; }
     .we__item-text {
       opacity: 0.8;
       color: #2f3234;
-      font-family: "Ubuntu", "Arial Narrow", sans-serif;
-      font-size: 14px;
       font-weight: 300;
       line-height: 1.8; }
 
@@ -784,8 +785,7 @@ img {
     margin-bottom: 5%; }
   .team__name {
     color: #ffffff;
-    font-family: "Gagalin-Regular";
-    font-size: 14px;
+    font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
     font-weight: 400;
     cursor: pointer; }
     .team__name::before {
@@ -861,7 +861,7 @@ img {
     .team__content-title {
       text-align: left;
       font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-      font-size: 72px;
+      font-size: 4.5rem;
       color: #f9b43b;
       margin-bottom: 11%; }
 
@@ -881,11 +881,11 @@ img {
   .burgermenu__title {
     text-align: left;
     font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-    font-size: 72px;
+    font-size: 4.5rem;
     color: #fff;
     position: absolute;
-    top: 89px;
-    left: 97px; }
+    top: 12%;
+    left: 30%; }
   .burgermenu__left {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 29%;
@@ -929,7 +929,7 @@ img {
       padding: 13% 8% 0 7%; }
   .burgermenu__block {
     position: relative;
-    width: 80px;
+    width: 5rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -960,15 +960,15 @@ img {
     .burgermenu__block-title {
       text-align: left;
       font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-      font-size: 72px;
+      font-size: 4.5rem;
       color: #fff;
-      font-size: 40px;
+      font-size: 2.5rem;
       -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
       transform: rotate(-90deg);
-      -webkit-transform-origin: 3% -15% 0;
-      -ms-transform-origin: 3% -15% 0;
-      transform-origin: 3% -15% 0;
+      -webkit-transform-origin: 0.8125rem 0 0;
+      -ms-transform-origin: 0.8125rem 0 0;
+      transform-origin: 0.8125rem 0 0;
       -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
       align-self: flex-end;
@@ -1020,7 +1020,7 @@ img {
     transition: .6s;
     background-color: rgba(20, 20, 20, 0.7); }
   .reviews__wrap {
-    margin: 14% 9% 0 8%;
+    padding: 14% 9% 0 8%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1036,13 +1036,10 @@ img {
     align-items: flex-start; }
   .reviews__title {
     color: #ffffff;
-    font-family: Gagalin;
-    font-size: 14px;
-    margin-bottom: 11%; }
+    font-family: Gagalin, "Arial Narrow", sans-serif;
+    padding-bottom: 11%; }
   .reviews__text {
     color: #ffffff;
-    font-family: "Ubuntu", "Arial Narrow", sans-serif;
-    font-size: 14px;
     font-weight: 300;
     margin-bottom: 7%;
     line-height: 1.7; }
@@ -1057,8 +1054,7 @@ img {
     -o-transition: .3s;
     transition: .3s;
     padding: 11px 15px;
-    font-family: "Ubuntu", "Arial Narrow", sans-serif;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
     text-transform: uppercase; }
     .reviews__button:focus {
@@ -1134,14 +1130,12 @@ img {
   .delivery__title {
     text-align: center;
     font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-    font-size: 72px;
+    font-size: 4.5rem;
     color: #f9b43b;
     margin: 12% 0 4%; }
 
 .form {
   color: #ffffff;
-  font-family: "Ubuntu", "Arial Narrow", sans-serif;
-  font-size: 14px;
   font-weight: 300; }
   .form__content {
     display: -webkit-box;
@@ -1204,7 +1198,7 @@ img {
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
-      font-size: 13px;
+      font-size: 0.8125rem;
       padding: 10.5px 16.5px;
       margin-right: 12px;
       text-transform: uppercase; }
@@ -1222,7 +1216,6 @@ img {
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
-      font-size: 14px;
       font-weight: 300; }
       .form__block-reset:focus {
         outline: none; }
@@ -1230,8 +1223,6 @@ img {
         background-color: transparent; }
   .form__input {
     color: #2f3234;
-    font-family: "Ubuntu", "Arial Narrow", sans-serif;
-    font-size: 14px;
     font-weight: 300;
     width: 100%;
     border: 2px solid #d1cfcb;
@@ -1245,8 +1236,6 @@ img {
       border: 2px solid #f9b43b; }
     .form__input-comment {
       color: #2f3234;
-      font-family: "Ubuntu", "Arial Narrow", sans-serif;
-      font-size: 14px;
       font-weight: 300;
       width: 100%;
       border: 2px solid #d1cfcb;
@@ -1260,11 +1249,13 @@ img {
       .form__input-comment:focus {
         outline: none;
         border: 2px solid #f9b43b; }
+  .form__label {
+    white-space: nowrap; }
   .form__radio {
     display: none; }
     .form__radio-custom {
-      width: 15px;
-      height: 16px;
+      width: 0.9375rem;
+      height: 1rem;
       background-color: #ffffff;
       -webkit-border-radius: 50%;
       border-radius: 50%;
@@ -1287,8 +1278,8 @@ img {
   .form__checkbox {
     display: none; }
     .form__checkbox-custom {
-      width: 15px;
-      height: 16px;
+      width: 0.9375rem;
+      height: 1rem;
       background-color: #ffffff;
       position: relative;
       margin-right: 10px; }
@@ -1296,8 +1287,8 @@ img {
       content: "";
       display: block;
       position: absolute;
-      width: 11px;
-      height: 9px;
+      width: 0.6875rem;
+      height: 0.5625rem;
       top: 0;
       right: 0;
       bottom: 0;
@@ -1373,15 +1364,14 @@ img {
     -ms-flex-align: start;
     align-items: flex-start;
     color: #ffffff;
-    font-size: 14px;
     font-weight: 300;
     line-height: 1.7; }
     .footer__address-icon {
       content: "";
-      width: 12px;
-      height: 11px;
+      width: 0.75rem;
+      height: 0.6875rem;
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 0.625rem;
       background: url("../img/icons/phone.svg") center center no-repeat; }
     .footer__address-link {
       color: #e45028;
@@ -1419,22 +1409,22 @@ img {
     .footer__social-item:hover {
       opacity: 1; }
     .footer__social-item--vk {
-      width: 23px;
-      height: 13px;
+      width: 1.4375rem;
+      height: 0.8125rem;
       background: url("../img/icons/vk.png") center center no-repeat; }
     .footer__social-item--fb {
       background: url("../img/icons/fb.png") center center no-repeat;
-      width: 20px;
-      height: 20px; }
+      width: 1.25rem;
+      height: 1.25rem; }
     .footer__social-item--inst {
       background: url("../img/icons/inst.png") center center no-repeat;
-      width: 20px;
-      height: 20px; }
+      width: 1.25rem;
+      height: 1.25rem; }
     .footer__social-item--tw {
       background: url("../img/icons/twitter.png") center center no-repeat;
-      width: 20px;
-      height: 16px; }
+      width: 1.25rem;
+      height: 1rem; }
   .footer__social-link {
-    padding: 10px 12px;
+    padding: 0.625rem 0.75rem;
     display: block;
     font-size: 0; }

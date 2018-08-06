@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: $Ubuntu, "Arial Narrow", sans-serif;
-  font-size: 14px;
+  font-size: rem(14px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -76,10 +76,10 @@ img {
 .arrow {
   &--scroll {
     background: url('../img/hero/arrow-scroll.png') no-repeat center center;
-    width: 29px;
-    height: 14px;
+    width: rem(29px);
+    height: rem(14px);
     align-self: center;
-    margin: auto 0 43px 0;
+    margin: auto 0 5%;
   }
   &__link {
     display: block;
@@ -89,9 +89,9 @@ img {
 
 .points {
   position: fixed;
-  top: 86px;
+  top: rem(86px);
   align-self: flex-end;
-  margin-left: -46px;
+  margin-left: -2.5%;
   z-index: 100;
   &__list {
     display: flex;

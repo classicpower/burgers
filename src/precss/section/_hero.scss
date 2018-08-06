@@ -8,7 +8,7 @@
     margin-top: -11%;
   }
   &__logo {
-    flex: 0 1 450px;
+    flex: 0 1 rem(450px);
     margin: 0 11px 0 20px;
   }
   &__content {
@@ -23,9 +23,9 @@
     &-text {
       align-items: center;
       font-family: $Lifehack, "Arial Narrow", sans-serif;
-      font-size: 65px;
+      font-size: rem(65px);
       color: #fff;
-      letter-spacing: -1.63px;
+      letter-spacing: rem(-1.63px);
       line-height: 1;
     }
   }

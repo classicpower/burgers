@@ -19,8 +19,7 @@
   }
   &__name {
     color: #ffffff;
-    font-family: $Gagalin;
-    font-size: 14px;
+    font-family: $Gagalin, "Arial Narrow", sans-serif;
     font-weight: 400;
     cursor: pointer;
     &::before {

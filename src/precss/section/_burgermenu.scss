@@ -5,8 +5,8 @@
   &__title {
     @include title(#fff, left);
     position: absolute;
-    top: 89px;
-    left: 97px;
+    top: 12%;
+    left: 30%;
   }
   &__left {
     flex: 0 1 29%;
@@ -39,7 +39,7 @@
   }
   &__block {
     position: relative;
-    width: 80px;
+    width: rem(80px);
     display: flex;
     height: 100%;
     &::before {
@@ -68,9 +68,9 @@
     &-title {
       @include title (#fff,
       left);
-      font-size: 40px;
+      font-size: rem(40px);
       transform: rotate(-90deg);
-      transform-origin: 3% -15% 0;
+      transform-origin: rem(13px) 0 0;
       align-self: flex-end;
       white-space: nowrap;
     }
