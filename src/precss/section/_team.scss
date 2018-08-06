@@ -19,12 +19,7 @@
   }
   &__name {
     color: #ffffff;
-<<<<<<< HEAD
     font-family: $Gagalin, "Arial Narrow", sans-serif;
-=======
-    font-family: $Gagalin;
-    font-size: 14px;
->>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
     font-weight: 400;
     cursor: pointer;
     &::before {
@@ -55,37 +50,21 @@
   }
   &__text {
     font-weight: 300;
-<<<<<<< HEAD
     line-height: 1.7;
   }
   &__item {
     position: relative;
     margin-bottom: 10%;
-=======
-    line-height: 24.01px;
-  }
-  &__item {
-    position: relative;
-    margin-bottom: 9.7%;
->>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
     &--active {
       margin-bottom: 0;
       .team__name {
         color: $yellow;
-<<<<<<< HEAD
         margin-bottom: 5%;
-=======
-        margin-bottom: 4.73%;
->>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
       }
       .team__figure {
         height: 100%;
         visibility: visible;
-<<<<<<< HEAD
         margin-bottom: 10%;
-=======
-        margin-bottom: 11.4%;
->>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
       }
       .team__name::before {
         background: url('../img/icons/arrow-up.svg') center center no-repeat;
