@@ -58,9 +58,30 @@ img {
   display: flex;
   flex-direction: column;
 }
+.section{
+  min-height: 650px;
+}
+
+.container {
+  @include container()
+}
 
 .content {
   flex: 1;
+}
+
+.arrow {
+  &--scroll {
+    background: url('../img/hero/arrow-scroll.png') no-repeat center center;
+    width: 29px;
+    height: 14px;
+    align-self: center;
+    margin: auto 0 43px 0;
+  }
+  &__link {
+    display: block;
+    padding: 7px 15px;
+  }
 }
 
 .points {
@@ -83,7 +104,8 @@ img {
     border: 1px solid transparent;
     transition: .5s;
     z-index: 1;
-    &--current, &:hover {
+    &--current,
+    &:hover {
       border: 1px solid #fff;
     }
     &::before {
@@ -103,7 +125,7 @@ img {
       cursor: pointer;
     }
   }
-  &__link{
+  &__link {
     position: absolute;
     z-index: 2;
     display: block;

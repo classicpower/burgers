@@ -1,4 +1,4 @@
-.reviews__overlay {
+.overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -9,51 +9,31 @@
   opacity: 0;
   transition: opacity .6s;
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 9999px;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity .6s;
 }
 
 .reviews__modal {
-  position: fixed;
-  top: 50%;
-  left: 9999px;
-  right: 0;
-  bottom: 0;
-  transform: translateY(-50%);
   max-width: 460px;
   border-radius: 5px;
   background-color: #ffffff;
-  margin: 0 auto;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity .6s;
-}
-
-.burgers__overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 9999px;
-  z-index: 9000;
-  background-color: rgba(47, 50, 52, 0.92);
-  opacity: 0;
-  transition: opacity .6s;
-  cursor: pointer;
 }
 
 .burgers__modal {
-  position: fixed;
-  top: 50%;
-  left: 9999px;
-  right: 0;
-  bottom: 0;
-  transform: translateY(-50%);
   max-width: 460px;
   border-radius: 5px;
   background-color: #ffffff;
-  margin: 0 auto;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity .6s;
 }
 
 .open {

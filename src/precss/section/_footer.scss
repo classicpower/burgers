@@ -3,12 +3,16 @@
   background: url('../img/footer/footer.jpg') bottom center no-repeat;
   background-size: cover;
   &__container {
-    max-width: 940px;
-    margin: 0 auto;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 6px 0;
-    justify-content: space-between;
+  }
+  &__left, &__right{
+    flex: 0 1 50%;
+  }
+  &__right{
+    display: flex;
+    justify-content: flex-end;
   }
   &__address {
     display: flex;
@@ -19,7 +23,7 @@
     font-weight: 300;
     line-height: 24px;
     font-weight: 300;
-    &--icon {
+    &-icon {
       content: "";
       width: 12px;
       height: 11px;
@@ -27,7 +31,7 @@
       margin-right: 10px;
       background: url('../img/icons/phone.svg') center center no-repeat;
     }
-    &--link {
+    &-link {
       color: $red;
       font-weight: 700;
       display: flex;
@@ -40,40 +44,40 @@
     }
   }
   &__social {
-    &--list {
+    &-list {
       display: flex;
       align-items: center;
       margin: 0 -10px;
     }
-    &--item {
+    &-item {
       opacity: .3;
       margin: 0 10px;
       transition: opacity .6s;
       &:hover {
         opacity: 1;
       }
-      &-vk {
+      &--vk {
         width: 23px;
         height: 13px;
         background: url('../img/icons/vk.png') center center no-repeat;
       }
-      &-fb {
+      &--fb {
         background: url('../img/icons/fb.png') center center no-repeat;
         width: 20px;
         height: 20px;
       }
-      &-inst {
+      &--inst {
         background: url('../img/icons/inst.png') center center no-repeat;
         width: 20px;
         height: 20px;
       }
-      &-tw {
+      &--tw {
         background: url('../img/icons/twitter.png') center center no-repeat;
         width: 20px;
         height: 16px;
       }
     }
-    &--link{
+    &-link{
       padding: 10px 12px;
       display: block;
       font-size: 0;

@@ -1,8 +1,10 @@
-// color
+// vars
 $yellow: #f9b43b;
 $dark: #2f3234;
 $red: #e45028;
 $height: 100vh;
+$tablets: 768px;
+$mobile: 480px;
 
 //var fonts
 $Ubuntu: 'Ubuntu';
@@ -30,14 +32,13 @@ $Gagalin: 'Gagalin-Regular';
 @mixin container() {
   max-width: 940px;
   margin: 0 auto;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-@mixin btn($color,
-$bkg,
-$hover) {
+@mixin btn($color, $bkg, $hover) {
   color: $color;
   background-color: $bkg;
   border: none;
@@ -82,5 +83,26 @@ $hover) {
   &:focus{
     outline: none;
     border: 2px solid $yellow;
+  }
+}
+// Breakpoints  
+// @mixin desktop {
+//   @media screen and (max-width: 1200px){
+//     @content;
+//   }
+// }
+// @mixin desktop {
+//   @media screen and (max-width: 992px){
+//     @content;
+//   }
+// }
+@mixin tablets {
+  @media screen and (max-width: $tablets){
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile){
+    @content;
   }
 }

@@ -3,51 +3,97 @@
   align-items: center;
   padding-top: 12px;
   justify-content: space-between;
-  &__menu {
-    margin-left: 7%;
-    &--list {
-      display: flex;
-      align-items: center;
-      font-size: 13px;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin: 0 5px;
+  &__button {
+    @include btn(#fff, $red, #c1401e);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10.5px 16.5px;
+  }
+}
+
+.logo {
+  flex: 1;
+  svg {
+    max-width: 95%;
+  }
+  &__img {
+    height: 75px;
+  }
+}
+
+.menu {
+  flex: 1;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &__item {
+    margin-right: 2%; // &::after {
+    //   content: "";
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   white-space: nowrap;
+    //   width: 4px;
+    //   height: 4px;
+    //   border-radius: 50%;
+    //   margin: 0 11px;
+    // //   background-color: #fff;
+    // // }
+    // &:last-child::after {
+    //   display: none;
+    // }
+  }
+  &__link {
+    position: relative;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .8;
     }
-    &--item {
-      white-space: nowrap;
-      &::after {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        white-space: nowrap;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        margin: 0 11px;
-        background-color: #fff;
-      }
-      &:last-child::after {
-        display: none;
-      }
+  }
+}
+
+.hamburger-menu {
+  &__link {
+    position: relative;
+    display: none;
+    height: 22px;
+    margin-left: 30px;
+    align-items: center;
+    opacity: 1;
+    &:hover {
+      opacity: .8;
     }
-    &--link {
-      position: relative;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-      opacity: 1;
-      transition: opacity .3s;
-      &:hover{
-        opacity: .8;
-      }
+  }
+  &__bars {
+    &,
+    &::before,
+    &::after {
+      background-color: #fff;
+      width: 24px;
+      height: 5px;
+      border-radius: 3px;
     }
-    &--button {
-      @include btn(#fff, $red, #c1401e);
-      font-size: 13px;
-      text-transform: uppercase;
-      font-weight: 500;
-      padding: 10.5px 16.5px;
-      margin: 0 15px;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
     }
   }
 }

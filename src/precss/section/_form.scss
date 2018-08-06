@@ -1,8 +1,5 @@
 .delivery {
   @include section('../img/form/form.jpg');
-  .container {
-    @include container();
-  }
   &__title {
     @include title($yellow, center);
     margin: 12% 0 4%;
@@ -10,6 +7,11 @@
 }
 
 .form {
+  color: #ffffff;
+  font-family: $Ubuntu, "Arial Narrow", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
   &__content {
     display: flex;
     margin: 0 -10px;
@@ -19,13 +21,6 @@
     width: 50%;
     margin: 0 10px;
   }
-  color: #ffffff;
-  font-family: $Ubuntu,
-  "Arial Narrow",
-  sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
   &__row {
     display: flex;
     margin-bottom: 12px;
@@ -36,22 +31,27 @@
     &:last-child {
       margin-right: 0;
     }
-    &--title{
+    &--flex0{
+      flex: 0;
+      display: flex;
+      align-items: center;
+    }
+    &-title {
       margin-bottom: 1%;
     }
-    &--checked{
+    &--checked {
       display: flex;
       align-items: center;
       flex: 0 1 32%;
     }
-    &--submit{
+    &-submit {
       @include btn(#fff, $red, #c1401e);
       font-size: 13px;
       padding: 10.5px 16.5px;
       margin-right: 12px;
       text-transform: uppercase;
     }
-    &--reset{
+    &-reset {
       @include btn(#fff, transparent, transparent);
       font-size: 14px;
       font-weight: 300;
@@ -59,7 +59,7 @@
   }
   &__input {
     @include input();
-    &--comment {
+    &-comment {
       @include input();
       min-height: 110px;
       resize: none;
@@ -67,7 +67,7 @@
   }
   &__radio {
     display: none;
-    &--custom {
+    &-custom {
       width: 15px;
       height: 16px;
       background-color: #ffffff;
@@ -75,7 +75,7 @@
       position: relative;
       margin-right: 10px;
     }
-    &:checked+&--custom::before {
+    &:checked+&-custom::before {
       content: "";
       display: block;
       position: absolute;
@@ -92,14 +92,14 @@
   }
   &__checkbox {
     display: none;
-    &--custom {
+    &-custom {
       width: 15px;
       height: 16px;
       background-color: #ffffff;
       position: relative;
       margin-right: 10px;
     }
-    &:checked+&--custom::before {
+    &:checked+&-custom::before {
       content: "";
       display: block;
       position: absolute;
