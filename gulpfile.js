@@ -2,7 +2,8 @@ const
     gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    cssunit = require('gulp-css-unit');
 // cleanCSS = require('gulp-clean-css'),
 // gcmq = require('gulp-group-css-media-queries'),
 // sourcemaps = require('gulp-sourcemaps'),
@@ -38,6 +39,10 @@ gulp.task('build', function () {
         //     level: 2
         // }))
         // .pipe(sourcemaps.write('.'))
+        .pipe(cssunit({
+            type     :    'px-to-rem',
+            rootSize :    16
+        }))
         .pipe(gulp.dest(config.src + config.css.dest))
         .pipe(browserSync.reload({
             stream: true

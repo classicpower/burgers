@@ -76,10 +76,17 @@ img {
 .arrow {
   &--scroll {
     background: url('../img/hero/arrow-scroll.png') no-repeat center center;
+<<<<<<< HEAD
     width: rem(29px);
     height: rem(14px);
     align-self: center;
     margin: auto 0 5%;
+=======
+    width: 29px;
+    height: 14px;
+    align-self: center;
+    margin: auto 0 43px 0;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
   }
   &__link {
     display: block;

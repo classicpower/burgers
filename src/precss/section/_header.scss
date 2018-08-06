@@ -5,7 +5,11 @@
   justify-content: space-between;
   &__button {
     @include btn(#fff, $red, #c1401e);
+<<<<<<< HEAD
     font-size: rem(13px);
+=======
+    font-size: 13px;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
     text-transform: uppercase;
     font-weight: 500;
     padding: 10.5px 16.5px;
@@ -18,7 +22,11 @@
     max-width: 95%;
   }
   &__img {
+<<<<<<< HEAD
     height: rem(75px);
+=======
+    height: 75px;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
   }
 }
 
@@ -28,7 +36,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+<<<<<<< HEAD
     font-size: rem(13px);
+=======
+    font-size: 13px;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
     text-transform: uppercase;
     font-weight: 500;
   }
@@ -65,8 +77,13 @@
 .hamburger-menu {
   &__link {
     position: relative;
+<<<<<<< HEAD
     display: flex;
     height: rem(22px);
+=======
+    display: none;
+    height: 22px;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
     margin-left: 30px;
     align-items: center;
     opacity: 1;
@@ -79,8 +96,13 @@
     &::before,
     &::after {
       background-color: #fff;
+<<<<<<< HEAD
       width: rem(24px);
       height: rem(5px);
+=======
+      width: 24px;
+      height: 5px;
+>>>>>>> 935716be55f6cb0cc43be79248c90a148823c9a3
       border-radius: 3px;
     }
     &::before,
