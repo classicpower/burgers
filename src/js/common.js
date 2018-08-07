@@ -53,21 +53,44 @@ $(function () {
     });
 
     /**АККОРДЕОН**/
+    // TEAM SECTION
     var $teamItem = $(".team__item"),
-        $burgerItem = $('.burgermenu__item');
-    // $teamName = $(".team__content--item .team__content--item-name"),
-    // $teamContent = $(".team__content--item .team__content--item-figure");
+        $burgerItem = $('.burgermenu__item'),
+        $burgerLeft = $('.burgermenu__left'),
+        $burgerRight = $('.burgermenu__right');
 
     $teamItem.on('click', function () {
         var item = $(this);
-        item.toggleClass("team__item--active")
+        item.toggleClass('team__item--active')
             .siblings()
-            .removeClass("team__item--active")
+            .removeClass('team__item--active')
     })
+    // BURGERMENU SECTION
     $burgerItem.on('click', function () {
         var item = $(this);
-        item.toggleClass("burgermenu__item--active")
+        var scrWidth = window.innerWidth;
+        console.log(scrWidth);
+        item.toggleClass('burgermenu__item--active')
             .siblings()
-            .removeClass("burgermenu__item--active")
+            .removeClass('burgermenu__item--active');
+        if (scrWidth < 769 &&
+            scrWidth > 481 ||
+            item.hasClass('burgermenu__item--active')) {
+            $burgerLeft.addClass('burgermenu__left--hide');
+            $burgerRight.addClass('burgermenu__right--show');
+        }
+        if (scrWidth < 480 &&
+            item.hasClass('burgermenu__item--active')) {
+            $burgerLeft.addClass('burgermenu__left--hide');
+            $burgerRight.addClass('burgermenu__right--show');
+            item.siblings().toggle();
+
+        }
+        else {
+            $burgerLeft.removeClass('burgermenu__left--hide');
+            $burgerRight.removeClass('burgermenu__right--show');
+            item.siblings().add();
+        }
+
     })
 });

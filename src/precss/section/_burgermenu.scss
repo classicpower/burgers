@@ -9,15 +9,25 @@
     left: 30%;
   }
   &__left {
-    flex: 0 1 29%;
+    width: 30%;
     height: 100%;
     position: relative;
+    z-index: 0;
+    &--hide{
+      width: 0;
+      visibility: hidden;
+    }
   }
   &__right {
-    flex: 0 1 71%;
+    width: 70%;
     display: flex;
     justify-content: flex-end;
     height: 100%;
+    z-index: 100;
+    &--show{
+      width: 100%;
+      visibility: visible;
+    }
   }
   &__list {
     display: flex;
@@ -34,6 +44,15 @@
         transition: width 1s ease;
         visibility: visible;
         padding: 13% 8% 0 7%;
+        position: relative;
+        @include mobile(){
+          &::before{
+            content: "X";
+            position: absolute;
+            top: 30px;
+            right: 30px;
+          }
+        }
       }
     }
   }
