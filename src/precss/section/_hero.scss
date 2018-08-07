@@ -1,31 +1,57 @@
 .hero {
   @include section('../img/hero/hero.jpg');
   &__wrap {
-    height: 100%;
+    flex: 1;
     display: flex;
     align-items: center;
     margin-top: -11%;
+    @include tablets() {
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+    }
   }
   &__logo {
     flex: 0 1 55%;
     margin: 0 2% 0 4%;
+    @include tablets() {
+      flex: 0 1 auto;
+      margin: 0;
+    }
+    &-img {
+      @include tablets() {
+        max-width: 95%;
+        margin: 0 auto;
+      }
+      @include mobile() {
+        max-width: 80%;
+      }
+    }
   }
   &__content {
     flex: 0 1 39%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include tablets() {
+      flex: 0 1 auto;
+    }
     &-title {
       @include title($yellow, left);
-      margin: 17% 0 3%;
+      margin: 0 0 3%;
+      @include tablets() {
+        text-align: center;
+      }
     }
     &-text {
-      align-items: center;
       font-family: $Lifehack, "Arial Narrow", sans-serif;
       font-size: rem(65px);
       color: #fff;
       letter-spacing: rem(-1.63px);
       line-height: 1;
+      @include tablets() {
+        text-align: center;
+      }
     }
   }
 }
