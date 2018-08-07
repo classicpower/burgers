@@ -6,8 +6,7 @@
   }
   &__title {
     @include title($dark, center);
-    line-height: 64.05px;
-    margin: 122px 0 56px;
+    margin: 11% 0 4%;
   }
   &__list {
     display: flex;
@@ -23,7 +22,7 @@
     &-img {
       height: 89px;
       width: 100%;
-      margin-bottom: 28px;
+      margin-bottom: 8%;
       &--meat {
         background: url('../img/icons/meat.svg') center center no-repeat;
       }
@@ -37,18 +36,16 @@
     &-title {
       color: $dark;
       font-family: $Lifehack, "Arial Narrow", sans-serif;
-      font-size: 24px;
-      line-height: 28.14px;
-      letter-spacing: -0.6px;
-      margin-bottom: 15px;
+      font-size: rem(24px);
+      letter-spacing: rem(-0.6px);
+      margin-bottom: 4%;
+      line-height: 1.2;
     }
     &-text {
       opacity: 0.8;
       color: $dark;
-      font-family: $Ubuntu, "Arial Narrow", sans-serif;
-      font-size: 14px;
       font-weight: 300;
-      line-height: 24.07px;
+      line-height: 1.8;
     }
   }
 }

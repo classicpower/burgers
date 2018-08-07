@@ -66,15 +66,12 @@ $Gagalin: 'Gagalin-Regular';
 @mixin title ($color, $align){
   text-align: $align;
   font-family: $Gagalin, "Arial Narrow", sans-serif;
-  font-size: 72px;
+  font-size: rem(72px);
   color: $color;
 }
 @mixin input(){
   color: $dark;
-  font-family: $Ubuntu, "Arial Narrow", sans-serif;
-  font-size: 14px;
   font-weight: 300;
-  line-height: 24px;
   width: 100%;
   border: 2px solid #d1cfcb;
   padding: 5px 0 5px 21px;
@@ -85,17 +82,13 @@ $Gagalin: 'Gagalin-Regular';
     border: 2px solid $yellow;
   }
 }
+
+// PX to REM function
+@function rem($px: 16px) {
+  @return ($px / 16px) + rem;
+}
+
 // Breakpoints  
-// @mixin desktop {
-//   @media screen and (max-width: 1200px){
-//     @content;
-//   }
-// }
-// @mixin desktop {
-//   @media screen and (max-width: 992px){
-//     @content;
-//   }
-// }
 @mixin tablets {
   @media screen and (max-width: $tablets){
     @content;

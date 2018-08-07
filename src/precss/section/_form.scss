@@ -8,10 +8,7 @@
 
 .form {
   color: #ffffff;
-  font-family: $Ubuntu, "Arial Narrow", sans-serif;
-  font-size: 14px;
   font-weight: 300;
-  line-height: 24px;
   &__content {
     display: flex;
     margin: 0 -10px;
@@ -46,14 +43,13 @@
     }
     &-submit {
       @include btn(#fff, $red, #c1401e);
-      font-size: 13px;
+      font-size: rem(13px);
       padding: 10.5px 16.5px;
       margin-right: 12px;
       text-transform: uppercase;
     }
     &-reset {
       @include btn(#fff, transparent, transparent);
-      font-size: 14px;
       font-weight: 300;
     }
   }
@@ -65,11 +61,14 @@
       resize: none;
     }
   }
+  &__label{
+    white-space: nowrap;
+  }
   &__radio {
     display: none;
     &-custom {
-      width: 15px;
-      height: 16px;
+      width: rem(15px);
+      height: rem(16px);
       background-color: #ffffff;
       border-radius: 50%;
       position: relative;
@@ -93,8 +92,8 @@
   &__checkbox {
     display: none;
     &-custom {
-      width: 15px;
-      height: 16px;
+      width: rem(15px);
+      height: rem(16px);
       background-color: #ffffff;
       position: relative;
       margin-right: 10px;
@@ -103,8 +102,8 @@
       content: "";
       display: block;
       position: absolute;
-      width: 11px;
-      height: 9px;
+      width: rem(11px);
+      height: rem(9px);
       top: 0;
       right: 0;
       bottom: 0;

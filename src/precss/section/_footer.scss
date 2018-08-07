@@ -19,16 +19,14 @@
     flex-direction: column;
     align-items: flex-start;
     color: #ffffff;
-    font-size: 14px;
     font-weight: 300;
-    line-height: 24px;
-    font-weight: 300;
+    line-height: 1.7;
     &-icon {
       content: "";
-      width: 12px;
-      height: 11px;
+      width: rem(12px);
+      height: rem(11px);
       display: inline-block;
-      margin-right: 10px;
+      margin-right: rem(10px);
       background: url('../img/icons/phone.svg') center center no-repeat;
     }
     &-link {
@@ -57,28 +55,28 @@
         opacity: 1;
       }
       &--vk {
-        width: 23px;
-        height: 13px;
+        width: rem(23px);
+        height: rem(13px);
         background: url('../img/icons/vk.png') center center no-repeat;
       }
       &--fb {
         background: url('../img/icons/fb.png') center center no-repeat;
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
       }
       &--inst {
         background: url('../img/icons/inst.png') center center no-repeat;
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
       }
       &--tw {
         background: url('../img/icons/twitter.png') center center no-repeat;
-        width: 20px;
-        height: 16px;
+        width: rem(20px);
+        height: rem(16px);
       }
     }
     &-link{
-      padding: 10px 12px;
+      padding: rem(10px) rem(12px);
       display: block;
       font-size: 0;
     }
