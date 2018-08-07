@@ -13,15 +13,27 @@
     right: 0;
     display: flex;
     align-items: center;
+    @include tablets() {
+      width: 100%;
+    }
   }
   &__list {
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: column; // @include tablets(){
+    //   justify-content: center;
+    //   align-items: center;
+    // }
   }
   &__name {
     color: #ffffff;
     font-family: $Gagalin, "Arial Narrow", sans-serif;
     font-weight: 400;
     cursor: pointer;
+    @include tablets() {
+      text-align: center;
+      font-size: rem(25px);
+    }
     &::before {
       content: "";
       background: url('../img/icons/arrow-down.svg') center center no-repeat;
@@ -35,18 +47,31 @@
     height: 0;
     visibility: hidden;
     display: flex;
+    @include tablets() {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__clip {
     clip-path: circle(42% at 53% 48%);
+    @include tablets() {
+      clip-path: circle(42% at 53% 49%);
+      margin-bottom: 4%;
+    }
   }
   &__figcaption {
     flex: 1;
     color: #ffffff;
-
+    @include tablets() {
+      text-align: center;
+    }
   }
   &__prof {
     font-weight: 700;
     margin-bottom: 7%;
+    @include tablets() {
+      margin-bottom: 4%;
+    }
   }
   &__text {
     font-weight: 300;
@@ -65,6 +90,9 @@
         height: 100%;
         visibility: visible;
         margin-bottom: 10%;
+        @include tablets() {
+          margin-bottom: 8%;
+        }
       }
       .team__name::before {
         background: url('../img/icons/arrow-up.svg') center center no-repeat;
@@ -82,10 +110,20 @@
       display: flex;
       flex-direction: column;
       margin-left: 5%;
+      @include tablets() {
+        margin-left: 0;
+      }
     }
     &-title {
-      @include title($yellow, left);
+      @include title($yellow,
+      left);
       margin-bottom: 11%;
+      @include tablets() {
+        text-align: center;
+      }
+      @include mobile() {
+        font-size: rem(60px);
+      }
     }
   }
 }
