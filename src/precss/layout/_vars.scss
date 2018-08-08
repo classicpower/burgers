@@ -68,6 +68,9 @@ $Gagalin: 'Gagalin-Regular';
   font-family: $Gagalin, "Arial Narrow", sans-serif;
   font-size: rem(72px);
   color: $color;
+  @include mobile() {
+    font-size: rem(65px);
+  }
 }
 @mixin input(){
   color: $dark;
