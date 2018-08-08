@@ -32,7 +32,8 @@ $Gagalin: 'Gagalin-Regular';
 @mixin container() {
   max-width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   flex-direction: column;
   height: 100%;

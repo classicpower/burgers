@@ -1,11 +1,12 @@
-html{
-  @include tablets(){
+html {
+  @include tablets() {
     font-size: 15px;
   }
-  @include mobile(){
+  @include mobile() {
     font-size: 14px;
   }
 }
+
 body,
 html {
   width: 100%;
@@ -18,6 +19,11 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input {
+  font: 400 rem(14px) $Ubuntu, "Arial Narrow", sans-serif;
 }
 
 ul {
@@ -67,7 +73,8 @@ img {
   display: flex;
   flex-direction: column;
 }
-.section{
+
+.section {
   min-height: 650px;
 }
 

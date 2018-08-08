@@ -5,7 +5,8 @@
   &__container {
     flex-direction: row;
     align-items: center;
-    padding: 6px 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   &__left, &__right{
     flex: 0 1 50%;

@@ -79,10 +79,10 @@ $(function () {
             .removeClass('team__item--active')
     })
     // BURGERMENU SECTION
+    
     $burgerItem.on('click', function () {
-        var item = $(this);
         var scrWidth = window.innerWidth;
-        console.log(scrWidth);
+        var item = $(this);
         item.toggleClass('burgermenu__item--active')
             .siblings()
             .removeClass('burgermenu__item--active');
@@ -104,6 +104,17 @@ $(function () {
             $burgerRight.removeClass('burgermenu__right--show');
             item.siblings().add();
         }
+    })
 
+    var $reviewsButton = $('.reviews__button');
+    console.log($reviewsButton);
+    $(window).resize(function () {
+        var scrWidth = window.innerWidth;
+        console.log(scrWidth);
+        if (scrWidth < 480) {
+            $reviewsButton.html('Читать отзыв')
+        }else{
+            $reviewsButton.html('Подробнее')
+        }
     })
 });

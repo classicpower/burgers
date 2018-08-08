@@ -436,6 +436,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button,
+input {
+  font: 400 0.875rem "Ubuntu", "Arial Narrow", sans-serif;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -498,7 +503,8 @@ img {
 .container {
   max-width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1282,6 +1288,7 @@ img {
 
 .reviews__figcaption {
   position: absolute;
+  width: 100%;
   top: 0;
   left: -9999;
   height: 100%;
@@ -1313,6 +1320,7 @@ img {
   color: #ffffff;
   font-family: Gagalin, "Arial Narrow", sans-serif;
   padding-bottom: 11%;
+  text-align: center;
 }
 
 .reviews__text {
@@ -1682,7 +1690,8 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 6px 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .footer__left,
@@ -2043,6 +2052,24 @@ img {
   .team__content-title {
     text-align: center;
   }
+
+  .reviews__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+  }
+
+  .reviews__wrap {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .reviews__text {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2122,6 +2149,14 @@ img {
     position: absolute;
     top: 30px;
     right: 30px;
+  }
+
+  .reviews__title {
+    font-size: 1.5rem;
+  }
+
+  .reviews__text {
+    display: none;
   }
 
   .delivery__title {
