@@ -43,13 +43,14 @@ $(function () {
     }
 
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-    $('.menu--link, .button, .points__link, .arrow__link').on('click', function (e) {
+    $('.menu__link, .button, .points__link, .arrow__link, .fixed-menu__link').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this)
                 .attr('href'))
                 .offset().top
         }, 700, 'linear');
+        $fixedMenu.removeClass('fixed-menu--open')
     });
 
     // OPEM/CLOSE MOBILE MENU
