@@ -785,6 +785,7 @@ img {
   -webkit-flex: 0 1 39%;
   -ms-flex: 0 1 39%;
   flex: 0 1 39%;
+  max-width: 95%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2052,7 +2053,15 @@ img {
   }
 
   .hero__logo-img {
-    max-width: 80%;
+    max-width: 75%;
+  }
+
+  .hero__content-title {
+    font-size: 4.0625rem;
+  }
+
+  .hero__content-text {
+    font-size: 3.125rem;
   }
 
   .we__list {
