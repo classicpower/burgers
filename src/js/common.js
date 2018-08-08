@@ -108,7 +108,7 @@ $(function () {
 
     var $reviewsButton = $('.reviews__button');
     console.log($reviewsButton);
-    $(window).resize(function () {
+    $(window).on('resize load',function () {
         var scrWidth = window.innerWidth;
         console.log(scrWidth);
         if (scrWidth < 480) {
