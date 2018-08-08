@@ -52,6 +52,18 @@ $(function () {
         }, 700, 'linear');
     });
 
+    // OPEM/CLOSE MOBILE MENU
+    var $hamburger = $('.hamburger-menu__link'),
+        $fixedMenu = $('.fixed-menu'),
+        $closeMenu = $('.fixed-menu__close');
+    $hamburger.on('click', function (e) {
+        e.preventDefault();
+        $fixedMenu.addClass('fixed-menu--open')
+    });
+    $closeMenu.on('click', function () {
+        $fixedMenu.removeClass('fixed-menu--open')
+    });
+
     /**АККОРДЕОН**/
     // TEAM SECTION
     var $teamItem = $(".team__item"),
