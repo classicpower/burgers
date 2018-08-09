@@ -1065,10 +1065,18 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
 }
 
 .burgers__structure:hover {
   opacity: 1;
+}
+
+.burgers__structure:hover .burgers__weight {
+  left: 90px;
+  opacity: .9;
 }
 
 .burgers__structure-img {
@@ -1087,6 +1095,126 @@ img {
   font-size: 0.875rem;
 }
 
+.burgers__weight {
+  width: 270px;
+  height: 332px;
+  background-color: #ffffff;
+  opacity: 0;
+  z-index: 100;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.burgers__weight-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.burgers__weight-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.burgers__weight-picture {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 90px;
+  -ms-flex: 0 1 90px;
+  flex: 0 1 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.burgers__weight-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.burgers__weight-img--beef {
+  width: 44px;
+  height: 39px;
+  background-image: url("../img/icons/beef.svg");
+}
+
+.burgers__weight-img--buns {
+  width: 48px;
+  height: 30px;
+  background-image: url("../img/icons/buns.svg");
+}
+
+.burgers__weight-img--salad {
+  width: 38px;
+  height: 38px;
+  background-image: url("../img/icons/salad.svg");
+}
+
+.burgers__weight-img--sauce {
+  width: 41px;
+  height: 43px;
+  background-image: url("../img/icons/sauce.svg");
+}
+
+.burgers__weight-img--cucumber {
+  width: 43px;
+  height: 37px;
+  background-image: url("../img/icons/cucumber.svg");
+}
+
+.burgers__weight-img--cheese {
+  width: 39px;
+  height: 34px;
+  background-image: url("../img/icons/cheese.svg");
+}
+
+.burgers__weight-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+}
+
+.burgers__weight-quantity {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 53px;
+  -ms-flex: 0 1 53px;
+  flex: 0 1 53px;
+  font-weight: 300;
+}
+
 .burgers__calories {
   position: absolute;
   bottom: -50px;
@@ -1097,10 +1225,6 @@ img {
   background-image: url("../img/icons/kkal.svg");
   background-position: center center;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .burgers__calories-title {
@@ -1108,23 +1232,20 @@ img {
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   font-size: 4.5rem;
   color: #fff;
-  opacity: 0.5;
   color: #ffffff;
   font-size: 1.25rem;
   position: absolute;
-  top: 0;
+  top: 25px;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .burgers__calories-title::after {
   content: "ккал";
   display: block;
+  padding-top: 10px;
+  font-size: 0.875rem;
 }
 
 .burgers__content {

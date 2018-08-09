@@ -60,8 +60,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: opacity .5s;
     &:hover {
       opacity: 1;
+      .burgers__weight {
+        left: 90px;
+        opacity: .9;
+      }
     }
     &-img {
       width: 46px;
@@ -76,6 +81,77 @@
       font-size: rem(14px);
     }
   }
+  &__weight {
+    width: 270px;
+    height: 332px;
+    background-color: #ffffff;
+    opacity: 0;
+    z-index: 100;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    transition: opacity .5s;
+    &-list{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+    &-picture{
+      flex: 0 1 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      &--beef{
+        width: 44px;
+        height: 39px;
+        background-image: url('../img/icons/beef.svg');
+      }
+      &--buns{
+        width: 48px;
+        height: 30px;
+        background-image: url('../img/icons/buns.svg');
+      }
+      &--salad{
+        width: 38px;
+        height: 38px;
+        background-image: url('../img/icons/salad.svg');
+      }
+      &--sauce{
+        width: 41px;
+        height: 43px;
+        background-image: url('../img/icons/sauce.svg');
+      }
+      &--cucumber{
+        width: 43px;
+        height: 37px;
+        background-image: url('../img/icons/cucumber.svg');
+      }
+      &--cheese{
+        width: 39px;
+        height: 34px;
+        background-image: url('../img/icons/cheese.svg');
+      }
+    }
+    &-title{
+      flex: 1;
+      text-align: left;
+      font-weight: 500;
+    }
+    &-quantity{
+      flex: 0 1 53px;
+      font-weight: 300;
+    }
+  }
   &__calories {
     position: absolute;
     bottom: -50px;
@@ -86,22 +162,21 @@
     background-image: url('../img/icons/kkal.svg');
     background-position: center center;
     background-repeat: no-repeat;
-    display: flex;
     &-title {
-      @include title(#fff, center);
-      opacity: 0.5;
+      @include title(#fff,
+      center);
       color: #ffffff;
       font-size: rem(20px);
       position: absolute;
-      top: 0;
+      top: 25px;
       left: 0;
       right: 0;
       bottom: 0;
-      height: 50%;
-      transform: translateY(-50%);
       &::after {
         content: "ккал";
         display: block;
+        padding-top: 10px;
+        font-size: rem(14px);
       }
     }
   }

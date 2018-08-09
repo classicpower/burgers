@@ -86,23 +86,20 @@ $(function () {
         item.toggleClass('burgermenu__item--active')
             .siblings()
             .removeClass('burgermenu__item--active');
-        if (scrWidth < 769 ||
-            scrWidth > 481 ||
+        if (scrWidth < 769 &&
+            scrWidth > 481 &&
             item.hasClass('burgermenu__item--active')) {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');
         }
-        if (scrWidth < 480 ||
-            item.hasClass('burgermenu__item--active')) {
+        if (scrWidth < 480 ) {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');
             item.siblings().toggle();
-
         }
         else {
             $burgerLeft.removeClass('burgermenu__left--hide');
             $burgerRight.removeClass('burgermenu__right--show');
-            item.siblings().add();
         }
     })
 
