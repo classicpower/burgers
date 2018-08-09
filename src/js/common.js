@@ -86,13 +86,13 @@ $(function () {
         item.toggleClass('burgermenu__item--active')
             .siblings()
             .removeClass('burgermenu__item--active');
-        if (scrWidth < 769 &&
+        if (scrWidth < 769 ||
             scrWidth > 481 ||
             item.hasClass('burgermenu__item--active')) {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');
         }
-        if (scrWidth < 480 &&
+        if (scrWidth < 480 ||
             item.hasClass('burgermenu__item--active')) {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');

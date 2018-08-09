@@ -71,9 +71,38 @@
       background-repeat: no-repeat;
     }
     &-title {
-      @include title(#fff, center);
+      @include title(#fff,
+      center);
       font-size: rem(14px);
-
+    }
+  }
+  &__calories {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    opacity: .4;
+    width: 60px;
+    height: 60px;
+    background-image: url('../img/icons/kkal.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    &-title {
+      @include title(#fff, center);
+      opacity: 0.5;
+      color: #ffffff;
+      font-size: rem(20px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50%;
+      transform: translateY(-50%);
+      &::after {
+        content: "ккал";
+        display: block;
+      }
     }
   }
   &__content {

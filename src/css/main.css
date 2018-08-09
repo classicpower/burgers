@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -1083,6 +1085,46 @@ img {
   font-size: 4.5rem;
   color: #fff;
   font-size: 0.875rem;
+}
+
+.burgers__calories {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  opacity: .4;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/icons/kkal.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.burgers__calories-title {
+  text-align: center;
+  font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+  font-size: 4.5rem;
+  color: #fff;
+  opacity: 0.5;
+  color: #ffffff;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.burgers__calories-title::after {
+  content: "ккал";
+  display: block;
 }
 
 .burgers__content {
@@ -2383,6 +2425,10 @@ img {
   }
 
   .burgers__structure-title {
+    font-size: 4.0625rem;
+  }
+
+  .burgers__calories-title {
     font-size: 4.0625rem;
   }
 
