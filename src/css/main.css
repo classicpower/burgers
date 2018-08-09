@@ -1027,12 +1027,69 @@ img {
   align-items: center;
 }
 
-.burgers__logo,
+.burgers__logo {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 52%;
+  -ms-flex: 0 1 52%;
+  flex: 0 1 52%;
+  position: relative;
+}
+
+.burgers__structure {
+  position: absolute;
+  top: -77px;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  background-color: #e45028;
+  opacity: .4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.burgers__structure:hover {
+  opacity: 1;
+}
+
+.burgers__structure-img {
+  width: 46px;
+  height: 44px;
+  background-image: url("../img/icons/burger.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.burgers__structure-title {
+  text-align: center;
+  font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+  font-size: 4.5rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
 .burgers__content {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 50%;
-  -ms-flex: 0 1 50%;
-  flex: 0 1 50%;
+  -webkit-flex: 0 1 48%;
+  -ms-flex: 0 1 48%;
+  flex: 0 1 48%;
 }
 
 .burgers__title {
@@ -1066,7 +1123,7 @@ img {
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   font-size: 4.5rem;
   color: #e45028;
-  letter-spacing: -1.25px;
+  letter-spacing: -0.11188rem;
   margin-right: 30px;
   line-height: 1;
 }
@@ -1074,6 +1131,7 @@ img {
 .burgers__price-rub {
   font-size: 1.875rem;
   margin-left: -10px;
+  letter-spacing: -0.04688rem;
 }
 
 .burgers__button {
@@ -1089,7 +1147,7 @@ img {
   font-size: 0.8125rem;
   text-transform: uppercase;
   font-weight: 500;
-  padding: 9px 15px;
+  padding: 10.5px 16px;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -2322,6 +2380,10 @@ img {
     margin-right: 2%;
     -webkit-background-size: 90% 90%;
     background-size: 90% 90%;
+  }
+
+  .burgers__structure-title {
+    font-size: 4.0625rem;
   }
 
   .burgers__title {

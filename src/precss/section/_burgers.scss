@@ -42,9 +42,42 @@
     display: flex;
     align-items: center;
   }
-  &__logo,
+  &__logo {
+    flex: 0 1 52%;
+    position: relative;
+  }
+  &__structure {
+    position: absolute;
+    top: -77px;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background-color: $red;
+    opacity: .4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &-img {
+      width: 46px;
+      height: 44px;
+      background-image: url('../img/icons/burger.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &-title {
+      @include title(#fff, center);
+      font-size: rem(14px);
+
+    }
+  }
   &__content {
-    flex: 0 1 50%;
+    flex: 0 1 48%;
   }
   &__title {
     @include title(#fff,
@@ -64,12 +97,13 @@
   &__price {
     @include title($red,
     center);
-    letter-spacing: -1.25px;
+    letter-spacing: rem(-1.79px);
     margin-right: 30px;
     line-height: 1;
     &-rub {
       font-size: rem(30px);
       margin-left: -10px;
+      letter-spacing: rem(-0.75px);
     }
   }
   &__button {
@@ -79,7 +113,7 @@
     font-size: rem(13px);
     text-transform: uppercase;
     font-weight: 500;
-    padding: 9px 15px;
+    padding: 10.5px 16px;
     align-self: flex-end;
   }
 }
