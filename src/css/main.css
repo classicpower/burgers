@@ -1508,6 +1508,10 @@ img {
   background-color: rgba(47, 50, 52, 0.93);
 }
 
+.burgermenu__close {
+  display: none;
+}
+
 .reviews {
   height: 650px;
 }
@@ -2453,9 +2457,10 @@ img {
   }
 
   .burgermenu__item--active .burgermenu__close {
+    display: block;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
   }
 
   .burgermenu__item--active .burgermenu__close::before,

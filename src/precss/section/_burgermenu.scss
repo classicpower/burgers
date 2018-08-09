@@ -48,9 +48,10 @@
       }
       .burgermenu__close {
         @include mobile() {
+          display: block;
           position: absolute;
-          top: 30px;
-          right: 30px;
+          top: 20px;
+          right: 20px;
           &::before,
           &::after {
             height: 24px;
@@ -104,5 +105,8 @@
     font-weight: 300;
     padding: 0;
     background-color: rgba(47, 50, 52, 0.93);
+  }
+  &__close{
+    display: none;
   }
 }
