@@ -13,7 +13,7 @@
     height: 100%;
     position: relative;
     z-index: 0;
-    &--hide{
+    &--hide {
       width: 0;
       visibility: hidden;
     }
@@ -24,7 +24,7 @@
     justify-content: flex-end;
     height: 100%;
     z-index: 100;
-    &--show{
+    &--show {
       width: 100%;
       visibility: visible;
     }
@@ -45,12 +45,15 @@
         visibility: visible;
         padding: 13% 8% 0 7%;
         position: relative;
-        @include mobile(){
-          &::before{
-            content: "X";
-            position: absolute;
-            top: 30px;
-            right: 30px;
+      }
+      .burgermenu__close {
+        @include mobile() {
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          &::before,
+          &::after {
+            height: 24px;
           }
         }
       }

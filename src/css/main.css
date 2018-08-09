@@ -2452,11 +2452,15 @@ img {
     font-size: 4.0625rem;
   }
 
-  .burgermenu__item--active .burgermenu__text::before {
-    content: "X";
+  .burgermenu__item--active .burgermenu__close {
     position: absolute;
     top: 30px;
     right: 30px;
+  }
+
+  .burgermenu__item--active .burgermenu__close::before,
+  .burgermenu__item--active .burgermenu__close::after {
+    height: 24px;
   }
 
   .reviews__title {
