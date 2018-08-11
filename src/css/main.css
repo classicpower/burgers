@@ -1030,10 +1030,6 @@ img {
 }
 
 .burgers__logo-img {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
   margin: 0 auto;
 }
 
@@ -1208,6 +1204,9 @@ img {
 
 .burgers__calories {
   opacity: .4;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   position: relative;
 }
 
@@ -1390,8 +1389,8 @@ img {
 .team__name::before {
   content: "";
   background: url("../img/icons/sprite.svg#arrow-down-view") center center no-repeat;
-  width: 9px;
-  height: 7px;
+  width: 12px;
+  height: 10px;
   display: inline-block;
   margin-right: 10px;
 }
@@ -2432,10 +2431,39 @@ img {
   }
 
   .burgers__logo {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: auto;
+    -webkit-align-items: auto;
+    -ms-flex-align: auto;
+    align-items: auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .burgers__logo-img {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .burgers__structure {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
   }
 
   .burgers__calories {

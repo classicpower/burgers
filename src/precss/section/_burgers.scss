@@ -53,11 +53,17 @@
     justify-content: center;
     align-items: center;
     @include tablets() {
+      justify-content: space-between;
+      align-items: auto;
+      flex-wrap: wrap;
       flex: 0 1 auto;
+      flex-direction: row;
     }
     &-img {
-      order: 1;
       margin: 0 auto;
+      @include tablets() {
+        order: 1;
+      }
     }
   }
   &__structure {
@@ -75,6 +81,9 @@
     position: relative;
     cursor: pointer;
     transition: opacity .5s;
+    @include tablets(){
+      align-self: auto;
+    }
     &:hover {
       opacity: 1;
       .burgers__weight {
@@ -122,7 +131,7 @@
       align-items: center;
       justify-content: center;
     }
-    &-beef{
+    &-beef {
       width: 44px;
       height: 39px;
     }
@@ -158,14 +167,18 @@
   }
   &__calories {
     opacity: .4;
+    align-self: flex-start;
     position: relative;
-    
-    &-kkal{
+    @include tablets() {
+      order: 0;
+      
+    }
+    &-kkal {
       width: 60px;
       height: 60px;
     }
     @include tablets() {
-      order: 0;
+
     }
     &-title {
       @include title(#fff,
