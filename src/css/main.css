@@ -2205,7 +2205,7 @@ img {
 }
 
 .footer__social-item--fb {
-  background: url("../img/icons/fb.png") center center no-repeat;
+  background: url("../img/icons/sprite.svg#fb") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
 }
