@@ -3747,10 +3747,10 @@
 	<view id="twitter-view" viewBox="0 80 20 20" />
 	<use xlink:href="#twitter" width="20" height="20" x="0" y="80"></use>
 
-	<view id="arrow-up-view" viewBox="10 0 20 20" />
-	<use xlink:href="#arrow-up" width="20" height="20" x="10" y="0"></use>
+	<view id="arrow-up-view" viewBox="0 100 20 20" />
+	<use xlink:href="#arrow-up" width="20" height="20" x="0" y="100"></use>
 
-	<view id="arrow-down-view" viewBox="20 0 20 20" />
-	<use xlink:href="#arrow-down" width="20" height="20" x="20" y="0"></use>
+	<view id="arrow-down-view" viewBox="0 120 20 20" />
+	<use xlink:href="#arrow-down" width="20" height="20" x="0" y="120"></use>
 
 </svg>
