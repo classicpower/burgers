@@ -56,23 +56,23 @@
       }
       &--vk {
         width: rem(23px);
-        height: rem(13px);
-        background: url('../img/icons/vk.png') center center no-repeat;
+        height: rem(23px);
+        background: url('../img/icons/sprite.svg#vk-view') center center no-repeat;
       }
       &--fb {
-        background: url('../img/icons/sprite.svg#fb') center center no-repeat;
+        background: url('../img/icons/sprite.svg#fb-view') center center no-repeat;
         width: rem(20px);
         height: rem(20px);
       }
       &--inst {
-        background: url('../img/icons/inst.png') center center no-repeat;
+        background: url('../img/icons/sprite.svg#inst-view') center center no-repeat;
         width: rem(20px);
         height: rem(20px);
       }
       &--tw {
-        background: url('../img/icons/twitter.png') center center no-repeat;
+        background: url('../img/icons/sprite.svg#twitter-view') center center no-repeat;
         width: rem(20px);
-        height: rem(16px);
+        height: rem(20px);
       }
     }
     &-link{

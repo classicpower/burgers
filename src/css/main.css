@@ -2200,26 +2200,26 @@ img {
 
 .footer__social-item--vk {
   width: 1.4375rem;
-  height: 0.8125rem;
-  background: url("../img/icons/vk.png") center center no-repeat;
+  height: 1.4375rem;
+  background: url("../img/icons/sprite.svg#vk-view") center center no-repeat;
 }
 
 .footer__social-item--fb {
-  background: url("../img/icons/sprite.svg#fb") center center no-repeat;
+  background: url("../img/icons/sprite.svg#fb-view") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .footer__social-item--inst {
-  background: url("../img/icons/inst.png") center center no-repeat;
+  background: url("../img/icons/sprite.svg#inst-view") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .footer__social-item--tw {
-  background: url("../img/icons/twitter.png") center center no-repeat;
+  background: url("../img/icons/sprite.svg#twitter-view") center center no-repeat;
   width: 1.25rem;
-  height: 1rem;
+  height: 1.25rem;
 }
 
 .footer__social-link {

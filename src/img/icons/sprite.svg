@@ -3735,3 +3735,16 @@
 		c1.103,0.145,0.923-0.884,1.259-1.406C47.28,69.132,46.932,68.833,46.789,68.676z"/>
 		</g>
 	</symbol>
+	<view id="vk-view" viewBox="0 0 20 20" />
+	<use xlink:href="#vk" width="20" height="20" x="0" y="0"></use>
+
+	<view id="fb-view" viewBox="0 20 20 20" />
+	<use xlink:href="#fb" width="20" height="20" x="0" y="20"></use>
+
+	<view id="inst-view" viewBox="0 40 20 20" />
+	<use xlink:href="#inst" width="20" height="20" x="0" y="40"></use>
+
+	<view id="twitter-view" viewBox="0 80 20 20" />
+	<use xlink:href="#twitter" width="20" height="20" x="0" y="80"></use>
+
+</svg>
