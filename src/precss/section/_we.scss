@@ -32,29 +32,17 @@
       margin: 0 0 5%;
       text-align: left;
     }
-    &-img {
-      height: 89px;
+    &-meat,
+    &-hand,
+    &-natural {
       width: 100%;
+      height: 89px;
+    }
+    &-img {
       margin-bottom: 8%;
       @include mobile() {
         flex: 0 1 30%;
         margin-right: 2%;
-        background-size: 90% 90%;
-      }
-      &--meat {
-        background-image: url('../img/icons/meat.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-      &--hand {
-        background-image: url('../img/icons/hand.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-      &--natural {
-        background-image: url('../img/icons/natural.svg');
-        background-position: center center;
-        background-repeat: no-repeat;
       }
     }
     &-content {

@@ -25,7 +25,9 @@
         <div class="container">
           <header class="header">
             <div class="logo">
-              <img src="img/icons/logo.svg" alt="Логотип Burgers" class="logo__img">
+              <svg class="logo__img">
+                <use xlink:href="../img/icons/sprite.svg#logo"></use>
+              </svg>
             </div>
             <nav class="menu">
               <ul class="menu__list">
@@ -79,7 +81,11 @@
           <h2 class="we__title">Мы лучшие</h2>
           <ul class="we__list">
             <li class="we__item">
-              <div class="we__item-img we__item-img--meat"></div>
+              <div class="we__item-img">
+                <svg class="we__item-meat">
+                  <use xlink:href="../img/icons/sprite.svg#meat"></use>
+                </svg>
+              </div>
               <div class="we__item-content">
                 <h3 class="we__item-title">100% свежее мясо</h3>
                 <div class="we__item-text">
@@ -90,7 +96,11 @@
               </div>
             </li>
             <li class="we__item">
-              <div class="we__item-img we__item-img--hand"></div>
+              <div class="we__item-img">
+                <svg class="we__item-hand">
+                  <use xlink:href="../img/icons/sprite.svg#hand"></use>
+                </svg>
+              </div>
               <div class="we__item-content">
                 <h3 class="we__item-title">Ручная сборка</h3>
                 <div class="we__item-text">
@@ -102,7 +112,11 @@
               </div>
             </li>
             <li class="we__item">
-              <div class="we__item-img we__item-img--natural"></div>
+              <div class="we__item-img">
+                <svg class="we__item-natural">
+                  <use xlink:href="../img/icons/sprite.svg#natural"></use>
+                </svg>
+              </div>
               <div class="we__item-content">
                 <h3 class="we__item-title">Натуральные ингредиенты</h3>
                 <div class="we__item-text">
@@ -122,9 +136,12 @@
         <div class="burgers__center">
           <div class="container burgers__container">
             <div class="burgers__logo">
-              <img class="burgers__logo-img" src="img/burgers-slider/black-burger.png" alt="Черный Бургер с говядиной">
               <div class="burgers__structure">
-                <div class="burgers__structure-img"></div>
+                <div class="burgers__structure-burger">
+                  <svg class="burgers__structure-img">
+                    <use xlink:href="../img/icons/sprite.svg#burger"></use>
+                  </svg>
+                </div>
                 <h3 class="burgers__structure-title">
                   Состав
                 </h3>
@@ -132,42 +149,66 @@
                   <ul class="burgers__weight-list">
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--beef"></div>
+                        <div class="burgers__weight-img">
+                          <svg class="burgers__weight-beef">
+                            <use xlink:href="../img/icons/sprite.svg#beef"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Говядина</div>
                       <div class="burgers__weight-quantity">300 г</div>
                     </li>
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--buns"></div>
+                        <div class="burgers__weight-img">
+                          <svg class="burgers__weight-buns">
+                            <use xlink:href="../img/icons/sprite.svg#buns"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Булочки</div>
                       <div class="burgers__weight-quantity">100 г</div>
                     </li>
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--salad"></div>
+                        <div class="burgers__weight-img burgers__weight-img--salad">
+                          <svg class="burgers__weight-salad">
+                            <use xlink:href="../img/icons/sprite.svg#salad"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Зелень</div>
                       <div class="burgers__weight-quantity">70 г</div>
                     </li>
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--sauce"></div>
+                        <div class="burgers__weight-img">
+                          <svg class="burgers__weight-sauce">
+                            <use xlink:href="../img/icons/sprite.svg#sauce"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Соус</div>
                       <div class="burgers__weight-quantity">150 г</div>
                     </li>
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--cucumber"></div>
+                        <div class="burgers__weight-img">
+                          <svg class="burgers__weight-cucumber">
+                            <use xlink:href="../img/icons/sprite.svg#cucumber"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Овощи</div>
                       <div class="burgers__weight-quantity">200 г</div>
                     </li>
                     <li class="burgers__weight-item">
                       <div class="burgers__weight-picture">
-                        <div class="burgers__weight-img burgers__weight-img--cheese"></div>
+                        <div class="burgers__weight-img burgers__weight-img--cheese">
+                          <svg class="burgers__weight-cheese">
+                            <use xlink:href="../img/icons/sprite.svg#cheese"></use>
+                          </svg>
+                        </div>
                       </div>
                       <div class="burgers__weight-title">Сыр</div>
                       <div class="burgers__weight-quantity">80 г</div>
@@ -175,7 +216,11 @@
                   </ul>
                 </div>
               </div>
+              <img class="burgers__logo-img" src="img/burgers-slider/black-burger.png" alt="Черный Бургер с говядиной">
               <div class="burgers__calories">
+                <svg class="burgers__calories-kkal">
+                  <use xlink:href="../img/icons/sprite.svg#kkal"></use>
+                </svg>
                 <div class="burgers__calories-title">1200</div>
               </div>
             </div>
@@ -189,8 +234,8 @@
               </div>
               <div class="burgers__offer">
                 <div class="burgers__price">500
-                  <span class="burgers__price-rub">рублей</span>
                 </div>
+                <span class="burgers__price-rub">рублей</span>
                 <button class="button burgers__button">Заказать</button>
               </div>
             </div>
@@ -539,7 +584,11 @@
                 </div>
                 <div class="footer__address-tel">
                   <a href="tel:88123771377" class="footer__address-link">
-                    <span class="footer__address-icon"></span>
+                    <span class="footer__address-img">
+                      <svg class="footer__address-icon">
+                        <use xlink:href="../img/icons/sprite.svg#phone"></use>
+                      </svg>
+                    </span>
                     <span class="footer__address-title"> +7 (812) 377-13-77</span>
                   </a>
                 </div>

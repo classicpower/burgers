@@ -486,8 +486,6 @@ img {
 }
 
 .wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
   overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -666,6 +664,7 @@ img {
 }
 
 .logo__img {
+  width: 5.75rem;
   height: 4.6875rem;
 }
 
@@ -757,7 +756,7 @@ img {
 
 .hero {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/hero/hero.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -829,7 +828,7 @@ img {
 
 .we {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/we/we.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -887,28 +886,15 @@ img {
   text-align: center;
 }
 
-.we__item-img {
-  height: 89px;
+.we__item-meat,
+.we__item-hand,
+.we__item-natural {
   width: 100%;
+  height: 89px;
+}
+
+.we__item-img {
   margin-bottom: 8%;
-}
-
-.we__item-img--meat {
-  background-image: url("../img/icons/meat.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.we__item-img--hand {
-  background-image: url("../img/icons/hand.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.we__item-img--natural {
-  background-image: url("../img/icons/natural.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .we__item-content {
@@ -936,7 +922,7 @@ img {
 
 .burgers {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-color: #f9b43b;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b), to(#f9b43b));
   background-image: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
@@ -960,10 +946,6 @@ img {
   -ms-flex-direction: row;
   flex-direction: row;
   padding: 0;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .burgers__left,
@@ -1020,14 +1002,6 @@ img {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .burgers__logo {
@@ -1036,17 +1010,41 @@ img {
   -ms-flex: 0 1 52%;
   flex: 0 1 52%;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .burgers__logo-img {
-  max-width: 80%;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   margin: 0 auto;
 }
 
 .burgers__structure {
-  position: absolute;
-  top: -77px;
-  left: 0;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   width: 90px;
   height: 90px;
   background-color: #e45028;
@@ -1070,6 +1068,7 @@ img {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   cursor: pointer;
   -webkit-transition: opacity .5s;
   -o-transition: opacity .5s;
@@ -1088,9 +1087,6 @@ img {
 .burgers__structure-img {
   width: 46px;
   height: 44px;
-  background-image: url("../img/icons/burger.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .burgers__structure-title {
@@ -1163,45 +1159,34 @@ img {
   justify-content: center;
 }
 
-.burgers__weight-img {
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.burgers__weight-img--beef {
+.burgers__weight-beef {
   width: 44px;
   height: 39px;
-  background-image: url("../img/icons/beef.svg");
 }
 
-.burgers__weight-img--buns {
-  width: 48px;
-  height: 30px;
-  background-image: url("../img/icons/buns.svg");
-}
-
-.burgers__weight-img--salad {
+.burgers__weight-salad {
   width: 38px;
   height: 38px;
-  background-image: url("../img/icons/salad.svg");
 }
 
-.burgers__weight-img--sauce {
+.burgers__weight-buns {
+  width: 48px;
+  height: 30px;
+}
+
+.burgers__weight-sauce {
   width: 41px;
   height: 43px;
-  background-image: url("../img/icons/sauce.svg");
 }
 
-.burgers__weight-img--cucumber {
+.burgers__weight-cucumber {
   width: 43px;
   height: 37px;
-  background-image: url("../img/icons/cucumber.svg");
 }
 
-.burgers__weight-img--cheese {
+.burgers__weight-cheese {
   width: 39px;
   height: 34px;
-  background-image: url("../img/icons/cheese.svg");
 }
 
 .burgers__weight-title {
@@ -1222,15 +1207,13 @@ img {
 }
 
 .burgers__calories {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
   opacity: .4;
+  position: relative;
+}
+
+.burgers__calories-kkal {
   width: 60px;
   height: 60px;
-  background-image: url("../img/icons/kkal.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .burgers__calories-title {
@@ -1239,12 +1222,15 @@ img {
   font-size: 4.5rem;
   color: #fff;
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 20px;
   position: absolute;
-  top: 25px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  -webkit-transform: translateY(35%);
+  -ms-transform: translateY(35%);
+  transform: translateY(35%);
 }
 
 .burgers__calories-title::after {
@@ -1259,6 +1245,19 @@ img {
   -webkit-flex: 0 1 48%;
   -ms-flex: 0 1 48%;
   flex: 0 1 48%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .burgers__title {
@@ -1288,18 +1287,24 @@ img {
 }
 
 .burgers__price {
-  text-align: center;
+  width: auto;
+  text-align: left;
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   font-size: 4.5rem;
   color: #e45028;
   letter-spacing: -0.11188rem;
-  margin-right: 30px;
   line-height: 1;
 }
 
 .burgers__price-rub {
+  text-align: left;
+  font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+  font-size: 4.5rem;
+  color: #e45028;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
   font-size: 1.875rem;
-  margin-left: -10px;
   letter-spacing: -0.04688rem;
 }
 
@@ -1316,6 +1321,7 @@ img {
   font-size: 0.8125rem;
   text-transform: uppercase;
   font-weight: 500;
+  margin-left: 6%;
   padding: 10.5px 16px;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -1332,7 +1338,7 @@ img {
 
 .team {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/team/team.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -1487,7 +1493,7 @@ img {
 
 .burgermenu {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/burgermenu/menu.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -1640,7 +1646,7 @@ img {
 }
 
 .reviews {
-  height: 650px;
+  height: 100vh;
 }
 
 .reviews__list {
@@ -1800,7 +1806,7 @@ img {
 
 .work {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/work/work.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -1811,7 +1817,7 @@ img {
 
 .delivery {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/form/form.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -2058,7 +2064,7 @@ img {
 
 .contacts {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   background-image: url("../img/contacts/contacts.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -2140,7 +2146,6 @@ img {
 }
 
 .footer__address-icon {
-  content: "";
   width: 0.75rem;
   height: 0.6875rem;
   display: inline-block;
@@ -2423,7 +2428,7 @@ img {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    max-width: 95%;
+    max-width: 77%;
   }
 
   .burgers__logo {
@@ -2433,11 +2438,18 @@ img {
     flex: 0 1 auto;
   }
 
-  .burgers__structure {
-    top: -40px;
+  .burgers__calories {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
   }
 
   .burgers__content {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
@@ -2597,16 +2609,22 @@ img {
     -ms-flex: 0 1 30%;
     flex: 0 1 30%;
     margin-right: 2%;
-    -webkit-background-size: 90% 90%;
-    background-size: 90% 90%;
   }
 
   .burgers__structure-title {
     font-size: 4.0625rem;
   }
 
+  .burgers__structure-title {
+    font-size: 0.875rem;
+  }
+
   .burgers__calories-title {
     font-size: 4.0625rem;
+  }
+
+  .burgers__calories-title {
+    font-size: 20px;
   }
 
   .burgers__title {
@@ -2614,6 +2632,10 @@ img {
   }
 
   .burgers__price {
+    font-size: 4.0625rem;
+  }
+
+  .burgers__price-rub {
     font-size: 4.0625rem;
   }
 
