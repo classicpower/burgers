@@ -1389,7 +1389,7 @@ img {
 
 .team__name::before {
   content: "";
-  background: url("../img/icons/arrow-down.svg") center center no-repeat;
+  background: url("../img/icons/sprite.svg#arrow-down-view") center center no-repeat;
   width: 9px;
   height: 7px;
   display: inline-block;
@@ -1449,7 +1449,7 @@ img {
 }
 
 .team__item--active .team__name::before {
-  background: url("../img/icons/arrow-up.svg") center center no-repeat;
+  background: url("../img/icons/sprite.svg#arrow-up-view") center center no-repeat;
 }
 
 .team__content {
