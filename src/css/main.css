@@ -1648,10 +1648,6 @@ img {
   display: none;
 }
 
-.reviews {
-  height: 100vh;
-}
-
 .reviews__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1667,7 +1663,6 @@ img {
   -webkit-flex: 0 1 25%;
   -ms-flex: 0 1 25%;
   flex: 0 1 25%;
-  height: 50%;
 }
 
 .reviews__figure {
@@ -1686,6 +1681,9 @@ img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  min-height: 325px;
 }
 
 .reviews__figcaption {
@@ -1702,7 +1700,7 @@ img {
 }
 
 .reviews__wrap {
-  padding: 14% 9% 0 8%;
+  padding: 14% 1% 0 8%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -1,13 +1,11 @@
-//reviews section
+
 .reviews {
-  height: $height;
   &__list {
     display: flex;
     flex-wrap: wrap;
   }
   &__item {
     flex: 0 1 25%;
-    height: 50%;
     @include tablets() {
       flex: 0 1 50%;
     }
@@ -23,6 +21,9 @@
   &__img {
     filter: grayscale(100%);
     width: 100%;
+    object-fit: cover;
+    min-height: 325px;
+
   }
   &__figcaption {
     position: absolute;
@@ -35,7 +36,7 @@
     background-color: rgba(20, 20, 20, 0.7);
   }
   &__wrap {
-    padding: 14% 9% 0 8%;
+    padding: 14% 1% 0 8%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
