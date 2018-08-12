@@ -5,6 +5,8 @@
   background-image: linear-gradient(to top, $yellow 0%, #eb8c38 48%, $yellow 74%, $yellow 100%);
   overflow: hidden;
   display: flex;
+  padding: 5% 0;
+  box-sizing: border-box;
   &__container {
     display: flex;
     flex-direction: row;

@@ -937,6 +937,9 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 5% 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .burgers__container {
