@@ -59,11 +59,11 @@ $(function () {
         $closeMenu = $('.fixed-menu__close, .fixed-menu__link');
     $hamburger.on('click', function (e) {
         e.preventDefault();
-        $fixedMenu.addClass('fixed-menu--open');
+        $fixedMenu.fadeIn().addClass('fixed-menu--open');
         $('body').addClass('blocked-scroll');
     });
     $closeMenu.on('click', function () {
-        $fixedMenu.removeClass('fixed-menu--open')
+        $fixedMenu.fadeOut().removeClass('fixed-menu--open')
         $('body').removeClass('blocked-scroll');
     });
 
