@@ -12,7 +12,10 @@
     @include tablets() {
       flex-direction: column;
       justify-content: center;
-      max-width: 77%;
+      max-width: 90%;
+    }
+    @include mobile() {
+      max-width: 100%;
     }
   }
   &__left,
@@ -54,7 +57,6 @@
     align-items: center;
     @include tablets() {
       justify-content: space-between;
-      align-items: auto;
       flex-wrap: wrap;
       flex: 0 1 auto;
       flex-direction: row;
@@ -81,7 +83,7 @@
     position: relative;
     cursor: pointer;
     transition: opacity .5s;
-    @include tablets(){
+    @include tablets() {
       align-self: auto;
     }
     &:hover {
@@ -115,6 +117,9 @@
     top: 0;
     left: -9999px;
     transition: opacity .5s;
+    @include mobile(){
+      width: 370px;
+    }
     &-list {
       display: flex;
       flex-direction: column;
@@ -171,15 +176,12 @@
     position: relative;
     @include tablets() {
       order: 0;
-      
     }
     &-kkal {
       width: 60px;
       height: 60px;
     }
-    @include tablets() {
-
-    }
+    @include tablets() {}
     &-title {
       @include title(#fff,
       center);
@@ -248,6 +250,9 @@
       align-self: flex-end;
       font-size: rem(30px);
       letter-spacing: rem(-0.75px);
+      @include mobile() {
+        font-size: rem(30px);
+      }
     }
   }
   &__button {

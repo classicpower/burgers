@@ -526,6 +526,10 @@ img {
   flex: 1;
 }
 
+.blocked-scroll {
+  overflow: hidden;
+}
+
 .arrow--scroll {
   background: url("../img/hero/arrow-scroll.png") no-repeat center center;
   width: 1.8125rem;
@@ -2427,7 +2431,7 @@ img {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    max-width: 77%;
+    max-width: 90%;
   }
 
   .burgers__logo {
@@ -2435,10 +2439,6 @@ img {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: auto;
-    -webkit-align-items: auto;
-    -ms-flex-align: auto;
-    align-items: auto;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2639,12 +2639,20 @@ img {
     margin-right: 2%;
   }
 
+  .burgers__container {
+    max-width: 100%;
+  }
+
   .burgers__structure-title {
     font-size: 4.0625rem;
   }
 
   .burgers__structure-title {
     font-size: 0.875rem;
+  }
+
+  .burgers__weight {
+    width: 370px;
   }
 
   .burgers__calories-title {
@@ -2665,6 +2673,10 @@ img {
 
   .burgers__price-rub {
     font-size: 4.0625rem;
+  }
+
+  .burgers__price-rub {
+    font-size: 1.875rem;
   }
 
   .team__content-title {

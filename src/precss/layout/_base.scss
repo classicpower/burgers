@@ -85,7 +85,9 @@ img {
 .content {
   flex: 1;
 }
-
+.blocked-scroll {
+  overflow: hidden;
+}
 .arrow {
   &--scroll {
     background: url('../img/hero/arrow-scroll.png') no-repeat center center;

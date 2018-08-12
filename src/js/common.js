@@ -56,13 +56,15 @@ $(function () {
     // OPEM/CLOSE MOBILE MENU
     var $hamburger = $('.hamburger-menu__link'),
         $fixedMenu = $('.fixed-menu'),
-        $closeMenu = $('.fixed-menu__close');
+        $closeMenu = $('.fixed-menu__close, .fixed-menu__link');
     $hamburger.on('click', function (e) {
         e.preventDefault();
-        $fixedMenu.addClass('fixed-menu--open')
+        $fixedMenu.addClass('fixed-menu--open');
+        $('body').addClass('blocked-scroll');
     });
     $closeMenu.on('click', function () {
         $fixedMenu.removeClass('fixed-menu--open')
+        $('body').removeClass('blocked-scroll');
     });
 
     /**АККОРДЕОН**/
