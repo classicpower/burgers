@@ -73,8 +73,8 @@
   &__structure {
     order: 0;
     align-self: flex-start;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     background-color: $red;
     opacity: .4;
     border-radius: 5px;
@@ -91,13 +91,13 @@
     &:hover {
       opacity: 1;
       .burgers__weight {
-        left: 90px;
+        left: rem(90px);
         opacity: .9;
       }
     }
     &-img {
-      width: 46px;
-      height: 44px;
+      width: rem(46px);
+      height: rem(44px);
     }
     &-title {
       @include title(#fff,
@@ -109,8 +109,8 @@
     }
   }
   &__weight {
-    width: 270px;
-    height: 332px;
+    width: rem(270px);
+    height: rem(332px);
     background-color: #ffffff;
     opacity: 0;
     z-index: 100;
@@ -119,14 +119,17 @@
     top: 0;
     left: -9999px;
     transition: opacity .5s;
-    @include mobile(){
-      width: 370px;
+    display: flex;
+    @include mobile() {
+      width: rem(370px);
+      
     }
     &-list {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       height: 100%;
+      flex: 1;
     }
     &-item {
       display: flex;
@@ -170,6 +173,16 @@
     &-quantity {
       flex: 0 1 53px;
       font-weight: 300;
+    }
+  }
+  &__close {
+    display: none;
+    @include mobile(){
+      display: block;
+    }
+    &::after,
+    &::before {
+      background-color: $red!important;
     }
   }
   &__calories {

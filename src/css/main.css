@@ -1048,8 +1048,8 @@ img {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  width: 90px;
-  height: 90px;
+  width: 5.625rem;
+  height: 5.625rem;
   background-color: #e45028;
   opacity: .4;
   -webkit-border-radius: 5px;
@@ -1083,13 +1083,13 @@ img {
 }
 
 .burgers__structure:hover .burgers__weight {
-  left: 90px;
+  left: 5.625rem;
   opacity: .9;
 }
 
 .burgers__structure-img {
-  width: 46px;
-  height: 44px;
+  width: 2.875rem;
+  height: 2.75rem;
 }
 
 .burgers__structure-title {
@@ -1101,8 +1101,8 @@ img {
 }
 
 .burgers__weight {
-  width: 270px;
-  height: 332px;
+  width: 16.875rem;
+  height: 20.75rem;
   background-color: #ffffff;
   opacity: 0;
   z-index: 100;
@@ -1114,6 +1114,10 @@ img {
   -webkit-transition: opacity .5s;
   -o-transition: opacity .5s;
   transition: opacity .5s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .burgers__weight-list {
@@ -1130,6 +1134,10 @@ img {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   height: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .burgers__weight-item {
@@ -1207,6 +1215,15 @@ img {
   -ms-flex: 0 1 53px;
   flex: 0 1 53px;
   font-weight: 300;
+}
+
+.burgers__close {
+  display: none;
+}
+
+.burgers__close::after,
+.burgers__close::before {
+  background-color: #e45028 !important;
 }
 
 .burgers__calories {
@@ -2363,7 +2380,7 @@ img {
   position: absolute;
   left: 15px;
   content: "";
-  height: 30px;
+  height: 25px;
   width: 5px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -2577,6 +2594,13 @@ img {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 95%;
+    padding: 0 3%;
   }
 
   .reviews__text {
@@ -2671,7 +2695,11 @@ img {
   }
 
   .burgers__weight {
-    width: 370px;
+    width: 23.125rem;
+  }
+
+  .burgers__close {
+    display: block;
   }
 
   .burgers__calories-title {
@@ -2720,6 +2748,10 @@ img {
   .burgermenu__item--active .burgermenu__close::before,
   .burgermenu__item--active .burgermenu__close::after {
     height: 24px;
+  }
+
+  .reviews {
+    min-width: 320px;
   }
 
   .reviews__title {

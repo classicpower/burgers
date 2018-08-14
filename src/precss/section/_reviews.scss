@@ -1,5 +1,7 @@
-
 .reviews {
+  @include mobile() {
+    min-width: 320px;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +25,6 @@
     width: 100%;
     object-fit: cover;
     min-height: 325px;
-
   }
   &__figcaption {
     position: absolute;
@@ -42,6 +43,10 @@
     align-items: flex-start;
     @include tablets() {
       align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 95%;
+      padding: 0 3%;
     }
   }
   &__title {
