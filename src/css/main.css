@@ -1389,8 +1389,13 @@ img {
 .team__name {
   color: #ffffff;
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
-  font-weight: 400;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+}
+
+.team__name:focus {
+  outline: none;
 }
 
 .team__name::before {
@@ -1412,8 +1417,16 @@ img {
 }
 
 .team__clip {
-  -webkit-clip-path: circle(42% at 53% 48%);
-  clip-path: circle(42% at 53% 48%);
+  margin: 0 20px;
+}
+
+.team__img {
+  width: 6.25rem;
+  height: 6.25rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .team__figcaption {
@@ -1625,6 +1638,9 @@ img {
 .burgermenu__block-title {
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   font-size: 2.5rem;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -1636,6 +1652,10 @@ img {
   -ms-flex-item-align: end;
   align-self: flex-end;
   white-space: nowrap;
+}
+
+.burgermenu__block-title:focus {
+  outline: none;
 }
 
 .burgermenu__text {
@@ -2522,8 +2542,6 @@ img {
   }
 
   .team__clip {
-    -webkit-clip-path: circle(42% at 53% 49%);
-    clip-path: circle(42% at 53% 49%);
     margin-bottom: 4%;
   }
 

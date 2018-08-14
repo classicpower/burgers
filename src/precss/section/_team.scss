@@ -28,8 +28,12 @@
   &__name {
     color: #ffffff;
     font-family: $Gagalin, "Arial Narrow", sans-serif;
-    font-weight: 400;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    &:focus{
+      outline: none;
+    }
     @include tablets() {
       text-align: center;
       font-size: rem(25px);
@@ -53,11 +57,16 @@
     }
   }
   &__clip {
-    clip-path: circle(42% at 53% 48%);
+    margin: 0 20px;
     @include tablets() {
-      clip-path: circle(42% at 53% 49%);
       margin-bottom: 4%;
     }
+  }
+  &__img {
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+    object-fit: cover;
   }
   &__figcaption {
     flex: 1;

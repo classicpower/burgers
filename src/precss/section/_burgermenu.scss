@@ -91,11 +91,17 @@
     &-title {
       font-family: $Gagalin, "Arial Narrow", sans-serif;
       color: #fff;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
       font-size: rem(40px);
       transform: rotate(-90deg);
       transform-origin: rem(13px) 0 0;
       align-self: flex-end;
       white-space: nowrap;
+      &:focus {
+        outline: none;
+      }
     }
   }
   &__text {
