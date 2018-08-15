@@ -43,7 +43,7 @@ $(function () {
     }
 
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-    $('.menu__link, .button, .points__link, .arrow__link, .fixed-menu__link').on('click', function (e) {
+    $('.click-link').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this)

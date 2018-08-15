@@ -1288,13 +1288,13 @@ img {
   font-size: 4.5rem;
   color: #fff;
   line-height: 1;
-  margin-bottom: 40px;
+  margin-bottom: 6%;
 }
 
 .burgers__text {
   color: #fff;
   font-weight: 300;
-  margin-bottom: 35px;
+  margin-bottom: 4%;
 }
 
 .burgers__offer {
@@ -2491,9 +2491,12 @@ img {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   .burgers__logo-img {
+    max-width: 80%;
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
@@ -2702,6 +2705,10 @@ img {
 
   .burgers__container {
     max-width: 100%;
+  }
+
+  .burgers__logo {
+    height: auto;
   }
 
   .burgers__structure-title {

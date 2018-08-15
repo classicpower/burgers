@@ -62,10 +62,16 @@
       flex-wrap: wrap;
       flex: 0 1 auto;
       flex-direction: row;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    @include mobile() {
+      height: auto;
     }
     &-img {
       margin: 0 auto;
       @include tablets() {
+        max-width: 80%;
         order: 1;
       }
     }
@@ -120,9 +126,7 @@
     left: -9999px;
     transition: opacity .5s;
     display: flex;
-    @include mobile() {
-
-    }
+    @include mobile() {}
     &-list {
       display: flex;
       flex-direction: column;
@@ -236,7 +240,7 @@
     @include title(#fff,
     left);
     line-height: 1;
-    margin-bottom: 40px;
+    margin-bottom: 6%;
     @include tablets() {
       text-align: center;
     }
@@ -244,7 +248,7 @@
   &__text {
     color: #fff;
     font-weight: 300;
-    margin-bottom: 35px;
+    margin-bottom: 4%;
     @include tablets() {
       text-align: center;
     }
