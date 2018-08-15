@@ -109,8 +109,8 @@
     }
   }
   &__weight {
-    width: rem(270px);
-    height: rem(332px);
+    // width: rem(270px);
+    // height: rem(332px);
     background-color: #ffffff;
     opacity: 0;
     z-index: 100;
@@ -121,8 +121,7 @@
     transition: opacity .5s;
     display: flex;
     @include mobile() {
-      width: rem(370px);
-      
+
     }
     &-list {
       display: flex;
@@ -134,55 +133,59 @@
     &-item {
       display: flex;
       align-items: center;
+      padding: 5% 0 2% 7%;
     }
     &-picture {
-      flex: 0 1 90px;
+      width: rem(90px);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-right: 5%;
     }
     &-beef {
-      width: 44px;
-      height: 39px;
+      width: rem(44px);
+      height: rem(39px);
     }
     &-salad {
-      width: 38px;
-      height: 38px;
+      width: rem(38px);
+      height: rem(38px);
     }
     &-buns {
-      width: 48px;
-      height: 30px;
+      width: rem(48px);
+      height: rem(30px);
     }
     &-sauce {
-      width: 41px;
-      height: 43px;
+      width: rem(41px);
+      height: rem(43px);
     }
     &-cucumber {
-      width: 43px;
-      height: 37px;
+      width: rem(43px);
+      height: rem(37px);
     }
     &-cheese {
-      width: 39px;
-      height: 34px;
+      width: rem(39px);
+      height: rem(34px);
     }
     &-title {
-      flex: 1;
+      flex: 0 1 rem(125px);
       text-align: left;
       font-weight: 500;
+      padding-right: 17%;
     }
     &-quantity {
-      flex: 0 1 53px;
+      flex: 0 1 rem(50px);
       font-weight: 300;
+      padding-right: 9%;
     }
   }
   &__close {
     display: none;
-    @include mobile(){
+    @include mobile() {
       display: block;
     }
     &::after,
     &::before {
-      background-color: $red!important;
+      background-color: $red !important;
     }
   }
   &__calories {
