@@ -1910,7 +1910,7 @@ img {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 3%;
 }
 
 .form__block {
@@ -2153,6 +2153,7 @@ img {
   -webkit-flex: 0 1 50%;
   -ms-flex: 0 1 50%;
   flex: 0 1 50%;
+  margin-bottom: 2%;
 }
 
 .footer__right {
@@ -2569,6 +2570,18 @@ img {
     margin-bottom: 4%;
   }
 
+  .team__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .team__item--active .team__figure {
     margin-bottom: 8%;
   }
@@ -2604,6 +2617,10 @@ img {
 
   .reviews__text {
     text-align: center;
+  }
+
+  .delivery__title {
+    line-height: 1;
   }
 
   .form__content {
@@ -2779,5 +2796,20 @@ img {
 
   .form__block-submit {
     margin-right: 0;
+  }
+
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__address {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }

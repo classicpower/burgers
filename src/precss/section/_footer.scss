@@ -7,9 +7,13 @@
     align-items: center;
     padding-top: 6px;
     padding-bottom: 6px;
+    @include mobile(){
+      flex-direction: column;
+    }
   }
   &__left, &__right{
     flex: 0 1 50%;
+    margin-bottom: 2%;
   }
   &__right{
     display: flex;
@@ -22,6 +26,9 @@
     color: #ffffff;
     font-weight: 300;
     line-height: 1.7;
+    @include mobile(){
+      align-items: center;
+    }
     &-icon {
       width: rem(12px);
       height: rem(11px);

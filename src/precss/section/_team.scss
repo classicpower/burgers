@@ -31,7 +31,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    &:focus{
+    &:focus {
       outline: none;
     }
     @include tablets() {
@@ -89,6 +89,10 @@
   &__item {
     position: relative;
     margin-bottom: 10%;
+    @include tablets() {
+      display: flex;
+      flex-direction: column;
+    }
     &--active {
       margin-bottom: 0;
       .team__name {

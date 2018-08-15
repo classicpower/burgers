@@ -7,6 +7,9 @@
   &__title {
     @include title($yellow, center);
     margin-bottom: 4%;
+    @include tablets(){
+      line-height: 1;
+    }
   }
 }
 
@@ -32,7 +35,7 @@
   }
   &__row {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 3%;
     @include tablets(){
       margin-bottom: 20px;
     }
