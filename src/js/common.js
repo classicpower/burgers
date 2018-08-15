@@ -4,25 +4,17 @@ $(function () {
         $btnReviews = $('.reviews__button'),
         $reviewsModal = $('.reviews__modal'),
         $reviewsOverlay = $('.reviews__overlay'),
-        $burgersModal = $('.burgers__modal'),
-        $burgersOverlay = $('.burgers__overlay'),
         popRev = new Popup({
             modal: $reviewsModal,
             overlay: $reviewsOverlay
-        }),
-        popBur = new Popup({
-            modal: $burgersModal,
-            overlay: $burgersOverlay
         });
 
+
     $btnReviews.on('click', function () {
-        popRev.open('Отзыв');
+        popRev.open();
     });
     $reviewsOverlay.on('click', function () {
         popRev.close();
-    });
-    $burgersOverlay.on('click', function () {
-        popBur.close();
     });
 
     function Popup(obj) {
@@ -34,11 +26,13 @@ $(function () {
             overlay.addClass('open');
             modal.addClass('open');
             modal.html(content);
+            $('body').addClass('blocked-scroll');
         }
 
         this.close = function () {
             overlay.removeClass('open');
             modal.removeClass('open');
+            $('body').removeClass('blocked-scroll');
         }
     }
 

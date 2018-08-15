@@ -76,6 +76,12 @@ img {
 
 .section {
   min-height: 650px;
+  @include tablets(){
+    min-height: 1024px;
+  }
+  @include mobile(){
+    min-height: 800px;
+  }
 }
 
 .container {

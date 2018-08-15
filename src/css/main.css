@@ -1793,6 +1793,27 @@ img {
   background-color: #1f2122;
 }
 
+.reviews__modal {
+  max-width: 460px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.reviews__modal-content {
+  position: relative;
+  padding: 30px 24px;
+}
+
+.reviews__close {
+  position: absolute;
+}
+
+.reviews__close::after,
+.reviews__close::before {
+  background-color: #e45028 !important;
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -1823,20 +1844,6 @@ img {
   -webkit-transition: opacity .6s;
   -o-transition: opacity .6s;
   transition: opacity .6s;
-}
-
-.reviews__modal {
-  max-width: 460px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #ffffff;
-}
-
-.burgers__modal {
-  max-width: 460px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #ffffff;
 }
 
 .open {
@@ -2406,6 +2413,10 @@ img {
     font-size: 15px;
   }
 
+  .section {
+    min-height: 1024px;
+  }
+
   .menu__list {
     display: none;
   }
@@ -2606,6 +2617,10 @@ img {
     flex: 0 1 50%;
   }
 
+  .reviews__img {
+    min-height: 256px;
+  }
+
   .reviews__wrap {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -2641,13 +2656,26 @@ img {
   }
 
   .form__row {
-    margin-bottom: 20px;
+    margin-bottom: 5%;
+  }
+
+  .form__block-title {
+    margin-bottom: 2px;
+  }
+
+  .form__radio:checked + .form__radio-custom::before {
+    width: 6px;
+    height: 7px;
   }
 }
 
 @media screen and (max-width: 480px) {
   html {
     font-size: 14px;
+  }
+
+  .section {
+    min-height: 800px;
   }
 
   .hero__logo-img {
@@ -2773,6 +2801,11 @@ img {
 
   .reviews {
     min-width: 320px;
+  }
+
+  .reviews__img {
+    height: 200px;
+    min-height: auto;
   }
 
   .reviews__title {
