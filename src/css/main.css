@@ -993,7 +993,14 @@ img {
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
   background-size: 100%;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+}
+
+.burgers__prev:focus,
+.burgers__next:focus {
+  outline: none;
 }
 
 .burgers__prev {

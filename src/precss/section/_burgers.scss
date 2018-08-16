@@ -39,7 +39,12 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    &:focus{
+      outline: none;
+    }
   }
   &__prev {
     background-image: url('../img/icons/arrow-left.svg');
