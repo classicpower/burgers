@@ -116,7 +116,7 @@ $(function () {
         slide: '.burgers__center',
         classPrev: '.burgers__left .burgers__prev',
         classNext: '.burgers__right .burgers__next',
-        auto: false
+        auto: true
     });
 
     function Slider(obj) {
@@ -128,7 +128,7 @@ $(function () {
         var btnNext = document.querySelector(obj.classNext);
         console.log(btnNext);
         var auto = obj.auto;
-        var time = obj.time || 2000;
+        var time = obj.time || 3000;
         var i = 0;
 
         var prev = function () {
