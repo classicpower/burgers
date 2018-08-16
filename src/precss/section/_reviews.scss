@@ -25,10 +25,10 @@
     width: 100%;
     object-fit: cover;
     min-height: 325px;
-    @include tablets(){
+    @include tablets() {
       min-height: 256px;
     }
-    @include mobile(){
+    @include mobile() {
       height: 200px;
       min-height: auto;
     }
@@ -88,14 +88,15 @@
     max-width: 460px;
     border-radius: 5px;
     background-color: #ffffff;
-    &-content{
-      position: relative;
-      padding: 30px 24px;
+    padding: 30px 24px;
+    box-sizing: border-box;
+    &-title {
+      font-family: Gagalin, "Arial Narrow", sans-serif;
+      margin-bottom: 30px;
     }
-
   }
-  &__close{
-    position: absolute;
+  &__close {
+    position: absolute!important;
     &::after,
     &::before {
       background-color: $red !important;

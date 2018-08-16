@@ -3,7 +3,7 @@ $(function () {
     var
         $btnReviews = $('.reviews__button'),
         $reviewsModal = $('.reviews__modal'),
-        $reviewsOverlay = $('.reviews__overlay'),
+        $reviewsOverlay = $('.reviews__overlay, .reviews__close'),
         popRev = new Popup({
             modal: $reviewsModal,
             overlay: $reviewsOverlay

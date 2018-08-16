@@ -1798,15 +1798,18 @@ img {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: #ffffff;
+  padding: 30px 24px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.reviews__modal-content {
-  position: relative;
-  padding: 30px 24px;
+.reviews__modal-title {
+  font-family: Gagalin, "Arial Narrow", sans-serif;
+  margin-bottom: 30px;
 }
 
 .reviews__close {
-  position: absolute;
+  position: absolute !important;
 }
 
 .reviews__close::after,
