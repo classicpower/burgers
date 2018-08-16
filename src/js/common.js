@@ -75,7 +75,7 @@ $(function () {
             .removeClass('team__item--active')
     })
     // BURGERMENU SECTION
-    
+
     $burgerItem.on('click', function () {
         var scrWidth = window.innerWidth;
         var item = $(this);
@@ -88,7 +88,7 @@ $(function () {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');
         }
-        if (scrWidth < 480 ) {
+        if (scrWidth < 480) {
             $burgerLeft.addClass('burgermenu__left--hide');
             $burgerRight.addClass('burgermenu__right--show');
             item.siblings().toggle();
@@ -101,13 +101,67 @@ $(function () {
 
     var $reviewsButton = $('.reviews__button');
     console.log($reviewsButton);
-    $(window).on('resize load',function () {
+    $(window).on('resize load', function () {
         var scrWidth = window.innerWidth;
         console.log(scrWidth);
         if (scrWidth < 480) {
             $reviewsButton.html('Читать отзыв')
-        }else{
+        } else {
             $reviewsButton.html('Подробнее')
         }
     })
+
+    /* СЛАЙДЕР*/
+    var slider = new Slider({
+        slide: '.burgers__center',
+        classPrev: '.burgers__left .burgers__prev',
+        classNext: '.burgers__right .burgers__next',
+        auto: false
+    });
+
+    function Slider(obj) {
+        this.obj = obj;
+        var slideArray = document.querySelectorAll(obj.slide);
+        console.log(slideArray);
+        var btnPrev = document.querySelector(obj.classPrev);
+        console.log(btnPrev);
+        var btnNext = document.querySelector(obj.classNext);
+        console.log(btnNext);
+        var auto = obj.auto;
+        var time = obj.time || 2000;
+        var i = 0;
+
+        var prev = function () {
+            slideArray[i].classList.remove('burgers__center--showed');
+            i--;
+
+            if (i < 0) {
+                i = slideArray.length - 1;
+            }
+
+            slideArray[i].classList.add('burgers__center--showed');
+        };
+        btnPrev.onclick = function () {
+            prev();
+        }
+
+        var next = function () {
+            slideArray[i].classList.remove('burgers__center--showed');
+            i++;
+
+            if (i >= slideArray.length) {
+                i = 0;
+            }
+
+            slideArray[i].classList.add('burgers__center--showed');
+        };
+        btnNext.onclick = function () {
+            next();
+        }
+        if (auto) {
+            setInterval(function () {
+                next()
+            }, time);
+        }
+    }
 });
