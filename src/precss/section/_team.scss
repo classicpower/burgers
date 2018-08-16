@@ -50,6 +50,8 @@
   &__figure {
     height: 0;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
     display: flex;
     @include tablets() {
       flex-direction: column;
@@ -101,6 +103,7 @@
       }
       .team__figure {
         height: 100%;
+        opacity: 1;
         visibility: visible;
         margin-bottom: 10%;
         @include tablets() {

@@ -1456,6 +1456,10 @@ img {
 .team__figure {
   height: 0;
   visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1509,6 +1513,7 @@ img {
 
 .team__item--active .team__figure {
   height: 100%;
+  opacity: 1;
   visibility: visible;
   margin-bottom: 10%;
 }
