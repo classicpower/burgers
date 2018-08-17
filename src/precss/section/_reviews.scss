@@ -96,6 +96,7 @@
     }
   }
   &__close {
+    @include offBtnStyle;
     position: absolute!important;
     &::after,
     &::before {

@@ -205,6 +205,7 @@
   }
   &__close {
     display: none;
+    @include offBtnStyle;
     @include mobile() {
       display: block;
     }

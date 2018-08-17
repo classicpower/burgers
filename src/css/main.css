@@ -717,6 +717,16 @@ img {
   opacity: .8;
 }
 
+.hamburger-menu {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
 .hamburger-menu__link {
   position: relative;
   display: none;
@@ -1248,6 +1258,13 @@ img {
 
 .burgers__close {
   display: none;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.burgers__close:focus {
+  outline: none;
 }
 
 .burgers__close::after,
@@ -1719,7 +1736,14 @@ img {
 }
 
 .burgermenu__close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
   display: none;
+}
+
+.burgermenu__close:focus {
+  outline: none;
 }
 
 .reviews__list {
@@ -1844,7 +1868,14 @@ img {
 }
 
 .reviews__close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
   position: absolute !important;
+}
+
+.reviews__close:focus {
+  outline: none;
 }
 
 .reviews__close::after,
@@ -2406,6 +2437,16 @@ img {
 
 .fixed-menu__link:hover {
   opacity: .7;
+}
+
+.fixed-menu__close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.fixed-menu__close:focus {
+  outline: none;
 }
 
 .close {

@@ -54,6 +54,15 @@ $Gagalin: 'Gagalin-Regular';
   }
 }
 
+@mixin offBtnStyle {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  &:focus{
+    outline: none
+  }
+}
+
 @mixin section($url) {
   width: 100%;
   height: $height;

@@ -128,7 +128,7 @@ $(function () {
         var btnNext = document.querySelector(obj.classNext);
         console.log(btnNext);
         var auto = obj.auto;
-        var time = obj.time || 3000;
+        var time = obj.time || 5000;
         var i = 0;
 
         var prev = function () {

@@ -68,6 +68,7 @@
 }
 
 .hamburger-menu {
+  @include offBtnStyle;
   &__link {
     position: relative;
     display: none;

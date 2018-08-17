@@ -9,7 +9,7 @@
   z-index: 9000;
   display: none;
   flex-direction: column;
-  &--open{
+  &--open {
     display: flex;
   }
   &__header {
@@ -45,8 +45,11 @@
     font-size: rem(24px);
     text-transform: uppercase;
     opacity: 1;
-    &:hover{
+    &:hover {
       opacity: .7;
     }
+  }
+  &__close {
+    @include offBtnStyle;
   }
 }

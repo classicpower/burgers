@@ -112,7 +112,8 @@
     padding: 0;
     background-color: rgba(47, 50, 52, 0.93);
   }
-  &__close{
+  &__close {
+    @include offBtnStyle;
     display: none;
   }
 }
