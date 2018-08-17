@@ -50,6 +50,8 @@
     }
   }
   &__close {
+    top: 50%;
+    transform: translateY(-50%);
     @include offBtnStyle;
   }
 }

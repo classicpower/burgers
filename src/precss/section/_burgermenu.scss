@@ -49,13 +49,6 @@
       .burgermenu__close {
         @include mobile() {
           display: block;
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          &::before,
-          &::after {
-            height: 24px;
-          }
         }
       }
     }

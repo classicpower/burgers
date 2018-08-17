@@ -2,37 +2,36 @@ $(function () {
     /**Popup c параметрами**/
     var
         $btnReviews = $('.reviews__button'),
-        $reviewsModal = $('.reviews__modal'),
-        $reviewsOverlay = $('.reviews__overlay, .reviews__close'),
+        $reviewsOpen = $('.reviews__overlay'),
+        $reviewsClose = $('.reviews__close'),
+        $body = $('body'),
         popRev = new Popup({
-            modal: $reviewsModal,
-            overlay: $reviewsOverlay
+            open: $reviewsOpen,
+            close: $reviewsClose
         });
 
 
     $btnReviews.on('click', function () {
         popRev.open();
     });
-    $reviewsOverlay.on('click', function () {
+    $reviewsClose.on('click', function () {
         popRev.close();
     });
 
     function Popup(obj) {
-        var modal = obj.modal;
-        var overlay = obj.overlay;
+        var open = obj.open;
+        var close = obj.close;
         var popup = this;
         this.open = function (content) {
             popup.content = content;
-            overlay.addClass('open');
-            modal.addClass('open');
-            modal.html(content);
-            $('body').addClass('blocked-scroll');
+            open.addClass('open');
+            open.html(content);
+            $body.addClass('blocked-scroll');
         }
 
         this.close = function () {
-            overlay.removeClass('open');
-            modal.removeClass('open');
-            $('body').removeClass('blocked-scroll');
+            open.removeClass('open');
+            $body.removeClass('blocked-scroll');
         }
     }
 
@@ -54,11 +53,11 @@ $(function () {
     $hamburger.on('click', function (e) {
         e.preventDefault();
         $fixedMenu.fadeIn().addClass('fixed-menu--open');
-        $('body').addClass('blocked-scroll');
+        $body.addClass('blocked-scroll');
     });
     $closeMenu.on('click', function () {
         $fixedMenu.fadeOut().removeClass('fixed-menu--open')
-        $('body').removeClass('blocked-scroll');
+        $body.removeClass('blocked-scroll');
     });
 
     /**АККОРДЕОН**/

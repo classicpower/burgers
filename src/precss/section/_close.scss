@@ -1,5 +1,5 @@
 .close {
-  position: relative;
+  position: absolute;
   right: 0;
   top: 0;
   width: 32px;
@@ -17,7 +17,7 @@
   position: absolute;
   left: 15px;
   content: "";
-  height: 25px;
+  height: 20px;
   width: 5px;
   border-radius: 3px;
   background-color: #fff;
