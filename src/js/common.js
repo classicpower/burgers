@@ -116,7 +116,7 @@ $(function () {
         slide: '.burgers__center',
         classPrev: '.burgers__left .burgers__prev',
         classNext: '.burgers__right .burgers__next',
-        auto: true
+        auto: false
     });
 
     function Slider(obj) {

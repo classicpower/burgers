@@ -7,17 +7,10 @@
     align-items: center;
     padding-top: 6px;
     padding-bottom: 6px;
+    justify-content: space-between;
     @include mobile(){
       flex-direction: column;
     }
-  }
-  &__left, &__right{
-    flex: 0 1 50%;
-    margin-bottom: 2%;
-  }
-  &__right{
-    display: flex;
-    justify-content: flex-end;
   }
   &__address {
     font-size: 14px;
@@ -27,6 +20,7 @@
     color: #ffffff;
     font-weight: 300;
     line-height: 1.7;
+    margin-bottom: 2%;
     @include mobile(){
       align-items: center;
     }
