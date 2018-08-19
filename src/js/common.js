@@ -167,7 +167,9 @@ $(function () {
         /*Валидация и обработка данных*/
         const form = document.querySelector('#form');
         const submit = document.querySelector('#submit');
-        const action = document.getElementById("form").attributes["action"].value
+        const action = document.getElementById("form").attributes["action"].value;
+        const method = document.getElementById("form").attributes["method"].value;
+
 
         submit.addEventListener('click', function (e) {
             e.preventDefault();
@@ -188,7 +190,7 @@ $(function () {
 
                 const xhr = new XMLHttpRequest();
 
-                xhr.open('POST', action);
+                xhr.open(method, action);
                 xhr.send(JSON.stringify(data));
 
 
