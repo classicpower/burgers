@@ -163,4 +163,49 @@ $(function () {
             }, time);
         }
     }
+
+        /*Валидация и обработка данных*/
+        const form = document.querySelector('#form');
+        const submit = document.querySelector('#submit');
+        const action = document.getElementById("form").attributes["action"].value
+
+        submit.addEventListener('click', function (e) {
+            e.preventDefault();
+            if(validateForm(form)){
+                const data = {
+                    name: form.elements.name.value,
+                    phone : form.elements.phone.value,
+                    street: form.elements.street.value,
+                    house: form.elements.house.value,
+                    corps: form.elements.corps.value,
+                    flat: form.elements.flat.value,
+                    flour: form.elements.flour.value,
+                    comment: form.elements.comment.value,
+                    pay: form.elements.pay.value,
+                    change: form.elements.change.value,
+                    to: "karasev.dev@gmail.com"
+                };
+
+                const xhr = new XMLHttpRequest();
+
+                xhr.open('POST', action);
+                xhr.send(JSON.stringify(data));
+
+
+            }
+        });
+        function validateForm(form){
+            let valid = true;
+            if(!validateField(form.elements.name)){
+                valid = false;
+            }
+            if(!validateField(form.elements.phone)){
+                valid = false;
+            }
+            return valid;
+        };
+        function validateField(field) {
+            field.nextElementSibling.textContent = field.validationMessage;
+            return field.checkValidity();
+        }
 });

@@ -146,4 +146,8 @@
       margin: auto;
     }
   }
+  &__error{
+    background-color: $red;
+    color: #fff;
+  }
 }

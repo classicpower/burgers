@@ -927,18 +927,18 @@
           </li>
         </ul>
         <div class="overlay reviews__overlay">
-        <div class="modal reviews__modal">
-          <div class="reviews__content">
-            <button type="button" class="close reviews__close"></button>
-            <h3 class="reviews__content-title">Константин Спилберг</h3>
-            <p class="reviews__content-text">
-              Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
-              мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять,
-              невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
-              расплавленным.
-            </p>
+          <div class="modal reviews__modal">
+            <div class="reviews__content">
+              <button type="button" class="close reviews__close"></button>
+              <h3 class="reviews__content-title">Константин Спилберг</h3>
+              <p class="reviews__content-text">
+                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
+                мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя
+                устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной,
+                а сыр таким расплавленным.
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </section>
       <!-- <section id="work" class="section work"></section> -->
@@ -946,41 +946,48 @@
         <div class="container delivery__container">
           <h2 class="delivery__title">Закажите доставку</h2>
           <div class="form">
-            <form method="POST" action="mail.php" class="form__elem">
+            <form method="POST" action="https://webdev-api.loftschool.com/sendmail" id="form" class="form__elem">
               <div class="form__content">
                 <div class="form__left">
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Имя</div>
-                      <input type="text" class="form__input" name="name">
+                      <input type="text" class="form__input" name="name" required>
+                      <div class="form__error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Телефон</div>
-                      <input type="tel" class="form__input" name="tel">
+                      <input type="tel" class="form__input" name="phone" required>
+                      <div class="form__error"></div>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Улица</div>
                       <input type="text" class="form__input" name="street">
+                      <div class="form__error"></div>
                     </label>
                   </div>
                   <div class="form__row">
                     <label class="form__block">
                       <div class="form__block-title">Дом</div>
                       <input type="number" class="form__input" name="house">
+                      <div class="form__error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Корпус</div>
                       <input type="number" class="form__input" name="corps">
+                      <div class="form__error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Квартира</div>
                       <input type="number" class="form__input" name="flat">
+                      <div class="form__error"></div>
                     </label>
                     <label class="form__block">
                       <div class="form__block-title">Этаж</div>
                       <input type="number" class="form__input" name="flour">
+                      <div class="form__error"></div>
                     </label>
                   </div>
                 </div>
@@ -1012,7 +1019,7 @@
                   </div>
                   <div class="form__row">
                     <label class="form__block form__block--flex0">
-                      <input type="submit" name="submit" class="form__block-submit" value="Зaказать">
+                      <input type="submit" name="submit" id="submit" class="form__block-submit" value="Зaказать">
                     </label>
                     <label class="form__block form__block--flex0">
                       <input type="reset" name="reset" class="form__block-reset" value="Очистить">
@@ -1026,37 +1033,37 @@
       <section id="contacts" class="section contacts">
         <footer class="footer">
           <div class="container footer__container">
-              <address class="footer__address">
-                <div class="footer__address-text">
-                  Санкт-Петербург, ул.Бабушкина, д.12/1, 15
-                </div>
-                <div class="footer__address-tel">
-                  <a href="tel:88123771377" class="footer__address-link">
-                    <span class="footer__address-img">
-                      <svg class="footer__address-icon">
-                        <use xlink:href="img/icons/sprite.svg#phone"></use>
-                      </svg>
-                    </span>
-                    <span class="footer__address-title"> +7 (812) 377-13-77</span>
-                  </a>
-                </div>
-              </address>
-              <div class="footer__social">
-                <ul class="footer__social-list">
-                  <li class="footer__social-item footer__social-item--vk">
-                    <a href="//vk.com" class="footer__social-link">Vkontakte</a>
-                  </li>
-                  <li class="footer__social-item footer__social-item--fb">
-                    <a href="//fb.com" class="footer__social-link">Facebook</a>
-                  </li>
-                  <li class="footer__social-item footer__social-item--inst">
-                    <a href="//instagram.com" class="footer__social-link">Instagram</a>
-                  </li>
-                  <li class="footer__social-item footer__social-item--tw">
-                    <a href="//twitter.com" class="footer__social-link">Twitter</a>
-                  </li>
-                </ul>
+            <address class="footer__address">
+              <div class="footer__address-text">
+                Санкт-Петербург, ул.Бабушкина, д.12/1, 15
               </div>
+              <div class="footer__address-tel">
+                <a href="tel:88123771377" class="footer__address-link">
+                  <span class="footer__address-img">
+                    <svg class="footer__address-icon">
+                      <use xlink:href="img/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </span>
+                  <span class="footer__address-title"> +7 (812) 377-13-77</span>
+                </a>
+              </div>
+            </address>
+            <div class="footer__social">
+              <ul class="footer__social-list">
+                <li class="footer__social-item footer__social-item--vk">
+                  <a href="//vk.com" class="footer__social-link">Vkontakte</a>
+                </li>
+                <li class="footer__social-item footer__social-item--fb">
+                  <a href="//fb.com" class="footer__social-link">Facebook</a>
+                </li>
+                <li class="footer__social-item footer__social-item--inst">
+                  <a href="//instagram.com" class="footer__social-link">Instagram</a>
+                </li>
+                <li class="footer__social-item footer__social-item--tw">
+                  <a href="//twitter.com" class="footer__social-link">Twitter</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </footer>
       </section>
