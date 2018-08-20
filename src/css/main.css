@@ -2043,6 +2043,10 @@ img {
   box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
 }
 
+.delivery__text {
+  margin-bottom: 30px;
+}
+
 .delivery__button {
   color: #fff;
   background-color: #e45028;
