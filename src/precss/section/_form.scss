@@ -18,7 +18,7 @@
     justify-content: center;
   }
   &__content {
-    width: 200px;
+    max-width: 200px;
     border-radius: 5px;
     background-color: #ffffff;
     padding: 20px;
@@ -29,7 +29,7 @@
     box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
   }
   &__text{
-    margin-bottom: 30px;
+    margin-bottom: 6%;
   }
   &__button {
     @include btn(#fff, $red, #c1401e);

@@ -2017,7 +2017,7 @@ img {
 }
 
 .delivery__content {
-  width: 200px;
+  max-width: 200px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   background-color: #ffffff;
@@ -2044,7 +2044,7 @@ img {
 }
 
 .delivery__text {
-  margin-bottom: 30px;
+  margin-bottom: 6%;
 }
 
 .delivery__button {
