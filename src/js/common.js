@@ -206,7 +206,7 @@ $(function () {
                         text: modalText,
                         body: body
                     });
-                    popupForm.open("Доставлено");
+                    popupForm.open();
                     formClose.addEventListener("click", function(){
                         popupForm.close()
                     });
