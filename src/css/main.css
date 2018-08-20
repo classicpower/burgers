@@ -1294,22 +1294,6 @@ img {
   padding-right: 9%;
 }
 
-.burgers__close {
-  display: none;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.burgers__close:focus {
-  outline: none;
-}
-
-.burgers__close::after,
-.burgers__close::before {
-  background-color: #e45028 !important;
-}
-
 .burgers__calories {
   opacity: .4;
   -webkit-align-self: flex-start;
@@ -2832,10 +2816,6 @@ img {
 
   .burgers__structure-title {
     font-size: 0.875rem;
-  }
-
-  .burgers__close {
-    display: block;
   }
 
   .burgers__calories-title {

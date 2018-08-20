@@ -203,17 +203,6 @@
       padding-right: 9%;
     }
   }
-  &__close {
-    display: none;
-    @include offBtnStyle;
-    @include mobile() {
-      display: block;
-    }
-    &::after,
-    &::before {
-      background-color: $red !important;
-    }
-  }
   &__calories {
     opacity: .4;
     align-self: flex-start;

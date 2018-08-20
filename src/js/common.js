@@ -177,22 +177,24 @@ $(function () {
                 const data = {
                     name: form.elements.name.value,
                     phone : form.elements.phone.value,
-                    street: form.elements.street.value,
-                    house: form.elements.house.value,
-                    corps: form.elements.corps.value,
-                    flat: form.elements.flat.value,
-                    flour: form.elements.flour.value,
+                    // street: form.elements.street.value,
+                    // house: form.elements.house.value,
+                    // corps: form.elements.corps.value,
+                    // flat: form.elements.flat.value,
+                    // flour: form.elements.flour.value,
                     comment: form.elements.comment.value,
-                    pay: form.elements.pay.value,
-                    change: form.elements.change.value,
+                    // pay: form.elements.pay.value,
+                    // change: form.elements.change.value,
                     to: "karasev.dev@gmail.com"
                 };
 
                 const xhr = new XMLHttpRequest();
-
+                xhr.responseType = 'json';
                 xhr.open(method, action);
                 xhr.send(JSON.stringify(data));
-
+                xhr.addEventListener('load', function(){
+                    console.log(xhr.response.status);
+                })
 
             }
         });
