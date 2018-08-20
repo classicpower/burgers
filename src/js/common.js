@@ -197,18 +197,23 @@ $(function () {
             xhr.open(method, action);
             xhr.send(JSON.stringify(data));
             xhr.addEventListener("load", function () {
+                const 
+                formClose = document.querySelector(".delivery__button"),
+                modalForm = document.querySelector(".delivery__modal"),
+                modalText = document.querySelector(".delivery__text"),
+                popupForm = new Popup({
+                    open: overlayOpen,
+                    modal: modalForm,
+                    text: modalText,
+                    body: body
+                });
                 if (xhr.status < 400) {
-                    const 
-                    formClose = document.querySelector(".delivery__button"),
-                    modalForm = document.querySelector(".delivery__modal"),
-                    modalText = document.querySelector(".delivery__text"),
-                    popupForm = new Popup({
-                        open: overlayOpen,
-                        modal: modalForm,
-                        text: modalText,
-                        body: body
-                    });
                     popupForm.open("Доставлено");
+                    formClose.addEventListener("click", function(){
+                        popupForm.close()
+                    });
+                }else{
+                    popupForm.open("Не доставлено");
                     formClose.addEventListener("click", function(){
                         popupForm.close()
                     });
