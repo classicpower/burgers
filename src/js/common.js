@@ -172,10 +172,11 @@ $(function () {
             $burgerLeft.addClass("burgermenu__left--hide");
             $burgerRight.addClass("burgermenu__right--show");
         }
-        if (scrWidth < 480) {
-            $burgerLeft.addClass("burgermenu__left--hide");
-            $burgerRight.addClass("burgermenu__right--show");
+        else if (scrWidth < 480) {
+            $burgerLeft.toggleClass("burgermenu__left--hide");
+            $burgerRight.toggleClass("burgermenu__right--show");
             item.siblings().toggle();
+
         }
         else {
             $burgerLeft.removeClass("burgermenu__left--hide");
