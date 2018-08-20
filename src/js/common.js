@@ -193,7 +193,9 @@ $(function () {
                 xhr.open(method, action);
                 xhr.send(JSON.stringify(data));
                 xhr.addEventListener('load', function(){
-                    console.log(xhr.response.status);
+                    if(xhr.status < 400){
+                        console.log("xhr.response.status");
+                    }
                 })
 
             }
