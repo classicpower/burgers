@@ -4,31 +4,37 @@ $(function () {
         btnReviews = document.querySelectorAll(".reviews__button"),
         overlayOpen = document.querySelector(".overlay"),
         reviewsClose = document.querySelector(".reviews__close"),
-        body = document.body,
-        popRev = new Popup({
-            open: overlayOpen,
+        revievsModal = document.querySelector(".reviews__modal")
+    body = document.body,
+        popReviews = new Popup({
+            overlay: overlayOpen,
+            modal: revievsModal,
             body: body
         });
     for (let i = 0; i < btnReviews.length; i++) {
         const btn = btnReviews[i];
         btn.addEventListener("click", function () {
-            popRev.open();
+            popReviews.open();
         });
     }
     reviewsClose.addEventListener("click", function () {
-        popRev.close();
+        popReviews.close();
     });
 
     function Popup(obj) {
-        var open = obj.open;
+        var overlay = obj.overlay;
+        var modal = obj.modal;
         var popup = this;
-        popup.open = function () {
-            open.classList.add("open");
+        popup.open = function (content) {
+            popup.content = content;
+            overlay.classList.add("open");
+            modal.classList.add("open");
             body.classList.add("blocked-scroll");
         }
 
         popup.close = function () {
-            open.classList.remove("open");
+            overlay.classList.remove("open");
+            modal.classList.remove("open");
             body.classList.remove("blocked-scroll");
         }
     }
@@ -187,12 +193,18 @@ $(function () {
             xhr.send(JSON.stringify(data));
             xhr.addEventListener("load", function () {
                 if (xhr.status < 400) {
-                    const formClose = document.querySelector(".delivery__button");
+                    const 
+                    formClose = document.querySelector(".delivery__button"),
+                    modalForm = document.querySelector(".delivery__modal"),
                     popupForm = new Popup({
                         open: overlayOpen,
+                        modal: modalForm,
                         body: body
                     });
-                    popupForm.open();
+                    popupForm.open("Доставлено");
+                    formClose.addEventListener("click", function(){
+                        popupForm.close
+                    })
                 }
             })
 
