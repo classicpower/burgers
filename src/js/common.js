@@ -22,13 +22,16 @@ $(function () {
     });
 
     function Popup(obj) {
-        var overlay = obj.overlay;
-        var modal = obj.modal;
-        var popup = this;
+        var 
+        overlay = obj.overlay,
+        modal = obj.modal,
+        popup = this,
+        text = obj.text;
         popup.open = function (content) {
             popup.content = content;
             overlay.classList.add("open");
             modal.classList.add("open");
+            text.textContent = content;
             body.classList.add("blocked-scroll");
         }
 
@@ -196,15 +199,17 @@ $(function () {
                     const 
                     formClose = document.querySelector(".delivery__button"),
                     modalForm = document.querySelector(".delivery__modal"),
+                    modalText = document.querySelector(".delivery__text"),
                     popupForm = new Popup({
                         open: overlayOpen,
                         modal: modalForm,
+                        text: modalText,
                         body: body
                     });
                     popupForm.open("Доставлено");
                     formClose.addEventListener("click", function(){
-                        popupForm.close
-                    })
+                        popupForm.close()
+                    });
                 }
             })
 
