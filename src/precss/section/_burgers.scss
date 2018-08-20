@@ -42,7 +42,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
@@ -60,7 +60,7 @@
     flex: 1;
     display: none;
     transition: opacity .5s;
-    &--showed{
+    &--showed {
       display: flex;
       left: 0;
       opacity: 1;
@@ -109,7 +109,7 @@
     cursor: pointer;
     border: none;
     transition: opacity .5s;
-    &:focus{
+    &:focus {
       outline: none;
     }
     @include tablets() {
