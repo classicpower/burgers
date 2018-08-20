@@ -1,18 +1,31 @@
 $(function () {
     /**Popup c параметрами**/
-    var
+    const
+        body = document.body,
+        /*POPUP REVIEWS */
         btnReviews = document.querySelectorAll(".reviews__button"),
         overlayOpen = document.querySelector(".overlay"),
         reviewsClose = document.querySelector(".reviews__close"),
         revievsModal = document.querySelector(".reviews__modal"),
         revievsText = document.querySelector(".reviews__content-text"),
-        body = document.body,
         popReviews = new Popup({
             overlay: overlayOpen,
             modal: revievsModal,
+            // text: revievsText,
+            body: body
+        }),
+        /*POPUP FORM */
+        formClose = document.querySelector(".delivery__button"),
+        modalForm = document.querySelector(".delivery__modal"),
+        modalText = document.querySelector(".delivery__text"),
+        popupForm = new Popup({
+            overlay: overlayOpen,
+            modal: modalForm,
+            text: modalText,
             body: body
         });
-        
+
+
     for (let i = 0; i < btnReviews.length; i++) {
         const btn = btnReviews[i];
         btn.addEventListener("click", function () {
@@ -24,17 +37,17 @@ $(function () {
     });
 
     function Popup(obj) {
-        var 
-        overlay = obj.overlay,
-        modal = obj.modal,
-        $this = this,
-        text = obj.text;
+        var
+            overlay = obj.overlay,
+            modal = obj.modal,
+            $this = this,
+            text = obj.text;
         $this.open = function (content) {
             $this.content = content;
             overlay.classList.add("open");
             modal.classList.add("open");
             body.classList.add("blocked-scroll");
-            if(text){
+            if (text) {
                 text.textContent = content;
             }
         }
@@ -44,6 +57,66 @@ $(function () {
             modal.classList.remove("open");
             body.classList.remove("blocked-scroll");
         }
+    }
+
+    /*Валидация и обработка данных*/
+    const
+        form = document.querySelector("#form"),
+        submit = document.querySelector("#submit"),
+        action = document.getElementById("form").attributes["action"].value,
+        method = document.getElementById("form").attributes["method"].value;
+
+
+    submit.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (validateForm(form)) {
+            const data = {
+                name: form.elements.name.value,
+                phone: form.elements.phone.value,
+                // street: form.elements.street.value,
+                // house: form.elements.house.value,
+                // corps: form.elements.corps.value,
+                // flat: form.elements.flat.value,
+                // flour: form.elements.flour.value,
+                comment: form.elements.comment.value,
+                // pay: form.elements.pay.value,
+                // change: form.elements.change.value,
+                to: "karasev.dev@gmail.com"
+            };
+
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = "json";
+            xhr.open(method, action);
+            xhr.send(JSON.stringify(data));
+            xhr.addEventListener("load", function () {
+                if (xhr.status < 400) {
+                    popupForm.open("Доставлено");
+                    formClose.addEventListener("click", function () {
+                        popupForm.close()
+                    });
+                } else {
+                    popupForm.open("Не доставлено");
+                    formClose.addEventListener("click", function () {
+                        popupForm.close()
+                    });
+                }
+            })
+
+        }
+    });
+    function validateForm(form) {
+        let valid = true;
+        if (!validateField(form.elements.name)) {
+            valid = false;
+        }
+        if (!validateField(form.elements.phone)) {
+            valid = false;
+        }
+        return valid;
+    };
+    function validateField(field) {
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity();
     }
 
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
@@ -168,74 +241,5 @@ $(function () {
                 next()
             }, time);
         }
-    }
-
-    /*Валидация и обработка данных*/
-    const form = document.querySelector("#form");
-    const submit = document.querySelector("#submit");
-    const action = document.getElementById("form").attributes["action"].value;
-    const method = document.getElementById("form").attributes["method"].value;
-
-
-    submit.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (validateForm(form)) {
-            const data = {
-                name: form.elements.name.value,
-                phone: form.elements.phone.value,
-                // street: form.elements.street.value,
-                // house: form.elements.house.value,
-                // corps: form.elements.corps.value,
-                // flat: form.elements.flat.value,
-                // flour: form.elements.flour.value,
-                comment: form.elements.comment.value,
-                // pay: form.elements.pay.value,
-                // change: form.elements.change.value,
-                to: "karasev.dev@gmail.com"
-            };
-
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = "json";
-            xhr.open(method, action);
-            xhr.send(JSON.stringify(data));
-            xhr.addEventListener("load", function () {
-                const 
-                formClose = document.querySelector(".delivery__button"),
-                modalForm = document.querySelector(".delivery__modal"),
-                modalText = document.querySelector(".delivery__text"),
-                popupForm = new Popup({
-                    open: overlayOpen,
-                    modal: modalForm,
-                    text: modalText,
-                    body: body
-                });
-                if (xhr.status < 400) {
-                    popupForm.open("Доставлено");
-                    formClose.addEventListener("click", function(){
-                        popupForm.close()
-                    });
-                }else{
-                    popupForm.open("Не доставлено");
-                    formClose.addEventListener("click", function(){
-                        popupForm.close()
-                    });
-                }
-            })
-
-        }
-    });
-    function validateForm(form) {
-        let valid = true;
-        if (!validateField(form.elements.name)) {
-            valid = false;
-        }
-        if (!validateField(form.elements.phone)) {
-            valid = false;
-        }
-        return valid;
-    };
-    function validateField(field) {
-        field.nextElementSibling.textContent = field.validationMessage;
-        return field.checkValidity();
     }
 });
