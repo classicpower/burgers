@@ -194,12 +194,12 @@ $(function () {
                 xhr.send(JSON.stringify(data));
                 xhr.addEventListener('load', function(){
                     if(xhr.status < 400){
-                        pop = new Popup({
+                        console.log(xhr.responseText);
+                        popupForm = new Popup({
                             open: $reviewsOpen,
                             close: $reviewsClose
                         });
-                        popRev1.open(xhr.responseText);
-                        console.log(xhr.responseText);
+                        popupForm.open(xhr.responseText);
                     }
                 })
 
