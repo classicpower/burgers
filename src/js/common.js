@@ -4,22 +4,23 @@ $(function () {
         body = document.body,
         /*POPUP REVIEWS */
         btnReviews = document.querySelectorAll(".reviews__button"),
-        overlayOpen = document.querySelector(".overlay"),
+        overlayReviews = document.querySelector(".reviews__overlay"),
         reviewsClose = document.querySelector(".reviews__close"),
         revievsModal = document.querySelector(".reviews__modal"),
         revievsText = document.querySelector(".reviews__content-text"),
         popReviews = new Popup({
-            overlay: overlayOpen,
+            overlay: overlayReviews,
             modal: revievsModal,
             // text: revievsText,
             body: body
         }),
         /*POPUP FORM */
+        overlayForm = document.querySelector(".delivery__overlay"),
         formClose = document.querySelector(".delivery__button"),
         modalForm = document.querySelector(".delivery__modal"),
         modalText = document.querySelector(".delivery__text"),
         popupForm = new Popup({
-            overlay: overlayOpen,
+            overlay: overlayForm,
             modal: modalForm,
             text: modalText,
             body: body
