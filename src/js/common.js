@@ -194,6 +194,7 @@ $(function () {
                 xhr.send(JSON.stringify(data));
                 xhr.addEventListener('load', function(){
                     if(xhr.status < 400){
+                        popRev.open();
                         console.log("xhr.response.status");
                     }
                 })
