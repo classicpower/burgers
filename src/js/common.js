@@ -4,13 +4,15 @@ $(function () {
         btnReviews = document.querySelectorAll(".reviews__button"),
         overlayOpen = document.querySelector(".overlay"),
         reviewsClose = document.querySelector(".reviews__close"),
-        revievsModal = document.querySelector(".reviews__modal")
-    body = document.body,
+        revievsModal = document.querySelector(".reviews__modal"),
+        revievsText = document.querySelector(".reviews__content-text"),
+        body = document.body,
         popReviews = new Popup({
             overlay: overlayOpen,
             modal: revievsModal,
             body: body
         });
+        
     for (let i = 0; i < btnReviews.length; i++) {
         const btn = btnReviews[i];
         btn.addEventListener("click", function () {
@@ -206,7 +208,7 @@ $(function () {
                         text: modalText,
                         body: body
                     });
-                    popupForm.open();
+                    popupForm.open("Доставлено");
                     formClose.addEventListener("click", function(){
                         popupForm.close()
                     });
