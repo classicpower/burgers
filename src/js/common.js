@@ -210,7 +210,7 @@ $(function () {
                     body: body
                 });
                 if (xhr.status < 400) {
-                    popReviews.open("Доставлено");
+                    popupForm.open("Доставлено");
                     formClose.addEventListener("click", function(){
                         popupForm.close()
                     });
