@@ -91,12 +91,12 @@ $(function () {
             xhr.send(JSON.stringify(data));
             xhr.addEventListener("load", function () {
                 if (xhr.status < 400) {
-                    popupForm.open("Доставлено");
+                    popupForm.open("Сообщение отправлено");
                     formClose.addEventListener("click", function () {
                         popupForm.close()
                     });
                 } else {
-                    popupForm.open("Не доставлено");
+                    popupForm.open("Сообщение не отправлено");
                     formClose.addEventListener("click", function () {
                         popupForm.close()
                     });

@@ -2017,9 +2017,9 @@ img {
 }
 
 .delivery__content {
-  max-width: 200px;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
-  box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
+  width: 200px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   background-color: #ffffff;
   padding: 20px;
   display: -webkit-box;
@@ -2039,6 +2039,8 @@ img {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 1, 0.5);
 }
 
 .delivery__button {
