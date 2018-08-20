@@ -27,17 +27,19 @@ $(function () {
         var 
         overlay = obj.overlay,
         modal = obj.modal,
-        popup = this,
+        $this = this,
         text = obj.text;
-        popup.open = function (content) {
-            popup.content = content;
+        $this.open = function (content) {
+            $this.content = content;
             overlay.classList.add("open");
             modal.classList.add("open");
-            text.textContent = content;
             body.classList.add("blocked-scroll");
+            if(text){
+                text.textContent = content;
+            }
         }
 
-        popup.close = function () {
+        $this.close = function () {
             overlay.classList.remove("open");
             modal.classList.remove("open");
             body.classList.remove("blocked-scroll");
