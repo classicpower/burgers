@@ -38,25 +38,25 @@ $(function () {
                 reviewsText.text(sliceText.slice(0, size));
             }
         }
-        else{
+        else {
             console.log("ok");
         }
-    }
+    };
     sliceReviews(true);
 
     for (let i = 0; i < btnReviews.length; i++) {
         const btn = btnReviews[i];
         btn.addEventListener("click", function () {
-            console.log(sliceReviews(false));
-            sliceReviews(false);
             var
                 $this = this,
                 thisParent = $this.parentNode;
             const
                 title = thisParent.querySelector(".reviews__title"),
                 content = thisParent.querySelector(".reviews__text");
-            revievsTitle.textContent = title.innerHTML;
-            revievsText.textContent = content.innerHTML;
+            revievsTitle.textContent = title.textContent;
+            revievsText.textContent = content.textContent;
+            // console.log(sliceReviews(false));
+            // sliceReviews(false);
             popReviews.open();
         });
     }
@@ -270,5 +270,23 @@ $(function () {
                 next()
             }, time);
         }
+    }
+
+    /* Яндекс карты*/
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map("map", {
+            center: [59.93, 30.36],
+            zoom: 12,
+            controls: ['zoomControl'],
+            behaviors: ['drag']
+        });
+        var myPlacemark = new ymaps.Placemark([55.75, 37.62], {
+            hintContent: 'Содержимое всплывающей подсказки',
+            balloonContent: 'Содержимое балуна'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
     }
 });
