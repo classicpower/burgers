@@ -8,6 +8,7 @@ $(function () {
         reviewsClose = document.querySelector(".reviews__close"),
         revievsModal = document.querySelector(".reviews__modal"),
         revievsText = document.querySelector(".reviews__content-text"),
+        revievsTitle = document.querySelector(".reviews__content-title"),
         popReviews = new Popup({
             overlay: overlayReviews,
             modal: revievsModal,
@@ -26,10 +27,36 @@ $(function () {
             body: body
         });
 
+    /* ОБРЕЗАТЬ ОТЗЫВ ДО НЕОБХОДИМОГО КОЛ-ВА БУКВ*/
+    function sliceReviews(switcher) {
+        var
+            size = 225,
+            reviewsText = $('.reviews__text'),
+            sliceText = reviewsText.text();
+        if (switcher) {
+            if (sliceText.length > size) {
+                reviewsText.text(sliceText.slice(0, size));
+            }
+        }
+        else{
+            console.log("ok");
+        }
+    }
+    sliceReviews(true);
 
     for (let i = 0; i < btnReviews.length; i++) {
         const btn = btnReviews[i];
         btn.addEventListener("click", function () {
+            console.log(sliceReviews(false));
+            sliceReviews(false);
+            var
+                $this = this,
+                thisParent = $this.parentNode;
+            const
+                title = thisParent.querySelector(".reviews__title"),
+                content = thisParent.querySelector(".reviews__text");
+            revievsTitle.textContent = title.innerHTML;
+            revievsText.textContent = content.innerHTML;
             popReviews.open();
         });
     }
