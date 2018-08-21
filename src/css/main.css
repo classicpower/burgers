@@ -2318,9 +2318,31 @@ img {
   justify-content: flex-end;
 }
 
-.contacts__map {
+.map {
   width: inherit;
   height: inherit;
+}
+
+.map__geoobjects {
+  position: relative;
+  top: 57px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.map__geoobjects-length {
+  position: absolute;
+  top: -24px;
+  left: 1px;
+  right: 0;
+  font-weight: bold;
 }
 
 .footer {

@@ -3,8 +3,28 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  &__map{
-    width: inherit;
-    height: inherit;
+}
+
+.map {
+  width: inherit;
+  height: inherit;
+  &__geoobjects {
+    position: relative;
+    top: 57px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 50%;
+    &-length {
+      position: absolute;
+      top: -24px;
+      left: 1px;
+      right: 0;
+      font-weight: bold;
+    }
   }
 }

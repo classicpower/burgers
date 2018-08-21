@@ -275,18 +275,81 @@ $(function () {
     /* Яндекс карты*/
     ymaps.ready(init);
 
+    var placemarks = [
+        {
+            latitude: 59.97,
+            longitude: 30.31,
+            hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
+                '</div>'
+            ]
+        },
+        {
+            latitude: 59.94,
+            longitude: 30.25,
+            hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+                '</div>'
+            ]
+        },
+        {
+            latitude: 59.93,
+            longitude: 30.34,
+            hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+                '</div>'
+            ]
+        }
+    ],
+        geoObjects = [];
+
     function init() {
-        var myMap = new ymaps.Map("map", {
+        var map = new ymaps.Map("map", {
             center: [59.93, 30.36],
             zoom: 12,
             controls: ['zoomControl'],
             behaviors: ['drag']
         });
-        var myPlacemark = new ymaps.Placemark([55.75, 37.62], {
-            hintContent: 'Содержимое всплывающей подсказки',
-            balloonContent: 'Содержимое балуна'
-        });
 
-        myMap.geoObjects.add(myPlacemark);
+        for (var i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+                {
+                    hintContent: placemarks[i].hintContent,
+                    balloonContent: placemarks[i].balloonContent.join('')
+                },
+                {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/icons/map-marker.svg',
+                    iconImageSize: [46, 57],
+                    iconImageOffset: [-23, -57],
+                    iconImageClipRect: [[415, 0], [461, 57]]
+                });
+        };
+        var
+            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                '<div class="map__geoobjects"><div class="map__geoobjects-length">{{ properties.geoObjects.length }}</div></div>'),
+            clusterer = new ymaps.Clusterer({
+                clusterIcons: [
+                    {
+                        href: 'img/icons/map-marker.svg',
+                        size: [69, 85],
+                        offset: [-50, -50]
+                    }
+                ],
+                clusterIconContentLayout: MyIconContentLayout
+            });
+
+        map.geoObjects.add(clusterer);
+        clusterer.add(geoObjects);
+
     }
 });
