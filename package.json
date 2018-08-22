@@ -8,6 +8,7 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",

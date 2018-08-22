@@ -55,14 +55,16 @@
   &__item {
     display: flex;
     cursor: pointer;
+    transition: .3s;
     &--active {
       .burgermenu__block-title {
         color: $yellow;
       }
       .burgermenu__text {
         width: 100%;
-        transition: width 1s ease;
+        transition: delay .6s, visibility 1s, opacity 1s, width 1s;
         visibility: visible;
+        opacity: 1;
         padding: 13% 8% 0 7%;
         position: relative;
       }
@@ -126,11 +128,13 @@
   }
   &__text {
     visibility: hidden;
+    opacity: 0;
     width: 0;
     color: #ffffff;
     font-weight: 300;
     padding: 0;
     background-color: rgba(47, 50, 52, 0.93);
+    transition: visibility .6s, opacity .6s, width 0s;
   }
   &__close {
     @include offBtnStyle;
