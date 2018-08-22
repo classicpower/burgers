@@ -6,8 +6,9 @@ const
     imagemin = require('gulp-imagemin'),
     gcmq = require('gulp-group-css-media-queries'),
     cleanCSS = require('gulp-clean-css'),
-    sourcemaps = require('gulp-sourcemaps');
-// rename = require('gulp-rename');
+    sourcemaps = require('gulp-sourcemaps'),
+    del = require('del'),
+    rename = require('gulp-rename');
 
 const config = {
     src: './src',
@@ -27,10 +28,12 @@ const config = {
         dest: '/img/'
     }
 };
+gulp.task('clean', function () {
+    return del.sync(config.src + config.css.dest);
+});
 
-gulp.task('build', function () {
+gulp.task('build', ['clean'], function () {
     gulp.src(config.src + config.css.src)
-        .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: require('node-normalize-scss').includePaths
         }).on('error', sass.logError))
@@ -39,11 +42,13 @@ gulp.task('build', function () {
             browsers: ['last 15 version', '> 0.1%'],
             cascade: false
         }))
+        .pipe(gulp.dest(config.src + config.css.dest))
+        .pipe(sourcemaps.init())
         .pipe(cleanCSS({
             level: 2
         }))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(sourcemaps.write('.'))
-        // .pipe(gcmq())
         .pipe(gulp.dest(config.src + config.css.dest))
         .pipe(browserSync.reload({
             stream: true
