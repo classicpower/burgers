@@ -68,7 +68,6 @@ gulp.task('image', function () {
 
 gulp.task('watch', ['browserSync'], function () {
     gulp.watch(config.src + config.css.watch, ['build']);
-    gulp.watch(config.src + config.img.src, ['image']);
     gulp.watch(config.src + config.html.src, browserSync.reload);
     gulp.watch(config.src + config.js.src, browserSync.reload);
 });

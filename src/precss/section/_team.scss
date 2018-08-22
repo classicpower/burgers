@@ -20,10 +20,7 @@
   &__list {
     margin-bottom: 5%;
     display: flex;
-    flex-direction: column; // @include tablets(){
-    //   justify-content: center;
-    //   align-items: center;
-    // }
+    flex-direction: column;
   }
   &__name {
     color: #ffffff;

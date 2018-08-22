@@ -282,30 +282,77 @@ $(function () {
             hintContent: '<div class="map__hint">ул. Литераторов, д. 19</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
+                '<svg class="map__balloon-img">',
+                '<use xlink:href="img/icons/sprite.svg#logo"></use>',
+                '</svg>',
+                '<div class="map__balloon-content">',
+                '<div class="map__balloon-title">',
+                'Бургеры на Литераторов',
+                '</div>',
+                '<div class="map__balloon-text">',
                 'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литераторов, д. 19',
+                '</div>',
+                '</div>',
                 '</div>'
             ]
         },
         {
-            latitude: 59.94,
-            longitude: 30.25,
-            hintContent: '<div class="map__hint">Малый проспект В О, д 64</div>',
+            latitude: 59.89623482,
+            longitude: 30.42444512,
+            hintContent: '<div class="map__hint">ул. Бабушкина, д.12/1</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-                'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д 64',
+                '<svg class="map__balloon-img">',
+                '<use xlink:href="img/icons/sprite.svg#logo"></use>',
+                '</svg>',
+                '<div class="map__balloon-content">',
+                '<div class="map__balloon-title">',
+                'Бургеры на Бабушкина',
+                '</div>',
+                '<div class="map__balloon-text">',
+                'Самые вкусные бургеры у нас! Заходите по адресу: ул. Бабушкина, д.12/1',
+                '</div>',
+                '</div>',
                 '</div>'
             ]
         },
         {
-            latitude: 59.93,
-            longitude: 30.34,
-            hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+            latitude: 59.94672149,
+            longitude: 30.38588377,
+            hintContent: '<div class="map__hint">ул. Тверская, д.15</div>',
             balloonContent: [
                 '<div class="map__balloon">',
-                '<img class="map__burger-img" src="img/burger.png" alt="Бургер"/>',
-                'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+                '<svg class="map__balloon-img">',
+                '<use xlink:href="img/icons/sprite.svg#logo"></use>',
+                '</svg>',
+                '<div class="map__balloon-content">',
+                '<div class="map__balloon-title">',
+                'Бургеры на Тверской',
+                '</div>',
+                '<div class="map__balloon-text">',
+                'Самые вкусные бургеры у нас! Заходите по адресу: ул. Тверская, д.15',
+                '</div>',
+                '</div>',
+                '</div>'
+            ]
+        },
+        {
+            latitude: 59.89103892,
+            longitude: 30.31873528,
+            hintContent: '<div class="map__hint">Московский пр., д.105</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<svg class="map__balloon-img">',
+                '<use xlink:href="img/icons/sprite.svg#logo"></use>',
+                '</svg>',
+                '<div class="map__balloon-content">',
+                '<div class="map__balloon-title">',
+                'Бургеры на Московской',
+                '</div>',
+                '<div class="map__balloon-text">',
+                'Самые вкусные бургеры у нас! Заходите по адресу: Московский пр., д.105',
+                '</div>',
+                '</div>',
                 '</div>'
             ]
         }
