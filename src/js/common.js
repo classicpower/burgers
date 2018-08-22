@@ -114,7 +114,7 @@ $(function () {
 
             const xhr = new XMLHttpRequest();
             xhr.responseType = "json";
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+            xhr.open(method, action);
             xhr.send(JSON.stringify(data));
             xhr.addEventListener("load", function () {
                 if (xhr.status < 400) {
