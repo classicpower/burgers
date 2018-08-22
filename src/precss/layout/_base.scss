@@ -5,6 +5,9 @@ html {
   @include mobile() {
     font-size: 14px;
   }
+  @include mini() {
+    font-size: 13px;
+  }
 }
 
 body,

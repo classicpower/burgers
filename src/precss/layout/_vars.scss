@@ -5,7 +5,7 @@ $red: #e45028;
 $height: 100vh;
 $tablets: 768px;
 $mobile: 480px;
-
+$mini: 380px;
 //var fonts
 $Ubuntu: 'Ubuntu';
 $Ubuntu-Bold: '#{$Ubuntu}-Bold';
@@ -13,8 +13,6 @@ $Ubuntu-Light: '#{$Ubuntu}-Light';
 $Ubuntu-Medium: '#{$Ubuntu}-Medium';
 $Lifehack: 'Lifehack-Medium';
 $Gagalin: 'Gagalin-Regular';
-
-
 //mixin fontface
 @mixin fontface($fontName, $urlName: $fontName, $weight: normal, $style: normal) {
   @font-face {
@@ -39,7 +37,9 @@ $Gagalin: 'Gagalin-Regular';
   height: 100%;
 }
 
-@mixin btn($color, $bkg, $hover) {
+@mixin btn($color,
+$bkg,
+$hover) {
   color: $color;
   background-color: $bkg;
   border: none;
@@ -58,7 +58,7 @@ $Gagalin: 'Gagalin-Regular';
   padding: 0;
   background-color: transparent;
   border: none;
-  &:focus{
+  &:focus {
     outline: none
   }
 }
@@ -73,7 +73,8 @@ $Gagalin: 'Gagalin-Regular';
   overflow: hidden;
 }
 
-@mixin title ($color, $align){
+@mixin title ($color,
+$align) {
   text-align: $align;
   font-family: $Gagalin, "Arial Narrow", sans-serif;
   font-size: rem(72px);
@@ -82,7 +83,8 @@ $Gagalin: 'Gagalin-Regular';
     font-size: rem(65px);
   }
 }
-@mixin input(){
+
+@mixin input() {
   color: $dark;
   font-weight: 300;
   width: 100%;
@@ -90,7 +92,7 @@ $Gagalin: 'Gagalin-Regular';
   padding: 5px 0 5px 21px;
   box-sizing: border-box;
   border-radius: 5px;
-  &:focus{
+  &:focus {
     outline: none;
     border: 2px solid $yellow;
   }
@@ -98,17 +100,24 @@ $Gagalin: 'Gagalin-Regular';
 
 // PX to REM function
 @function rem($px: 16px) {
-  @return ($px / 16px) + rem;
+  @return ($px / 16px)+rem;
 }
 
 // Breakpoints  
 @mixin tablets {
-  @media screen and (max-width: $tablets){
+  @media screen and (max-width: $tablets) {
     @content;
   }
 }
+
 @mixin mobile {
-  @media screen and (max-width: $mobile){
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mini {
+  @media screen and (max-width: $mini) {
     @content;
   }
 }
