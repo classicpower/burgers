@@ -117,7 +117,7 @@ $(function () {
             xhr.open(method, action);
             xhr.send(JSON.stringify(data));
             xhr.addEventListener("load", function () {
-                if (xhr.status != 200) {
+                if (xhr.status < 400) {
                     popupForm.open("Сообщение отправлено");
                     formClose.addEventListener("click", function () {
                         popupForm.close()
