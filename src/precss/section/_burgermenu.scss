@@ -4,7 +4,7 @@
   display: flex;
   &__title {
     @include title(#fff, center);
-    margin: 18% 0 0 22%;
+    margin: 18% 0 0;
 
     @include mobile() {
       font-size: rem(58px);
@@ -21,6 +21,12 @@
     z-index: 0;
     display: flex;
     justify-content: center;
+    @include tablets(){
+      width: 50%;
+    }
+    @include mobile(){
+      width: 40%;
+    }
     &--hide {
       width: 0;
       visibility: hidden;
@@ -32,6 +38,12 @@
     justify-content: flex-end;
     height: 100%;
     z-index: 100;
+    @include tablets(){
+      width: 50%;
+    }
+    @include mobile(){
+      width: 60%;
+    }
     &--show {
       width: 100%;
       visibility: visible;

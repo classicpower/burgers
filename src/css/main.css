@@ -1621,7 +1621,7 @@ img {
   font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   font-size: 4.5rem;
   color: #fff;
-  margin: 18% 0 0 22%;
+  margin: 18% 0 0;
 }
 
 .burgermenu__left {
@@ -2788,6 +2788,14 @@ img {
     text-align: center;
   }
 
+  .burgermenu__left {
+    width: 50%;
+  }
+
+  .burgermenu__right {
+    width: 50%;
+  }
+
   .reviews__item {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 50%;
@@ -2964,6 +2972,14 @@ img {
   .burgermenu__title {
     font-size: 3.625rem;
     margin: 18% 0 0 18%;
+  }
+
+  .burgermenu__left {
+    width: 40%;
+  }
+
+  .burgermenu__right {
+    width: 60%;
   }
 
   .burgermenu__item--active .burgermenu__close {
