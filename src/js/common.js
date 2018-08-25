@@ -193,14 +193,15 @@ $(function () {
         var
             item = $(this),
             scrWidth = window.innerWidth,
-            eTarget = e.target,
-            content = eTarget.nextElementSibling,
+            thisContent = item.children('.burgermenu__content'),
+            otherContent = $burgerItem.children('.burgermenu__content'),
             bodyWidth = $("body").width(),
             itemWidth = item.width();
 
-        console.log(scrWidth);
-        console.log(itemWidth);
-        console.log(eTarget.nextElementSibling);
+        // console.log(scrWidth);
+        // console.log(itemWidth);
+        // console.log(eTarget);
+        console.log(thisContent);
 
         item.toggleClass("burgermenu__item--active")
             .siblings()
@@ -208,21 +209,24 @@ $(function () {
         if (scrWidth < 769 &&
             scrWidth > 481) {
             if (item.hasClass("burgermenu__item--active")) {
-                content.style.width = (bodyWidth - itemWidth * 3) + "px";
+                item.children('.burgermenu__content').css('width', (bodyWidth - itemWidth * 3) + "px");
+                item.siblings().children('.burgermenu__content').css('width', 0)
                 $burgerLeft.addClass("burgermenu__left--hide");
                 $burgerRight.addClass("burgermenu__right--show");
             } else {
-                content.style.width = 0;
+                thisContent.css('width', 0);
                 $burgerLeft.removeClass("burgermenu__left--hide");
                 $burgerRight.removeClass("burgermenu__right--show");
             }
 
         }
         else if (scrWidth < 480) {
-            content.style.width = (bodyWidth - itemWidth) + "px";
+
+            thisContent.css('width', (bodyWidth - itemWidth) + "px");
             $burgerLeft.toggleClass("burgermenu__left--hide");
             $burgerRight.toggleClass("burgermenu__right--show");
-            item.siblings().toggle();
+            item.siblings().animate({ width: 'toggle' });
+
 
         }
         else {
