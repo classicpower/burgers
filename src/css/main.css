@@ -2496,7 +2496,6 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0px -10px 10px;
 }
 
 .footer__social-item {
@@ -3093,6 +3092,10 @@ img {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  .footer__social {
+    margin: 0px -10px 10px;
   }
 }
 
