@@ -73,12 +73,14 @@ img {
 }
 
 .wrapper {
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .section {
+  position: relative;
   min-height: 650px;
   @include tablets(){
     min-height: 1024px;
@@ -87,13 +89,17 @@ img {
     min-height: 800px;
   }
 }
-
 .container {
   @include container()
 }
 
 .content {
   flex: 1;
+  position: relative;
+  top: 0;
+  transition: top 1s;
+  width: 100%;
+  height: 100%;
 }
 .blocked-scroll {
   overflow: hidden;

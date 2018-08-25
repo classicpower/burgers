@@ -150,6 +150,8 @@ $(function () {
     /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
     $(".click-link").on("click", function (e) {
         e.preventDefault();
+        console.log($(this)
+            .attr("href"));
         $("html, body").animate({
             scrollTop: $($(this)
                 .attr("href"))
@@ -177,7 +179,8 @@ $(function () {
     var $teamItem = $(".team__item"),
         $burgerItem = $(".burgermenu__item"),
         $burgerLeft = $(".burgermenu__left"),
-        $burgerRight = $(".burgermenu__right");
+        $burgerRight = $(".burgermenu__right"),
+        $burgerContent = $(".burgermenu__content");
 
     $teamItem.on("click", function () {
         var item = $(this);
@@ -187,17 +190,34 @@ $(function () {
     })
     // BURGERMENU SECTION
 
-    $burgerItem.on("click", function () {
-        var scrWidth = window.innerWidth;
-        var item = $(this);
+    $burgerItem.on("click", function (e) {
+        var
+            item = $(this),
+            scrWidth = window.innerWidth,
+            eTarget = e.target,
+            content = eTarget.nextElementSibling,
+            bodyWidth = $("body").width(),
+            itemWidth = item.width();
+
+        console.log(scrWidth);
+        console.log(itemWidth);
+        console.log(eTarget.nextElementSibling);
+
         item.toggleClass("burgermenu__item--active")
             .siblings()
             .removeClass("burgermenu__item--active");
         if (scrWidth < 769 &&
-            scrWidth > 481 &&
-            item.hasClass("burgermenu__item--active")) {
-            $burgerLeft.addClass("burgermenu__left--hide");
-            $burgerRight.addClass("burgermenu__right--show");
+            scrWidth > 481) {
+            if (item.hasClass("burgermenu__item--active")) {
+                content.style.width = (bodyWidth - itemWidth * 3) + "px";
+                $burgerLeft.addClass("burgermenu__left--hide");
+                $burgerRight.addClass("burgermenu__right--show");
+            } else {
+                content.style.width = 0;
+                $burgerLeft.removeClass("burgermenu__left--hide");
+                $burgerRight.removeClass("burgermenu__right--show");
+            }
+
         }
         else if (scrWidth < 480) {
             $burgerLeft.toggleClass("burgermenu__left--hide");
@@ -399,37 +419,4 @@ $(function () {
         clusterer.add(geoObjects);
 
     }
-
-    function mouseWheel() {
-        var divs = $('.section');
-        var dir = 'up';
-        var div = 0;
-        $(document.body).on('DOMMouseScroll mousewheel', function (e) {
-            if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-                dir = 'down';
-            } else {
-                dir = 'up';
-            }
-            div = -1;
-            divs.each(function (i) {
-                if (div < 0 && ($(this).offset().top >= $(window).scrollTop())) {
-                    div = i;
-                }
-            });
-            if (dir == 'up' && div > 0) {
-                div--;
-            }
-            if (dir == 'down' && div < divs.length) {
-                div++;
-            }
-            $('html,body').stop().animate({
-                scrollTop: divs.eq(div).offset().top
-            }, 600);
-            return false;
-        });
-        $(window).resize(function () {
-            $('html,body').scrollTop(divs.eq(div).offset().top);
-        });
-    }
-    mouseWheel();
 });

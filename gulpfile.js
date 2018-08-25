@@ -7,7 +7,7 @@ const
     gcmq = require('gulp-group-css-media-queries'),
     cleanCSS = require('gulp-clean-css'),
     sourcemaps = require('gulp-sourcemaps'),
-    del = require('del'),
+    // del = require('del'),
     rename = require('gulp-rename');
 
 const config = {
@@ -28,11 +28,11 @@ const config = {
         dest: '/img/'
     }
 };
-gulp.task('clean', function () {
-    return del.sync(config.src + config.css.dest);
-});
+// gulp.task('clean', function () {
+//     return del.sync(config.src + config.css.dest);
+// });
 
-gulp.task('build', ['clean'], function () {
+gulp.task('build', function () {
     gulp.src(config.src + config.css.src)
         .pipe(sass({
             includePaths: require('node-normalize-scss').includePaths
