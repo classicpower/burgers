@@ -220,6 +220,7 @@ $(function () {
 
         }
         else if (scrWidth < 480) {
+            content.style.width = (bodyWidth - itemWidth) + "px";
             $burgerLeft.toggleClass("burgermenu__left--hide");
             $burgerRight.toggleClass("burgermenu__right--show");
             item.siblings().toggle();
