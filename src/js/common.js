@@ -194,7 +194,6 @@ $(function () {
             item = $(this),
             scrWidth = window.innerWidth,
             thisContent = item.children('.burgermenu__content'),
-            otherContent = $burgerItem.children('.burgermenu__content'),
             bodyWidth = $("body").width(),
             itemWidth = item.width();
 
@@ -206,10 +205,18 @@ $(function () {
         item.toggleClass("burgermenu__item--active")
             .siblings()
             .removeClass("burgermenu__item--active");
-        if (scrWidth < 769 &&
-            scrWidth > 481) {
+        if (scrWidth > 769) {
             if (item.hasClass("burgermenu__item--active")) {
-                item.children('.burgermenu__content').css('width', (bodyWidth - itemWidth * 3) + "px");
+                thisContent.css('width', (bodyWidth / 2 - (itemWidth)) + "px");
+                item.siblings().children('.burgermenu__content').css('width', 0)
+            } else {
+                thisContent.css('width', 0);
+                $burgerLeft.removeClass("burgermenu__left--hide");
+                $burgerRight.removeClass("burgermenu__right--show");
+            }
+        } else if (scrWidth < 769 && scrWidth > 481) {
+            if (item.hasClass("burgermenu__item--active")) {
+                thisContent.css('width', (bodyWidth - itemWidth * 3) + "px");
                 item.siblings().children('.burgermenu__content').css('width', 0)
                 $burgerLeft.addClass("burgermenu__left--hide");
                 $burgerRight.addClass("burgermenu__right--show");
@@ -221,13 +228,10 @@ $(function () {
 
         }
         else if (scrWidth < 480) {
-
             thisContent.css('width', (bodyWidth - itemWidth) + "px");
             $burgerLeft.toggleClass("burgermenu__left--hide");
             $burgerRight.toggleClass("burgermenu__right--show");
             item.siblings().animate({ width: 'toggle' });
-
-
         }
         else {
             $burgerLeft.removeClass("burgermenu__left--hide");

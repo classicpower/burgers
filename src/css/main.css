@@ -1697,10 +1697,6 @@ img {
   color: #f9b43b;
 }
 
-.burgermenu__item--active .burgermenu__content {
-  width: 480px;
-}
-
 .burgermenu__item--active .burgermenu__text {
   visibility: visible;
   opacity: 1;
@@ -2656,10 +2652,6 @@ img {
     font-size: 15px;
   }
 
-  .section {
-    min-height: 1024px;
-  }
-
   .menu__list {
     display: none;
   }
@@ -2923,10 +2915,6 @@ img {
 @media screen and (max-width: 480px) {
   html {
     font-size: 14px;
-  }
-
-  .section {
-    min-height: 800px;
   }
 
   .hero__logo-img {
