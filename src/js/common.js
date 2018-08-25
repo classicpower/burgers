@@ -189,7 +189,6 @@ $(function () {
             .removeClass("team__item--active")
     })
     // BURGERMENU SECTION
-
     $burgerItem.on("click", function (e) {
         var
             item = $(this),

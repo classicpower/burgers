@@ -22,7 +22,6 @@
     display: flex;
     justify-content: center;
     opacity: 1;
-    transition: opacity .8s, width 1s;
     @include tablets(){
       width: 50%;
     }
