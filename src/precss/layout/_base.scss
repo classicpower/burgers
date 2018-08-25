@@ -118,6 +118,9 @@ img {
   align-self: flex-end;
   margin-left: -2.5%;
   z-index: 100;
+  @include tablets(){
+    display: none;
+  }
   &__list {
     display: flex;
     flex-direction: column;

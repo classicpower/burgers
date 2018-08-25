@@ -167,11 +167,11 @@ $(function () {
     $hamburger.on("click", function (e) {
         e.preventDefault();
         $fixedMenu.fadeIn().addClass("fixed-menu--open");
-        $body.addClass("blocked-scroll");
+        $('body').addClass("blocked-scroll");
     });
     $closeMenu.on("click", function () {
         $fixedMenu.fadeOut().removeClass("fixed-menu--open")
-        $body.removeClass("blocked-scroll");
+        $('body').removeClass("blocked-scroll");
     });
 
     /**АККОРДЕОН**/

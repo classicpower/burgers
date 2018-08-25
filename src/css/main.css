@@ -1833,7 +1833,7 @@ img {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  min-height: 325px;
+  height: 50vh;
 }
 
 .reviews__figcaption {
@@ -2651,6 +2651,10 @@ img {
     font-size: 15px;
   }
 
+  .points {
+    display: none;
+  }
+
   .menu__list {
     display: none;
   }
@@ -2860,7 +2864,7 @@ img {
   }
 
   .reviews__img {
-    min-height: 256px;
+    height: 25vh;
   }
 
   .reviews__wrap {
@@ -3040,11 +3044,6 @@ img {
 
   .reviews {
     min-width: 320px;
-  }
-
-  .reviews__img {
-    height: 200px;
-    min-height: auto;
   }
 
   .reviews__title {
