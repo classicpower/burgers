@@ -427,4 +427,25 @@ $(function () {
         clusterer.add(geoObjects);
 
     }
+
+    // Постраничная навигация
+    const
+        sections = $(".section"),
+        display = $(".content"),
+        inScroll = false;
+
+    const performTransition = sectionEq =>{
+        const position = (sectionEq * -100) + "%";
+    }
+
+    $(document).on("wheel", e => {
+        const deltaY = e.originalEvent.deltaY;
+
+        if (deltaY > 0) {
+
+        }
+        if (deltaY < 0) {
+
+        }
+    })
 });
