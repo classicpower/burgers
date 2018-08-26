@@ -1,8 +1,7 @@
 $(function () {
     /**Popup c параметрами**/
     const
-        body = document.body,
-        /*POPUP REVIEWS */
+        bodyDoc = document.body,
         btnReviews = document.querySelectorAll(".reviews__button"),
         overlayReviews = document.querySelector(".reviews__overlay"),
         reviewsClose = document.querySelector(".reviews__close"),
@@ -13,9 +12,8 @@ $(function () {
             overlay: overlayReviews,
             modal: revievsModal,
             // text: revievsText,
-            body: body
+            body: bodyDoc
         }),
-        /*POPUP FORM */
         overlayForm = document.querySelector(".delivery__overlay"),
         formClose = document.querySelector(".delivery__button"),
         modalForm = document.querySelector(".delivery__modal"),
@@ -24,7 +22,7 @@ $(function () {
             overlay: overlayForm,
             modal: modalForm,
             text: modalText,
-            body: body
+            body: bodyDoc
         });
 
     /* ОБРЕЗАТЬ ОТЗЫВ ДО НЕОБХОДИМОГО КОЛ-ВА БУКВ*/
