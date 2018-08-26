@@ -145,20 +145,20 @@ $(function () {
     function validateField(field) {
         field.nextElementSibling.textContent = field.validationMessage;
         return field.checkValidity();
-    }
+    };
 
-    /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-    $(".click-link").on("click", function (e) {
-        e.preventDefault();
-        console.log($(this)
-            .attr("href"));
-        $("html, body").animate({
-            scrollTop: $($(this)
-                .attr("href"))
-                .offset().top
-        }, 700, "linear");
-        $fixedMenu.removeClass("fixed-menu--open")
-    });
+    // /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
+    // $(".click-link").on("click", function (e) {
+    //     e.preventDefault();
+    //     console.log($(this)
+    //         .attr("href"));
+    //     $("html, body").animate({
+    //         scrollTop: $($(this)
+    //             .attr("href"))
+    //             .offset().top
+    //     }, 700, "linear");
+    //     $fixedMenu.removeClass("fixed-menu--open")
+    // });
 
     // OPEM/CLOSE MOBILE MENU
     var $hamburger = $(".hamburger-menu__link"),
@@ -196,11 +196,6 @@ $(function () {
             thisContent = item.children('.burgermenu__content'),
             bodyWidth = $("body").width(),
             itemWidth = item.width();
-
-        // console.log(scrWidth);
-        // console.log(itemWidth);
-        // console.log(eTarget);
-        console.log(thisContent);
 
         item.toggleClass("burgermenu__item--active")
             .siblings()
@@ -431,21 +426,82 @@ $(function () {
     // Постраничная навигация
     const
         sections = $(".section"),
-        display = $(".content"),
-        inScroll = false;
+        display = $(".content");
+    let inScroll = false;
 
-    const performTransition = sectionEq =>{
+    const performTransition = sectionEq => {
         const position = (sectionEq * -100) + "%";
+
+        if (inScroll) return;
+
+        inScroll = true;
+
+        sections
+            .eq(sectionEq)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        display.css({
+            "transform": `translateY(${position})`,
+            "-webkit-transform": `translateY(${position})`
+        });
+        if(sections.hasClass("active")){
+            const pointsItem = $(".points__item");
+            pointsItem.eq(sectionEq).addClass("points__item--current").siblings().removeClass("points__item--current");
+        }
+
+        setTimeout(() => {
+            inScroll = false;
+            // setActiveMenuItem(sectionEq);
+        }, 1300);
+
+    };
+    const defineSections = sections => {
+        const activeSection = sections.filter(".active");
+
+        return {
+            activeSection: activeSection,
+            nextSection: activeSection.next(),
+            prevSection: activeSection.prev()
+        }
     }
+    const scrollToSection = direction => {
+        const section = defineSections(sections);
 
-    $(document).on("wheel", e => {
-        const deltaY = e.originalEvent.deltaY;
-
-        if (deltaY > 0) {
-
+        if (direction === "up" && section.prevSection.length) {
+            performTransition(section.prevSection.index());
         }
-        if (deltaY < 0) {
 
+        if (direction === "down" && section.nextSection.length) {
+            performTransition(section.nextSection.index());
         }
+    };
+
+    $(document).on({
+        wheel: e => {
+            const deltaY = e.originalEvent.deltaY;
+            const direction = deltaY > 0 ? "down" : "up";
+
+            scrollToSection(direction);
+        },
+        keydown: e => {
+            switch (e.keyCode) {
+                case 40:
+                    scrollToSection("down");
+                    break;
+
+                case 38:
+                    scrollToSection("up");
+                    break;
+            }
+        },
+        touchmove: e => e.preventDefault()
+    });
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+
+        const
+            target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+        performTransition(target);
     })
 });
