@@ -425,7 +425,8 @@ $(function () {
     // Постраничная навигация
     const
         sections = $(".section"),
-        display = $(".content");
+        display = $(".content"),
+        overlay = $(".reviews__overlay, .delivery__overlay");
     let inScroll = false;
 
     const md = new MobileDetect(window.navigator.userAgent);
@@ -433,7 +434,11 @@ $(function () {
 
     const performTransition = sectionEq => {
         sectionEq = parseInt(sectionEq);
-        const position = (sectionEq * -100) + "%";
+        const
+            position = (sectionEq * -100) + "%",
+            positionOverlay = (sectionEq * 100) + "%";
+
+
 
         if (inScroll) return;
 
@@ -447,6 +452,10 @@ $(function () {
         display.css({
             "transform": `translateY(${position})`,
             "-webkit-transform": `translateY(${position})`
+        });
+        overlay.css({
+            "transform": `translateY(${positionOverlay})`,
+            "-webkit-transform": `translateY(${positionOverlay})`
         });
         if (sections.hasClass("active")) {
             const pointsItem = $(".points__item");
