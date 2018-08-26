@@ -510,6 +510,7 @@ $(function () {
     if (isMobile) {
         $(window).swipe({
             swipe: function (event, direction) {
+                alert(direction);
                 scrollToSection(direction);
             }
         });
