@@ -429,6 +429,9 @@ $(function () {
         display = $(".content");
     let inScroll = false;
 
+    const md = new MobileDetect(window.navigator.userAgent);
+    const isMobile = md.mobile();
+
     const performTransition = sectionEq => {
         sectionEq = parseInt(sectionEq);
         const position = (sectionEq * -100) + "%";
@@ -446,7 +449,7 @@ $(function () {
             "transform": `translateY(${position})`,
             "-webkit-transform": `translateY(${position})`
         });
-        if(sections.hasClass("active")){
+        if (sections.hasClass("active")) {
             const pointsItem = $(".points__item");
             pointsItem.eq(sectionEq).addClass("points__item--current").siblings().removeClass("points__item--current");
         }
@@ -504,11 +507,12 @@ $(function () {
         const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
         performTransition(target);
     });
-    $(window).swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction) {
-            scrollToSection(direction);
-        }
-      });
+    if (isMobile) {
+        $(window).swipe({
+            swipe: function (event, direction) {
+                scrollToSection(direction);
+            }
+        });
+    }
 
 });
