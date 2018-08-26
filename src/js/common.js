@@ -67,12 +67,13 @@ $(function () {
             overlay = obj.overlay,
             modal = obj.modal,
             $this = this,
+            body = obj.body,
             text = obj.text;
         $this.open = function (content) {
             $this.content = content;
             overlay.classList.add("open");
             modal.classList.add("open");
-            body.classList.add("blocked-scroll");
+            bodyDoc.classList.add("blocked-scroll");
             if (text) {
                 text.textContent = content;
             }
@@ -81,7 +82,7 @@ $(function () {
         $this.close = function () {
             overlay.classList.remove("open");
             modal.classList.remove("open");
-            body.classList.remove("blocked-scroll");
+            bodyDoc.classList.remove("blocked-scroll");
         }
     }
 
