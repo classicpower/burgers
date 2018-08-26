@@ -508,7 +508,8 @@ $(function () {
     if (isMobile) {
         $(window).swipe({
             swipe: function (event, direction) {
-                scrollToSection(direction);
+                const scrollDirection = direction === 'down' ? 'up' : 'down';
+                scrollToSection(scrollDirection);
             }
         });
     }
