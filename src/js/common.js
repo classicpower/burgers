@@ -430,6 +430,7 @@ $(function () {
     let inScroll = false;
 
     const performTransition = sectionEq => {
+        sectionEq = parseInt(sectionEq);
         const position = (sectionEq * -100) + "%";
 
         if (inScroll) return;
@@ -500,8 +501,14 @@ $(function () {
     $('[data-scroll-to]').on('click', e => {
         e.preventDefault();
 
-        const
-            target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+        const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
         performTransition(target);
-    })
+    });
+    $(window).swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction) {
+            scrollToSection(direction);
+        }
+      });
+
 });
