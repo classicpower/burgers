@@ -487,7 +487,7 @@ $(function () {
         }
     };
 
-    $(document).on({
+    $(".wrapper").on({
         wheel: e => {
             const deltaY = e.originalEvent.deltaY;
             const direction = deltaY > 0 ? "down" : "up";
