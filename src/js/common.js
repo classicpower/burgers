@@ -487,13 +487,16 @@ $(function () {
         }
     };
 
-    $(document, ".wrapper").on({
+    $(".wrapper").on({
         wheel: e => {
             const deltaY = e.originalEvent.deltaY;
             const direction = deltaY > 0 ? "down" : "up";
 
             scrollToSection(direction);
         },
+        touchmove: e => e.preventDefault()
+    });
+    $(document).on({
         keydown: e => {
             switch (e.keyCode) {
                 case 40:
@@ -504,15 +507,14 @@ $(function () {
                     scrollToSection("up");
                     break;
             }
-        },
-        touchmove: e => e.preventDefault()
+        }
     });
     $('[data-scroll-to]').on('click', e => {
-        e.preventDefault();
+            e.preventDefault();
 
-        const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
-        performTransition(target);
-    });
+            const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+            performTransition(target);
+        });
     if (isMobile) {
         $(window).swipe({
             swipe: function (event, direction) {
