@@ -2011,6 +2011,44 @@ img {
   overflow: hidden;
 }
 
+.work__container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.work__title {
+  text-align: center;
+  font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
+  font-size: 4.5rem;
+  color: #2f3234;
+}
+
+.work__video {
+  width: 660px;
+  height: 405px;
+  margin: 0 20px;
+}
+
 .delivery {
   width: 100%;
   height: 100%;
@@ -2662,10 +2700,6 @@ img {
     font-size: 15px;
   }
 
-  .points {
-    display: none;
-  }
-
   .menu__list {
     display: none;
   }
@@ -2931,6 +2965,10 @@ img {
     font-size: 14px;
   }
 
+  .section {
+    min-height: auto;
+  }
+
   .hero__logo-img {
     max-width: 75%;
   }
@@ -3063,6 +3101,10 @@ img {
 
   .reviews__text {
     display: none;
+  }
+
+  .work__title {
+    font-size: 4.0625rem;
   }
 
   .delivery__title {
