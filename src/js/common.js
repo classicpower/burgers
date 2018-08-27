@@ -505,7 +505,10 @@ $(function () {
                     break;
             }
         },
-        touchmove: e => {return false}
+        touchmove: e => {
+            e.preventDefault(); 
+            e.stopPropagation()
+        }
     });
     $('[data-scroll-to]').on('click', e => {
         e.preventDefault();
