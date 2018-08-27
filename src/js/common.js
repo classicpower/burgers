@@ -438,8 +438,6 @@ $(function () {
             position = (sectionEq * -100) + "%",
             positionOverlay = (sectionEq * 100) + "%";
 
-
-
         if (inScroll) return;
 
         inScroll = true;
@@ -507,7 +505,7 @@ $(function () {
                     break;
             }
         },
-        touchmove: e => e.preventDefault()
+        touchmove: e => {return false}
     });
     $('[data-scroll-to]').on('click', e => {
         e.preventDefault();
