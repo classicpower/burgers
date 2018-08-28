@@ -6,7 +6,8 @@
     align-items: center
   }
   &__title {
-    @include title($dark, center)
+    @include title($dark, center);
+    margin-bottom: 50px;
   }
 }
 
