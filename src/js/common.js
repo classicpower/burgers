@@ -526,6 +526,8 @@ $(function () {
 
     // MEDIA PLAYER
     const 
+        video = document.querySelector(".player__video"),
+        controls = document.querySelector(".player__controls"),
         btnStart = document.querySelector(".player__start-button"),
         iconStart = document.querySelector(".player__start-icon"),
         divStart = document.querySelector(".player__start"),
@@ -534,19 +536,31 @@ $(function () {
         divPause = document.querySelector(".player__pause"),
         btnPlayArray = [btnPlay,btnStart];
 
-        for (let i = 0; i < btnPlayArray.length; i++) {
-            const btn = btnPlayArray[i];
-            btn.addEventListener("click", () => {
-                divStart.classList.add("player__start--hidden");
-                btnPlay.style.display = "none";
-                divPause.style.display = "block";
-            })         
+        video.addEventListener('canplaythrough',() => {
+            video.removeAttribute('controls');
+            controls.style.visibility = 'visible';
+            clickPlay();
+        }, false);
+        let clickPlay = () =>{
+            for (let i = 0; i < btnPlayArray.length; i++) {
+                const btn = btnPlayArray[i];
+                btn.addEventListener("click", () => {
+                    divStart.classList.add("player__start--hidden");
+                    btnPlay.style.display = "none";
+                    divPause.style.display = "block";
+                    video.play();
+                })         
+            };
         };
-        btnPause.addEventListener("click", () => {
-            divPause.style.display = "none";
-            divStart.classList.remove("player__start--hidden");
-            btnPlay.style.display = "block";
-        })
+        let clickPause = () => {
+            btnPause.addEventListener("click", () => {
+                divPause.style.display = "none";
+                divStart.classList.remove("player__start--hidden");
+                btnPlay.style.display = "block";
+                video.pause();
+            })
+        };
+        clickPause();
 
 
 
