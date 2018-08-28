@@ -524,4 +524,30 @@ $(function () {
         });
     }
 
+    // MEDIA PLAYER
+    const 
+        btnStart = document.querySelector(".player__start-button"),
+        iconStart = document.querySelector(".player__start-icon"),
+        divStart = document.querySelector(".player__start"),
+        btnPlay = document.querySelector(".player__play-button"),
+        btnPause = document.querySelector(".player__pause-button"),
+        divPause = document.querySelector(".player__pause"),
+        btnPlayArray = [btnPlay,btnStart];
+
+        for (let i = 0; i < btnPlayArray.length; i++) {
+            const btn = btnPlayArray[i];
+            btn.addEventListener("click", () => {
+                divStart.classList.add("player__start--hidden");
+                btnPlay.style.display = "none";
+                divPause.style.display = "block";
+            })         
+        };
+        btnPause.addEventListener("click", () => {
+            divPause.style.display = "none";
+            divStart.classList.remove("player__start--hidden");
+            btnPlay.style.display = "block";
+        })
+
+
+
 });
