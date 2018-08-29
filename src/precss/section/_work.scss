@@ -12,14 +12,17 @@
 }
 
 .player {
+  max-width: 660px;
+  max-height: 405px;
+  margin: 0 auto;
   background-color: #3e3e3e;
   position: relative;
   display: flex;
   flex-direction: column;
   &__video {
-    width: 660px;
-    height: 370px;
     display: block;
+    width: 100%;
+    height: auto;
     &-wrap {
       position: relative;
     }
@@ -60,30 +63,41 @@
     justify-content: space-between;
     background-color: #3e3e3e;
     padding: 0 20px;
+    @include tablets() {
+      padding: 0 rem(38px);
+    }
   }
-  &__play{
-    &-icon{
+  &__play {
+    &-icon {
       margin-left: -10px;
+    }
+  }
+  &__volume {
+    @include tablets() {
+      display: none;
     }
   }
   &__play,
   &__volume {
-    height: 35px;
+    height: rem(35px);
     &-button {
       @include offBtnStyle;
       cursor: pointer;
     }
     &-icon {
-      width: 36px;
-      height: 35px;
+      width: rem(36px);
+      height: rem(35px);
       fill: #626262;
     }
   }
   &__pause {
-    width: 30px;
-    height: 35px;
+    width: rem(30px);
+    height: rem(35px);
     display: none;
     margin-left: -20px;
+    @include tablets() {
+      margin-left: 0;
+    }
     &-button {
       @include offBtnStyle;
       cursor: pointer;
@@ -91,7 +105,7 @@
     }
     &-bars {
       height: 100%;
-      width: 15px;
+      width: rem(15px);
       position: relative;
       &::before,
       &::after {
@@ -101,8 +115,8 @@
         top: 50%;
         transform: translateY(-50%);
         background-color: #626262;
-        width: 5px;
-        height: 20px;
+        width: rem(5px);
+        height: rem(20px);
         border-radius: 3px;
       }
       &::before {
@@ -119,10 +133,17 @@
     height: 5px;
     background-color: #626262;
     cursor: pointer;
+    @include tablets() {
+      width: 100%;
+    }
     &--volume {
       width: 60px;
+      @include tablets() {
+        display: none;
+      }
     }
-    &-input, .player__volume-input{
+    &-input,
+    .player__volume-input {
       @include offBtnStyle;
       cursor: pointer;
       width: 100%;
