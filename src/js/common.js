@@ -581,7 +581,12 @@ $(function () {
     });
     btnVolume.addEventListener('click', () => {
         const currentVolume = parseFloat(video.volume);
-        console.log(currentVolume);
+        if (currentVolume) {
+            localStorage.volume = currentVolume;
+            video.volume = inputVolume.value = 0;
+        } else {
+            video.volume = inputVolume.value = localStorage.volume;
+        };
     });
     inputVolume.addEventListener('input', () => {
         const currentBarVolume = parseFloat(inputVolume.value);
