@@ -72,6 +72,95 @@ img {
   display: block;
 }
 
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 0px;
+  border: none
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #6c6c6c;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 0px;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #585858;
+  border: none;
+  border-radius: 0px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #626262;
+  border: none;
+  border-radius: 0px;
+}
+
+input[type=range]::-ms-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+  height: 5px;
+}
+
+input[type=range] {
+  &:focus::-ms-fill-lower,
+  &:focus::-ms-fill-upper {
+    background: #626262;
+  }
+}
+
 .wrapper {
   overflow: hidden;
   display: flex;
@@ -83,10 +172,11 @@ img {
 .section {
   position: relative;
   min-height: 650px;
-  @include mobile(){
+  @include mobile() {
     min-height: auto;
   }
 }
+
 .container {
   @include container()
 }
@@ -98,9 +188,11 @@ img {
   height: 100%;
   transition: transform 1s;
 }
+
 .blocked-scroll {
   overflow: hidden;
 }
+
 .arrow {
   &--scroll {
     background: url('../img/hero/arrow-scroll.png') no-repeat center center;

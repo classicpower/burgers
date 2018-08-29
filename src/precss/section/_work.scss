@@ -20,9 +20,6 @@
     width: 660px;
     height: 370px;
     display: block;
-    &:hover{
-
-    }
     &-wrap {
       position: relative;
     }
@@ -121,14 +118,14 @@
     width: 444px;
     height: 5px;
     background-color: #626262;
+    cursor: pointer;
     &--volume {
       width: 60px;
     }
-    &-button {
+    &-input, .player__volume-input{
       @include offBtnStyle;
       cursor: pointer;
-      width: 12px;
-      height: 12px;
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 0;

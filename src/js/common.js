@@ -462,7 +462,6 @@ $(function () {
 
         setTimeout(() => {
             inScroll = false;
-            // setActiveMenuItem(sectionEq);
         }, 1300);
 
     };
@@ -529,11 +528,13 @@ $(function () {
         video = document.querySelector(".player__video"),
         controls = document.querySelector(".player__controls"),
         btnStart = document.querySelector(".player__start-button"),
-        iconStart = document.querySelector(".player__start-icon"),
         divStart = document.querySelector(".player__start"),
         btnPlay = document.querySelector(".player__play-button"),
         btnPause = document.querySelector(".player__pause-button"),
         divPause = document.querySelector(".player__pause"),
+        inputPlayback = document.querySelector(".player__playback-input"),
+        btnVolume = document.querySelector(".player__volume-button"),
+        inputVolume = document.querySelector(".player__volume-input"),
         btnPlayArray = [btnPlay, btnStart, btnPause];
 
     video.addEventListener('canplaythrough', () => {
@@ -541,7 +542,8 @@ $(function () {
         controls.style.visibility = 'visible';
     }, false);
 
-    const playPauseVideo = () => {
+    const playPauseVideo = e => {
+        e.preventDefault();
         if (video.paused) {
             divStart.classList.add("player__start--hidden");
             btnPlay.style.display = "none";
@@ -559,5 +561,31 @@ $(function () {
         btn.addEventListener('click', playPauseVideo);
     }
 
+    video.addEventListener('loadedmetadata', () => {
+        const duration = video.duration;
+        inputPlayback.setAttribute('max', duration);
+    });
+    inputPlayback.addEventListener('input', () => {
+        const videoCurrentProgress = parseFloat(inputPlayback.value);
+        video.currentTime = videoCurrentProgress;
+    });
+    video.addEventListener('timeupdate', () => {
+        const videoCurrentTime = parseFloat(video.currentTime);
+        inputPlayback.value = videoCurrentTime;
+    });
+    video.addEventListener('ended', () => {
+        divPause.style.display = "none";
+        divStart.classList.remove("player__start--hidden");
+        btnPlay.style.display = "block";
+        video.pause();
+    });
+    btnVolume.addEventListener('click', () => {
+        const currentVolume = parseFloat(video.volume);
+        console.log(currentVolume);
+    });
+    inputVolume.addEventListener('input', () => {
+        const currentBarVolume = parseFloat(inputVolume.value);
+        video.volume = currentBarVolume;
+    });
 
 });

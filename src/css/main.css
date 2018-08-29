@@ -486,6 +486,95 @@ img {
   display: block;
 }
 
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4.5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #6c6c6c;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 0px;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #585858;
+  border: none;
+  border-radius: 0px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #626262;
+  border: none;
+  border-radius: 0px;
+}
+
+input[type=range]::-ms-thumb {
+  border: 1.8px solid #626262;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  background: #626262;
+  cursor: pointer;
+  height: 5px;
+}
+
+input[type=range]:focus::-ms-fill-lower,
+input[type=range]:focus::-ms-fill-upper {
+  background: #626262;
+}
+
 .wrapper {
   overflow: hidden;
   display: -webkit-box;
@@ -2212,19 +2301,20 @@ img {
   width: 444px;
   height: 5px;
   background-color: #626262;
+  cursor: pointer;
 }
 
 .player__playback--volume {
   width: 60px;
 }
 
-.player__playback-button {
+.player__playback-input,
+.player__playback .player__volume-input {
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  width: 12px;
-  height: 12px;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 0;
@@ -2238,7 +2328,8 @@ img {
   border-radius: 50%;
 }
 
-.player__playback-button:focus {
+.player__playback-input:focus,
+.player__playback .player__volume-input:focus {
   outline: none;
 }
 
