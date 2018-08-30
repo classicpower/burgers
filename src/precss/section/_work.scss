@@ -130,7 +130,6 @@
   &__playback {
     position: relative;
     width: 444px;
-    height: 5px;
     background-color: #626262;
     cursor: pointer;
     @include tablets() {
@@ -154,7 +153,7 @@
       bottom: 0;
       transform: translateY(-50%);
       background-color: #626262;
-      border-radius: 50%;
+      height: 5px;
     }
   }
 }

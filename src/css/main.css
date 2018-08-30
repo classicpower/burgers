@@ -613,10 +613,6 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .content {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   position: relative;
   width: 100%;
   height: 100%;
@@ -2302,7 +2298,6 @@ input[type=range]:focus::-ms-fill-upper {
 .player__playback {
   position: relative;
   width: 444px;
-  height: 5px;
   background-color: #626262;
   cursor: pointer;
 }
@@ -2327,8 +2322,7 @@ input[type=range]:focus::-ms-fill-upper {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-color: #626262;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  height: 5px;
 }
 
 .player__playback-input:focus,
