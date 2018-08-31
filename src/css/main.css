@@ -880,6 +880,7 @@ input[type=range]:focus::-ms-fill-upper {
   -ms-flex-align: center;
   align-items: center;
   opacity: 1;
+  cursor: pointer;
 }
 
 .hamburger-menu__link:hover {
@@ -1964,7 +1965,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .reviews__title {
   color: #ffffff;
-  font-family: Gagalin, "Arial Narrow", sans-serif;
+  font-family: "Gagalin-Regular", "Arial Narrow", sans-serif;
   padding-bottom: 11%;
   text-align: center;
 }

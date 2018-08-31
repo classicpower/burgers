@@ -54,7 +54,7 @@
   }
   &__title {
     color: #ffffff;
-    font-family: Gagalin, "Arial Narrow", sans-serif;
+    font-family: $Gagalin, "Arial Narrow", sans-serif;
     padding-bottom: 11%;
     text-align: center;
     @include mobile() {
