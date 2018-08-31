@@ -74,6 +74,7 @@ $(function () {
             overlay.classList.add("open");
             modal.classList.add("open");
             bodyDoc.classList.add("blocked-scroll");
+            
             if (text) {
                 text.textContent = content;
             }
@@ -435,10 +436,9 @@ $(function () {
     const performTransition = sectionEq => {
         sectionEq = parseInt(sectionEq);
         const
-            position = (sectionEq * -100) + "%",
-            positionOverlay = (sectionEq * 100) + "%";
+            position = (sectionEq * -100) + "%";
 
-        if (inScroll) return;
+        if (inScroll || overlay.hasClass("open")) return;
 
         inScroll = true;
 
@@ -450,10 +450,6 @@ $(function () {
         display.css({
             "transform": `translateY(${position})`,
             "-webkit-transform": `translateY(${position})`
-        });
-        overlay.css({
-            "transform": `translateY(${positionOverlay})`,
-            "-webkit-transform": `translateY(${positionOverlay})`
         });
         if (sections.hasClass("active")) {
             const pointsItem = $(".points__item");
