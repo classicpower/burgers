@@ -103,10 +103,10 @@
   }
   &__close {
     @include offBtnStyle;
-    position: absolute!important;
+    position: absolute;
     &::after,
     &::before {
-      background-color: $red !important;
+      background-color: $red;
     }
   }
 }

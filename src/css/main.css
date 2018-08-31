@@ -2047,7 +2047,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0;
   background-color: transparent;
   border: none;
-  position: absolute !important;
+  position: absolute;
 }
 
 .reviews__close:focus {
@@ -2056,7 +2056,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .reviews__close::after,
 .reviews__close::before {
-  background-color: #e45028 !important;
+  background-color: #e45028;
 }
 
 .overlay {
